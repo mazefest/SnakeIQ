@@ -1,9 +1,11 @@
 using Toybox.System as Sys;
+using Toybox.Math as Math;
 
 class Arena {
     var width;
     var height;
-    var food;
+    var foodX;
+    var foodY;
 
     function initialize() {
         configWidth();
@@ -17,11 +19,15 @@ class Arena {
 
     function configHeight() {
        height = Sys.getDeviceSettings().screenHeight; 
+    }
 
+    function configFoodCoordinates() {
+        configFoodX();
+        configFoodY();
     }
 
     function configFoodX() {
-
+        foodX = Math.rand;
     }
 
     function configFoodY() {
