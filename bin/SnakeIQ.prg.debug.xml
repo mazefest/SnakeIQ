@@ -29,14 +29,13 @@
         <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/SnakeIQView.mc" id="18" lineNum="29" pc="268435869" symbol="onHide"/>
         <entry filename="Rez" id="24" lineNum="16" pc="268435874" symbol="MainLayout"/>
         <entry filename="Rez" id="24" lineNum="18" pc="268435886" symbol="MainLayout"/>
-        <entry filename="Rez" id="24" lineNum="20" pc="268435899" symbol="MainLayout"/>
-        <entry filename="Rez" id="24" lineNum="21" pc="268436054" symbol="MainLayout"/>
-        <entry filename="Rez" id="24" lineNum="22" pc="268436166" symbol="MainLayout"/>
-        <entry filename="Rez" id="24" lineNum="24" pc="268436203" symbol="MainLayout"/>
-        <entry filename="Rez" id="27" lineNum="37" pc="268436231" symbol="initialize"/>
-        <entry filename="Rez" id="27" lineNum="38" pc="268436235" symbol="initialize"/>
-        <entry filename="Rez" id="27" lineNum="39" pc="268436253" symbol="initialize"/>
-        <entry filename="Rez" id="27" lineNum="40" pc="268436309" symbol="initialize"/>
+        <entry filename="Rez" id="24" lineNum="19" pc="268436038" symbol="MainLayout"/>
+        <entry filename="Rez" id="24" lineNum="20" pc="268436150" symbol="MainLayout"/>
+        <entry filename="Rez" id="24" lineNum="22" pc="268436190" symbol="MainLayout"/>
+        <entry filename="Rez" id="27" lineNum="35" pc="268436218" symbol="initialize"/>
+        <entry filename="Rez" id="27" lineNum="36" pc="268436222" symbol="initialize"/>
+        <entry filename="Rez" id="27" lineNum="37" pc="268436240" symbol="initialize"/>
+        <entry filename="Rez" id="27" lineNum="38" pc="268436296" symbol="initialize"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="8388644" module="true" symbol="System"/>
@@ -90,10 +89,9 @@
         <entry endPc="268435659" name="item" stackId="1" startPc="268435584"/>
         <entry endPc="268435839" name="dc" stackId="1" startPc="268435797"/>
         <entry endPc="268435869" name="dc" stackId="1" startPc="268435844"/>
-        <entry endPc="268436230" name="rez_cmp_local_var_dc_getWidth" stackId="2" startPc="268435886"/>
-        <entry endPc="268436230" name="rez_cmp_local_bitmap_id_monkey" stackId="4" startPc="268435886"/>
-        <entry endPc="268436230" name="rez_cmp_local_text_1147857674" stackId="3" startPc="268435886"/>
-        <entry endPc="268436231" name="dc" stackId="1" startPc="268435874"/>
+        <entry endPc="268436217" name="rez_cmp_local_text_1434936668" stackId="2" startPc="268435886"/>
+        <entry endPc="268436217" name="rez_cmp_local_bitmap_id_monkey" stackId="3" startPc="268435886"/>
+        <entry endPc="268436218" name="dc" stackId="1" startPc="268435874"/>
     </localVars>
     <annotations/>
     <dataEntryOffsetMappings>
