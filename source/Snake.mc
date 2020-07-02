@@ -10,7 +10,7 @@ class SnakeInvenotry() {
     var size;
     
     function initialize() {
-       size = 0; 
+       size = 4; 
     }
     
     function addToLength() {
