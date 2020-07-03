@@ -27,11 +27,11 @@ class Arena {
     }
 
     function configFoodX() {
-        foodX = Math.rand % width;
+        foodX = Math.rand() % width;
     }
 
     function configFoodY() {
-        foodX = Math.rand % height;
+        foodX = Math.rand() % height;
     }
 
 }
