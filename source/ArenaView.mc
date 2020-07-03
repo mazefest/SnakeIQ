@@ -4,23 +4,25 @@ using Toybox.System as Sys;
 
 class ArenaView extends Ui.View {
     var arena;
-    
+    var snake; 
     function initialize() {
         View.initialize();
         arena = new Arena();
+        snake = new Snake();
     }
 
     function onUpdate(dc) {
        	dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_WHITE);
         dc.clear();
 
+        dc.setPenWidth(5);
 
-        drawPerimeter(dc);
-        drawFood(dc);
+        //drawPerimeter(dc);
+        //drawFood(dc);
+        //drawSnake(dc);
     }
     
     function drawPerimeter(dc) {
-        dc.setPenWidth(5);
         dc.drawRectangle(
             (arena.screenWidth - arena.width) / 2,
             (arena.screenHeight - arena.height) / 2,
@@ -28,10 +30,18 @@ class ArenaView extends Ui.View {
             arena.height
         );
     }
+    
+    function drawSnake(dc) {
+        for (var i = 0; i < snake.size; i++) {
+            dc.drawPoint(
+                snake.xCoordinates[i],
+                snake.yCoordinates[i]
+            );
+        }
+    }
 
     function drawFood(dc) {
         Ui.requestUpdate();
-        Sys.println(arena.foodX + " " + arena.foodY);
         dc.drawPoint(arena.foodX, arena.foodY);
     }
 
