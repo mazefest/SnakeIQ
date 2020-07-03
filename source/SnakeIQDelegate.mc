@@ -6,7 +6,7 @@ class SnakeIQDelegate extends WatchUi.BehaviorDelegate {
         BehaviorDelegate.initialize();
     }
 
-    function onMenu() {
+    function onSelect() {
         WatchUi.pushView(new Rez.Menus.MainMenu(), new SnakeIQMenuDelegate(), WatchUi.SLIDE_UP);
         return true;
     }

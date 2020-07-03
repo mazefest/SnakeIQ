@@ -1,14 +1,10 @@
-using Toybox.WatchUi;
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics as Gfx;
 
-class SnakeIQView extends WatchUi.View {
+class SnakeIQView extends Ui.View {
 
     function initialize() {
         View.initialize();
-    }
-
-    // Load your resources here
-    function onLayout(dc) {
-        setLayout(Rez.Layouts.MainLayout(dc));
     }
 
     // Called when this View is brought to the foreground. Restore
