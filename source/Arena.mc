@@ -4,34 +4,29 @@ using Toybox.Math as Math;
 class Arena {
     var width;
     var height;
+    var screenHeight;
+    var screenWidth;
     var foodX;
     var foodY;
-
+    
     function initialize() {
-        configWidth();
-        configHeight();
+        configArenaDimensions();
         configFoodCoordinates();
     }
 
-    function configWidth() {
-       width = Sys.getDeviceSettings().screenWidth; 
-    }
-
-    function configHeight() {
-       height = Sys.getDeviceSettings().screenHeight; 
+    function configArenaDimensions() {
+       screenWidth = Sys.getDeviceSettings().screenWidth; 
+       screenHeight = Sys.getDeviceSettings().screenHeight; 
+       var sWSquared = Math.pow(screenWidth, 2) / 2;
+       var sHSquared = Math.pow(screenHeight, 2) / 2;
+       width = Math.sqrt(sWSquared).toNumber();
+       height = Math.sqrt(sHSquared).toNumber();
     }
 
     function configFoodCoordinates() {
-        configFoodX();
-        configFoodY();
+        foodX = (Math.rand() % width.toNumber()) + ((screenWidth - width) / 2);
+        foodY = (Math.rand() % height.toNumber()) + ((screenHeight - height) / 2);
     }
 
-    function configFoodX() {
-        foodX = Math.rand() % width;
-    }
-
-    function configFoodY() {
-        foodX = Math.rand() % height;
-    }
 
 }
