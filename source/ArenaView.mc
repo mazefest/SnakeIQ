@@ -5,10 +5,14 @@ using Toybox.System as Sys;
 class ArenaView extends Ui.View {
     var arena;
     var snake; 
+    var timer;
+
     function initialize() {
         View.initialize();
         arena = new Arena();
         snake = new Snake();
+        timer = new Timer.Timer();
+		timer.start(method(:driver), 1000, true); 
     }
 
     function onUpdate(dc) {
@@ -17,9 +21,15 @@ class ArenaView extends Ui.View {
 
         dc.setPenWidth(5);
 
-        //drawPerimeter(dc);
-        //drawFood(dc);
-        //drawSnake(dc);
+        drawPerimeter(dc);
+        drawFood(dc);
+        drawSnake(dc);
+        
+        Ui.requestUpdate();
+    }
+
+    function driver() {
+        snake.driver();
     }
     
     function drawPerimeter(dc) {
@@ -32,6 +42,7 @@ class ArenaView extends Ui.View {
     }
     
     function drawSnake(dc) {
+
         for (var i = 0; i < snake.size; i++) {
             dc.drawPoint(
                 snake.xCoordinates[i],
@@ -41,7 +52,6 @@ class ArenaView extends Ui.View {
     }
 
     function drawFood(dc) {
-        Ui.requestUpdate();
         dc.drawPoint(arena.foodX, arena.foodY);
     }
 

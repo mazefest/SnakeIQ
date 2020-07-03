@@ -1,9 +1,15 @@
+using Toybox.System as Sys;
 
 enum {
     North,
     East,
     South,
-    west
+    West
+}
+
+enum {
+    x,
+    y
 }
 
 class SnakeInvenotry {
