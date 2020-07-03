@@ -6,7 +6,7 @@ enum {
     west
 }
 
-class SnakeInvenotry() {
+class SnakeInvenotry {
     var size;
     
     function initialize() {
@@ -27,15 +27,16 @@ class Snake {
     var isAlive;
     var direction;
     var inventory;
+    var snakeXCoordinates;
+    var snakeYCoordinates;
 
     function initialize() {
         isAlive = true;
         direction = North;
         inventory = new SnakeInvenotry();
-    }
-
-    function isAlive() {
-        return isAlive;
+        snakeXCoordinates = [];
+        snakeYCoordinates = [];
+        configInitialXYCoordinates();
     }
 
     function getDirection() {
@@ -44,6 +45,17 @@ class Snake {
 
     function setDirection(dir) {
         direction = dir;
+    }
+
+    function configInitialXYCoordinates() {
+        for (var i = 0; i < size; i ++) {
+            //snakeXCoordinates.add($.arena.width / 2);
+            //snakeYCoordinates.add(($.arena.height / 2) - (i + 1));
+        }
+    }
+
+    function coordinateDriver() {
+
     }
 
 }
