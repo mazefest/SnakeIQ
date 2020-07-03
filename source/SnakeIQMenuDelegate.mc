@@ -9,9 +9,7 @@ class SnakeIQMenuDelegate extends WatchUi.MenuInputDelegate {
 
     function onMenuItem(item) {
         if (item == :item_1) {
-            System.println("item 1");
-        } else if (item == :item_2) {
-            System.println("item 2");
+            getArenaView();
         }
     }
 
