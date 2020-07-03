@@ -14,4 +14,11 @@ class ArenaDelegate extends Ui.BehaviorDelegate {
         return true;
     }
 
+    function onNextPage() {
+        view.snake.setDirection(1);
+    }
+    function onPreviousPage() {
+        view.snake.setDirection(-1);
+    }
+
 }
