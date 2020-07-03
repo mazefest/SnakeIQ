@@ -15,14 +15,21 @@ class SnakeIQView extends Ui.View {
 
     // Update the view
     function onUpdate(dc) {
-        // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
+
+        dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+
+        drawTitle(dc);
     }
 
-    // Called when this View is removed from the screen. Save the
-    // state of this View here. This includes freeing resources from
-    // memory.
-    function onHide() {
+    function drawTitle(dc) {
+        dc.drawText(
+            dc.getWidth() / 2, 
+            dc.getWidth() / 2 - (dc.getFontHeight(Gfx.FONT_LARGE) / 2),
+            Gfx.FONT_LARGE,
+            "SNAKEIQ",
+            Gfx.TEXT_JUSTIFY_CENTER
+            );
     }
 
 }
