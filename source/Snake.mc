@@ -110,9 +110,9 @@ class Snake {
     function arenaCollisionCheck(northWall, eastWall, southWall, westWall) {
         var head = getSnakeHead();
         if (head[x] >= eastWall || 
-            head[x] == westWall ||
-            head[y] == northWall || 
-            head[y] == southWall) {
+            head[x] <= westWall ||
+            head[y] <= northWall || 
+            head[y] >= southWall) {
                 isAlive = false;
         }
     }
