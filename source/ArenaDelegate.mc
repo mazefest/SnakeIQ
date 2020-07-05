@@ -10,7 +10,7 @@ class ArenaDelegate extends Ui.BehaviorDelegate {
 
     function onSelect() {
         view.arena.configFoodCoordinates();
-        Sys.println(view.arena.foodX);
+        view.snake.hasEaten = true;
         return true;
     }
 
