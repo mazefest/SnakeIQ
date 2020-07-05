@@ -9,8 +9,11 @@ class ArenaDelegate extends Ui.BehaviorDelegate {
     }
 
     function onSelect() {
-        view.arena.configFoodCoordinates();
-        view.snake.hasEaten = true;
+        if (!view.snake.isAlive) {
+            //go home
+        } else {
+            // pause
+        }    
         return true;
     }
 
