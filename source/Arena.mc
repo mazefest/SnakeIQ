@@ -25,8 +25,9 @@ class Arena {
        var sWSquared = Math.pow(screenWidth, 2) / 2;
        var sHSquared = Math.pow(screenHeight, 2) / 2;
        width = Math.sqrt(sWSquared).toNumber();
-       width -= width % 5;
        height = Math.sqrt(sHSquared).toNumber();
+       width -= width % 5;
+       height -= height % 5;
     }
 
     function configFoodCoordinates() {
