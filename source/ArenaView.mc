@@ -22,8 +22,10 @@ class ArenaView extends Ui.View {
         dc.setPenWidth(5);
 
         drawPerimeter(dc);
+        drawScore(dc);
         drawFood(dc);
         drawSnake(dc);
+
         
         Ui.requestUpdate();
     }
@@ -53,6 +55,17 @@ class ArenaView extends Ui.View {
 
     function drawFood(dc) {
         dc.drawPoint(arena.foodX, arena.foodY);
+    }
+
+    function drawScore(dc) {
+        var screenWidth = Sys.getDeviceSettings().screenWidth; 
+        dc.drawText(
+            screenWidth / 2,
+            3,
+            Gfx.FONT_SMALL,
+            "Score:" + (snake.size - 4),
+            Gfx.TEXT_JUSTIFY_CENTER
+        );
     }
 
 }
