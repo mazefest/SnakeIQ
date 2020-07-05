@@ -12,7 +12,7 @@ class ArenaView extends Ui.View {
         arena = new Arena();
         snake = new Snake();
         timer = new Timer.Timer();
-		timer.start(method(:driver), 1000, true); 
+		timer.start(method(:driver), 400, true); 
     }
 
     function onUpdate(dc) {
