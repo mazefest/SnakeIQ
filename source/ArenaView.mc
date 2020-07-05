@@ -27,6 +27,14 @@ class ArenaView extends Ui.View {
 
     function driver() {
         foodCheck();
+        
+        snake.arenaCollisionCheck(
+            arena.northWall,
+            arena.eastWall,
+            arena.southWall,
+            arena.westWall
+        );
+        
         snake.driver();
     }
 

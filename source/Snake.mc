@@ -68,15 +68,15 @@ class Snake {
     }
 
     function driver() {
-        var nextCoordinate = getDirectionCoordinate();
-        var nextXCoordinate = xCoordinates[xCoordinates.size() -1] + nextCoordinate[x];
-        var nextYCoordinate = yCoordinates[yCoordinates.size() -1] + nextCoordinate[y];
+        var nextCoordinate = getNextPlot();
+        
+        selfCollisionCheck(nextCoordinate[x], nextCoordinate[y]);
         
         if (hasEaten) {
-            eatAndGrow(nextXCoordinate, nextYCoordinate);
-        } else {
-            moveForward(nextXCoordinate, nextYCoordinate);
-        }
+            eatAndGrow(nextCoordinate[x], nextCoordinate[y]);
+        } else if (isAlive) {
+            moveForward(nextCoordinate[x], nextCoordinate[y]);
+        } 
     }
 
     function eatAndGrow(x, y) {
@@ -97,6 +97,31 @@ class Snake {
         var x = xCoordinates[xCoordinates.size() - 1];
         var y = yCoordinates[yCoordinates.size() - 1];
         return [x, y];
+    }
+
+    function selfCollisionCheck(x, y) {
+        for (var i = 0; i < size -1; i ++) {
+            if (x == xCoordinates[i] && y == yCoordinates[i]) {
+                isAlive = false;
+            }
+        }
+    }
+
+    function arenaCollisionCheck(northWall, eastWall, southWall, westWall) {
+        var head = getSnakeHead();
+        if (head[x] >= eastWall || 
+            head[x] == westWall ||
+            head[y] == northWall || 
+            head[y] == southWall) {
+                isAlive = false;
+        }
+    }
+
+    function getNextPlot() {
+        var nextCoordinate = getDirectionCoordinate();
+        var nextXCoordinate = xCoordinates[xCoordinates.size() -1] + nextCoordinate[x];
+        var nextYCoordinate = yCoordinates[yCoordinates.size() -1] + nextCoordinate[y];
+        return [nextXCoordinate, nextYCoordinate];
     }
 
 }
