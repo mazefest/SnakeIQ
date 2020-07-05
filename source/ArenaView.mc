@@ -16,24 +16,25 @@ class ArenaView extends Ui.View {
     }
 
     function onUpdate(dc) {
-       	dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_WHITE);
-        dc.clear();
-
-        dc.setPenWidth(5);
-
+        clearScreenAndConfig(dc);
         drawPerimeter(dc);
         drawScore(dc);
         drawFood(dc);
         drawSnake(dc);
 
-        
         Ui.requestUpdate();
     }
 
     function driver() {
         snake.driver();
     }
-    
+
+    function clearScreenAndConfig() {
+       	dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_WHITE);
+        dc.clear();
+        dc.setPenWidth(5);
+
+    } 
     function drawPerimeter(dc) {
         dc.drawRectangle(
             (arena.screenWidth - arena.width) / 2,
