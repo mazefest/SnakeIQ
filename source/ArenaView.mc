@@ -21,7 +21,7 @@ class ArenaView extends Ui.View {
         drawScore(dc);
         drawFood(dc);
         drawSnake(dc);
-
+        drawGameOver(dc);
         Ui.requestUpdate();
     }
 
