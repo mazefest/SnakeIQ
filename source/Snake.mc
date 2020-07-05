@@ -69,9 +69,6 @@ class Snake {
     }
 
     function driver() {
-        //Sys.println("xCoordinates >> " + xCoordinates);
-        //Sys.println("yCoordinates >> " + yCoordinates);
-        //Sys.println(nextCoordinate);
         var nextCoordinate = getDirectionCoordinate();
         var nextXCoordinate = xCoordinates[xCoordinates.size() -1] + nextCoordinate[x];
         var nextYCoordinate = yCoordinates[yCoordinates.size() -1] + nextCoordinate[y];
