@@ -26,10 +26,11 @@ class ArenaView extends Ui.View {
     }
 
     function driver() {
+        foodCheck();
         snake.driver();
     }
 
-    function clearScreenAndConfig() {
+    function clearScreenAndConfig(dc) {
        	dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_WHITE);
         dc.clear();
         dc.setPenWidth(5);
@@ -68,6 +69,17 @@ class ArenaView extends Ui.View {
             Gfx.TEXT_JUSTIFY_CENTER
         );
     }
+
+    function foodCheck() {
+        var nextCoordinate = snake.getSnakeHead();
+        Sys.println(nextCoordinate[x] + " == " + arena.foodX);
+        Sys.println(nextCoordinate[y] + " == " + arena.foodY);
+        if (nextCoordinate[x] == arena.foodX && nextCoordinate[y] == arena.foodY) {
+            arena.configFoodCoordinates();
+            snake.hasEaten = true;
+        }
+    }
+
 
 }
 
