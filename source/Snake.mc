@@ -17,6 +17,7 @@ class SnakeInvenotry {
 
 class Snake {
     var isAlive;
+    var hasEaten;
     var direction;
     var inventory;
     var size;
@@ -25,6 +26,7 @@ class Snake {
 
     function initialize() {
         isAlive = true;
+        hasEaten = false;
         direction = South;
         xCoordinates = [];
         yCoordinates = [];
@@ -38,10 +40,11 @@ class Snake {
 
     function setDirection(dir) {
         if (direction == 0 && dir == -1) {
-            direction = South;
+            direction = West;
         } else {
-            direction += dir % 4;
+            direction = (direction + dir) % 4;
         }
+        Sys.println(direction);
     }
 
     function getDirectionCoordinate() {
@@ -59,25 +62,40 @@ class Snake {
     }
 
     function configInitialXYCoordinates() {
-        for (var i = 0; i < size; i ++) {
+        for (var i = size; i > 0; i --) {
             xCoordinates.add(120);
-            yCoordinates.add((120 / 2) - ((i + 1) * 5)) ;
+            yCoordinates.add((120 / 2) - ((i) * 5)) ;
         }
     }
 
     function driver() {
+        //Sys.println("xCoordinates >> " + xCoordinates);
+        //Sys.println("yCoordinates >> " + yCoordinates);
+        //Sys.println(nextCoordinate);
         var nextCoordinate = getDirectionCoordinate();
-        Sys.println("xCoordinates >> " + xCoordinates);
-        Sys.println("yCoordinates >> " + yCoordinates);
-        Sys.println(nextCoordinate);
         var nextXCoordinate = xCoordinates[xCoordinates.size() -1] + nextCoordinate[x];
         var nextYCoordinate = yCoordinates[yCoordinates.size() -1] + nextCoordinate[y];
         
+        if (hasEaten) {
+            eatAndGrow(nextXCoordinate, nextYCoordinate);
+        } else {
+            moveForward(nextXCoordinate, nextYCoordinate);
+        }
+    }
+
+    function eatAndGrow(x, y) {
+        size += 1;
+        xCoordinates.add(x);
+        yCoordinates.add(y);
+        hasEaten = false;
+    }
+
+    function moveForward(x, y) {
         xCoordinates.remove(xCoordinates[0]);
         yCoordinates.remove(yCoordinates[0]);
+        xCoordinates.add(x);
+        yCoordinates.add(y);
 
-        xCoordinates.add(nextXCoordinate);
-        yCoordinates.add(nextYCoordinate);
     }
 
 }
