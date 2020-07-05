@@ -92,7 +92,12 @@ class Snake {
         yCoordinates.remove(yCoordinates[0]);
         xCoordinates.add(x);
         yCoordinates.add(y);
-
+    }
+    
+    function getSnakeHead() {
+        var x = xCoordinates[xCoordinates.size() - 1];
+        var y = yCoordinates[yCoordinates.size() - 1];
+        return [x, y];
     }
 
 }
