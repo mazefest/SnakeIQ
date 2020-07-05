@@ -26,17 +26,13 @@ class Arena {
        var sHSquared = Math.pow(screenHeight, 2) / 2;
        width = Math.sqrt(sWSquared).toNumber();
        height = Math.sqrt(sHSquared).toNumber();
-
-        Sys.println("screen width: " + screenWidth);
-        Sys.println("screen height: " + screenHeight);
-        Sys.println("arena width: " + width);
-        Sys.println("arena height: " + height);
-
     }
 
     function configFoodCoordinates() {
-        foodX = (Math.rand() % (width - 10).toNumber()) + ((screenWidth - width) / 2) + 5;
-        foodY = (Math.rand() % (height - 10).toNumber()) + ((screenHeight - height) / 2) + 5;
+        var randX = (Math.rand() % ((width - 10) / 5)) * 5;
+        var randY = (Math.rand() % ((height - 10) / 5)) * 5;
+        foodX = (randX) + ((screenWidth - width) / 2) + 5;
+        foodY = (randY) + ((screenHeight - height) / 2) + 5;
     }
 
     function configWallValues() {
@@ -45,7 +41,5 @@ class Arena {
         southWall = (northWall + width) - 10;
         eastWall = (westWall + height) - 10; 
     }
-
-
 
 }
