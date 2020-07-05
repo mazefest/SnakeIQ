@@ -36,6 +36,7 @@ class ArenaView extends Ui.View {
         dc.setPenWidth(5);
 
     } 
+
     function drawPerimeter(dc) {
         dc.drawRectangle(
             (arena.screenWidth - arena.width) / 2,
@@ -46,7 +47,6 @@ class ArenaView extends Ui.View {
     }
     
     function drawSnake(dc) {
-
         for (var i = 0; i < snake.size; i++) {
             dc.drawPoint(
                 snake.xCoordinates[i],
@@ -70,17 +70,27 @@ class ArenaView extends Ui.View {
         );
     }
 
+    function drawGameOver(dc) {
+        if (!snake.isAlive) {
+            var screenWidth = Sys.getDeviceSettings().screenWidth; 
+            var screenHeight = Sys.getDeviceSettings().screenHeight; 
+            dc.drawText(
+                screenWidth / 2,
+                screenHeight / 2 - (dc.getFontHeight(Gfx.FONT_MEDIUM) / 2), 
+                Gfx.FONT_MEDIUM,
+                "GAME OVER",
+                Gfx.TEXT_JUSTIFY_CENTER
+            );
+        }
+    }
+
     function foodCheck() {
         var nextCoordinate = snake.getSnakeHead();
-        Sys.println(nextCoordinate[x] + " == " + arena.foodX);
-        Sys.println(nextCoordinate[y] + " == " + arena.foodY);
         if (nextCoordinate[x] == arena.foodX && nextCoordinate[y] == arena.foodY) {
             arena.configFoodCoordinates();
             snake.hasEaten = true;
         }
     }
-
-
 }
 
 

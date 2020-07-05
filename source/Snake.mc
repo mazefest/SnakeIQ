@@ -44,7 +44,6 @@ class Snake {
         } else {
             direction = (direction + dir) % 4;
         }
-        Sys.println(direction);
     }
 
     function getDirectionCoordinate() {
