@@ -60,18 +60,14 @@ class ArenaView extends Ui.View {
     } 
 
     function drawPerimeter(dc) {
-        var x = ((arena.screenWidth - arena.width) / 2);
-        var y = ((arena.screenHeight - arena.height) / 2);
-        x -= x % 5;
-        y -= y % 5;
-        Sys.println("DRAW: " + x + " , " + y);
         dc.drawRectangle(
-            x,//((arena.screenWidth - arena.width) / 2), 
-            y,//((arena.screenHeight - arena.height) / 2) + 3,
-            arena.width,
-            arena.height
+            arena.x,
+            arena.y,
+            arena.width + (1),
+            arena.height + (1)
         );
     }
+
     function drawSnake(dc) {
        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
         for (var i = 0; i < snake.size; i++) {
