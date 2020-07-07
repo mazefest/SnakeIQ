@@ -3,5 +3,6 @@
     <string id="prompt"> </string>
     <string id="newGame">New Game</string>
     <string id="settings">Settings</string>
+    <string id="highScores">High Scores</string>
     <string id="darkMode">Dark Mode</string>
 </strings>

@@ -2,6 +2,7 @@
 <menu id="MainMenu">
     <menu-item id="newGame" label="@Strings.newGame" />
     <menu-item id="settings" label="@Strings.settings" />
+    <menu-item id="highScores" label="@Strings.highScores" />
 </menu>
 <menu id="SettingsMenu">
     <menu-item id="darkMode" label="@Strings.darkMode"/>
