@@ -12,10 +12,13 @@ class Arena {
     var eastWall;
     var southWall;
     var westWall;
+    var x;
+    var y;
     
     function initialize() {
         configArenaDimensions();
         configFoodCoordinates();
+        configPerimeterStartingPoint();
         configWallValues();
     }
 
@@ -28,6 +31,13 @@ class Arena {
        height = Math.sqrt(sHSquared).toNumber();
        width -= width % 5;
        height -= height % 5;
+    }
+
+    function configPerimeterStartingPoint() {
+        x = ((screenWidth - width) / 2);
+        y = ((screenHeight - height) / 2);
+        x -= x % 5;
+        y -= y % 5;
     }
 
     function configFoodCoordinates() {
