@@ -32,25 +32,19 @@ class ArenaView extends Ui.View {
     }
 
     function driver() {
-        foodCheck();
         var nextCoordinate = snake.getNextPlot();
+        
+        foodCheck();
 
-        snake.selfCollisionCheck(nextCoordinate[x], nextCoordinate[y]);
-         
-        snake.arenaCollisionCheck(
-            arena.northWall,
-            arena.eastWall,
-            arena.southWall,
-            arena.westWall
-        );
         if (snake.hasEaten) {
             snake.eatAndGrow(nextCoordinate[x], nextCoordinate[y]);
         } else if (snake.isAlive) {
+            snake.selfCollisionCheck(nextCoordinate[x], nextCoordinate[y]);
+            snake.arenaCollisionCheck(arena.northWall, arena.eastWall, arena.southWall, arena.westWall);
             snake.moveForward(nextCoordinate[x], nextCoordinate[y]);
         } 
 
-        /*
-        snake.driver();*/
+        Ui.requestUpdate();
     }
 
     function clearScreenAndConfig(dc) {
