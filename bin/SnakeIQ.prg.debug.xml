@@ -343,7 +343,7 @@
         <entry endPc="268439294" name="item" stackId="1" startPc="268439263"/>
         <entry endPc="268439512" name="dc" stackId="1" startPc="268439437"/>
         <entry endPc="268439622" name="dc" stackId="1" startPc="268439512"/>
-        <entry endPc="268439803" name="rez_cmp_local_text_1016875872" stackId="2" startPc="268439634"/>
+        <entry endPc="268439803" name="rez_cmp_local_text_2693986911" stackId="2" startPc="268439634"/>
         <entry endPc="268439804" name="dc" stackId="1" startPc="268439622"/>
     </localVars>
     <annotations/>
