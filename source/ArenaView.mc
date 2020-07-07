@@ -12,7 +12,7 @@ class ArenaView extends Ui.View {
         arena = new Arena();
         snake = new Snake();
         timer = new Timer.Timer();
-		timer.start(method(:driver), 400, true); 
+		timer.start(method(:driver), 100, true); 
     }
 
     function onUpdate(dc) {
@@ -22,45 +22,70 @@ class ArenaView extends Ui.View {
         drawFood(dc);
         drawSnake(dc);
         drawGameOver(dc);
-        Ui.requestUpdate();
-    }
 
-    function driver() {
-        foodCheck();
-        
+        var nextCoordinate = snake.getNextPlot();
+        snake.selfCollisionCheck(nextCoordinate[x], nextCoordinate[y]);
+         
         snake.arenaCollisionCheck(
             arena.northWall,
             arena.eastWall,
             arena.southWall,
             arena.westWall
         );
-        
-        snake.driver();
+
+        Ui.requestUpdate();
+    }
+
+    function driver() {
+        foodCheck();
+        var nextCoordinate = snake.getNextPlot();
+
+        /*snake.selfCollisionCheck(nextCoordinate[x], nextCoordinate[y]);
+         
+        snake.arenaCollisionCheck(
+            arena.northWall,
+            arena.eastWall,
+            arena.southWall,
+            arena.westWall
+        );*/
+        if (snake.hasEaten) {
+            snake.eatAndGrow(nextCoordinate[x], nextCoordinate[y]);
+        } else if (snake.isAlive) {
+            snake.moveForward(nextCoordinate[x], nextCoordinate[y]);
+        } 
+
+        /*
+        snake.driver();*/
     }
 
     function clearScreenAndConfig(dc) {
        	dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_WHITE);
         dc.clear();
         dc.setPenWidth(5);
-
     } 
 
     function drawPerimeter(dc) {
+        var x = ((arena.screenWidth - arena.width) / 2);
+        var y = ((arena.screenHeight - arena.height) / 2);
+        x -= x % 5;
+        y -= y % 5;
+
         dc.drawRectangle(
-            (arena.screenWidth - arena.width) / 2,
-            (arena.screenHeight - arena.height) / 2,
+            x,//((arena.screenWidth - arena.width) / 2), 
+            y,//((arena.screenHeight - arena.height) / 2) + 3,
             arena.width,
             arena.height
         );
     }
-    
     function drawSnake(dc) {
+       	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
         for (var i = 0; i < snake.size; i++) {
             dc.drawPoint(
                 snake.xCoordinates[i],
                 snake.yCoordinates[i]
             );
         }
+       	dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_WHITE);
     }
 
     function drawFood(dc) {
@@ -100,7 +125,6 @@ class ArenaView extends Ui.View {
         }
     }
 }
-
 
 function getArenaView() {
     var view = new ArenaView();
