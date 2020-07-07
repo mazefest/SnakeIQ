@@ -8,6 +8,7 @@ class ArenaView extends Ui.View {
     var snake; 
     var timer;
     var paused;
+    var darkMode;
     var backgroundColor;
     var forgroundColor;
 
@@ -139,13 +140,13 @@ class ArenaView extends Ui.View {
     }
 
     function configColor() {
-        darkMode = app.getApp().getProperty("darkMode");
+        darkMode = App.getApp().getProperty("darkMode");
         if (darkMode) {
-            forgroundColor = COLOR_WHITE;
-            backgroundColor = COLOR_BLACK;
+            forgroundColor = Gfx.COLOR_WHITE;
+            backgroundColor = Gfx.COLOR_BLACK;
         } else {
-            forgroundColor = COLOR_BLACK;
-            backgroundColor = COLOR_WHITE;
+            forgroundColor = Gfx.COLOR_BLACK;
+            backgroundColor = Gfx.COLOR_WHITE;
         }
     }
 }
