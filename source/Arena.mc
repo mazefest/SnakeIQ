@@ -41,10 +41,18 @@ class Arena {
     }
 
     function configWallValues() {
-        northWall = (((screenHeight - height) / 2) + 5).toNumber(); 
-        westWall = (((screenHeight - height) / 2) + 5).toNumber();
-        southWall = (northWall + width) - 10;
-        eastWall = (westWall + height) - 10; 
+        northWall = 35;//(((screenHeight - height) / 2)).toNumber() + 5; 
+        westWall = 40;//(westWall + width); 
+        
+        southWall = (northWall + height);// - 10;
+        eastWall = westWall+ width;
+
+        Sys.println(
+            "north: " + northWall +
+            "south: " + southWall +
+            "east: " + eastWall +
+            "west: " + westWall
+            );
     }
 
 }

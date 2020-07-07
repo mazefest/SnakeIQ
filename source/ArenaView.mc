@@ -23,16 +23,7 @@ class ArenaView extends Ui.View {
         drawSnake(dc);
         drawGameOver(dc);
 
-        var nextCoordinate = snake.getNextPlot();
-        snake.selfCollisionCheck(nextCoordinate[x], nextCoordinate[y]);
          
-        snake.arenaCollisionCheck(
-            arena.northWall,
-            arena.eastWall,
-            arena.southWall,
-            arena.westWall
-        );
-
         Ui.requestUpdate();
     }
 
@@ -44,14 +35,14 @@ class ArenaView extends Ui.View {
         foodCheck();
         var nextCoordinate = snake.getNextPlot();
 
-        /*snake.selfCollisionCheck(nextCoordinate[x], nextCoordinate[y]);
+        snake.selfCollisionCheck(nextCoordinate[x], nextCoordinate[y]);
          
         snake.arenaCollisionCheck(
             arena.northWall,
             arena.eastWall,
             arena.southWall,
             arena.westWall
-        );*/
+        );
         if (snake.hasEaten) {
             snake.eatAndGrow(nextCoordinate[x], nextCoordinate[y]);
         } else if (snake.isAlive) {
@@ -73,7 +64,7 @@ class ArenaView extends Ui.View {
         var y = ((arena.screenHeight - arena.height) / 2);
         x -= x % 5;
         y -= y % 5;
-
+        Sys.println("DRAW: " + x + " , " + y);
         dc.drawRectangle(
             x,//((arena.screenWidth - arena.width) / 2), 
             y,//((arena.screenHeight - arena.height) / 2) + 3,
