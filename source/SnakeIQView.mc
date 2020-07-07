@@ -1,5 +1,6 @@
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
+using Toybox.Application as App;
 
 class SnakeIQView extends Ui.View {
 
