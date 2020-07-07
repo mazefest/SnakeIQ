@@ -6,12 +6,14 @@ class ArenaView extends Ui.View {
     var arena;
     var snake; 
     var timer;
+    var paused;
 
     function initialize() {
         View.initialize();
         arena = new Arena();
         snake = new Snake();
         timer = new Timer.Timer();
+        paused = false;
 		timer.start(method(:driver), 100, true); 
     }
 
@@ -22,6 +24,15 @@ class ArenaView extends Ui.View {
         drawFood(dc);
         drawSnake(dc);
         drawGameOver(dc);
+        drawPause(dc);
+    }
+
+    function start() {
+        paused = false;
+    }
+
+    function pause() {
+        paused = true;
     }
 
     function onHide() {
@@ -35,7 +46,7 @@ class ArenaView extends Ui.View {
 
         if (snake.hasEaten) {
             snake.eatAndGrow(nextCoordinate[x], nextCoordinate[y]);
-        } else if (snake.isAlive) {
+        } else if (snake.isAlive && !paused) {
             snake.selfCollisionCheck(nextCoordinate[x], nextCoordinate[y]);
             snake.arenaCollisionCheck(arena.northWall, arena.eastWall, arena.southWall, arena.westWall);
             snake.moveForward(nextCoordinate[x], nextCoordinate[y]);
@@ -94,6 +105,20 @@ class ArenaView extends Ui.View {
                 screenHeight / 2 - (dc.getFontHeight(Gfx.FONT_MEDIUM) / 2), 
                 Gfx.FONT_MEDIUM,
                 "GAME OVER",
+                Gfx.TEXT_JUSTIFY_CENTER
+            );
+        }
+    }
+
+        function drawPause(dc) {
+        if (paused) {
+            var screenWidth = Sys.getDeviceSettings().screenWidth; 
+            var screenHeight = Sys.getDeviceSettings().screenHeight; 
+            dc.drawText(
+                screenWidth / 2,
+                screenHeight / 2 - (dc.getFontHeight(Gfx.FONT_MEDIUM) / 2), 
+                Gfx.FONT_MEDIUM,
+                "PAUSED",
                 Gfx.TEXT_JUSTIFY_CENTER
             );
         }

@@ -10,10 +10,14 @@ class ArenaDelegate extends Ui.BehaviorDelegate {
 
     function onSelect() {
         if (!view.snake.isAlive) {
-            //go home
+        
+        } else if (view.paused) {
+            view.start();
+        
         } else {
-            // pause
+            view.pause();
         }    
+        
         return true;
     }
 
