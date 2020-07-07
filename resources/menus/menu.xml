@@ -1,3 +1,10 @@
+<menus>
 <menu id="MainMenu">
-    <menu-item id="item_1" label="@Strings.menu_label_1" />
+    <menu-item id="newGame" label="@Strings.newGame" />
+    <menu-item id="settings" label="@Strings.settings" />
 </menu>
+<menu id="SettingsMenu">
+    <menu-item id="darkMode" label="@Strings.darkMode"/>
+</menu>
+</menus>
+

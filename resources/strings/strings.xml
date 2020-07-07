@@ -1,7 +1,7 @@
 <strings>
     <string id="AppName">SnakeIQ</string>
-
     <string id="prompt"> </string>
-
-    <string id="menu_label_1">New Game</string>
+    <string id="newGame">New Game</string>
+    <string id="settings">Settings</string>
+    <string id="darkMode">Dark Mode</string>
 </strings>
