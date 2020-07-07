@@ -31,10 +31,13 @@ class Arena {
     }
 
     function configFoodCoordinates() {
-        var randX = (Math.rand() % ((width - 10) / 5)) * 5;
-        var randY = (Math.rand() % ((height - 10) / 5)) * 5;
-        foodX = (randX) + ((screenWidth - width) / 2) + 5;
-        foodY = (randY) + ((screenHeight - height) / 2) + 5;
+        var penWidth = 5;
+        var randX = (Math.rand() % ((width - penWidth * 2) / 5)) * 5;
+        var randY = (Math.rand() % ((height - penWidth * 2) / 5)) * 5;
+        foodX = (randX) + ((screenWidth - width) / 2) + penWidth;
+        foodY = (randY) + ((screenHeight - height) / 2) + penWidth;
+        foodX -= foodX % 5;
+        foodY -= foodY % 5;
     }
 
     function configWallValues() {

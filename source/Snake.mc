@@ -61,22 +61,13 @@ class Snake {
     }
 
     function configInitialXYCoordinates() {
-        for (var i = size; i > 0; i --) {
-            xCoordinates.add(120);
-            yCoordinates.add((120 / 2) - ((i) * 5)) ;
+        for (var i = size; i > 0; i--) {
+            var x = 120;
+            var y = (120 / 2) - (i * 5);
+            y -= y % 5;
+            xCoordinates.add(x);
+            yCoordinates.add(y);
         }
-    }
-
-    function driver() {
-        var nextCoordinate = getNextPlot();
-        
-        selfCollisionCheck(nextCoordinate[x], nextCoordinate[y]);
-        
-        if (hasEaten) {
-            eatAndGrow(nextCoordinate[x], nextCoordinate[y]);
-        } else if (isAlive) {
-            moveForward(nextCoordinate[x], nextCoordinate[y]);
-        } 
     }
 
     function eatAndGrow(x, y) {
@@ -87,10 +78,14 @@ class Snake {
     }
 
     function moveForward(x, y) {
-        xCoordinates.remove(xCoordinates[0]);
-        yCoordinates.remove(yCoordinates[0]);
-        xCoordinates.add(x);
-        yCoordinates.add(y);
+        if (isAlive) {
+
+        
+            xCoordinates.remove(xCoordinates[0]);
+            yCoordinates.remove(yCoordinates[0]);
+            xCoordinates.add(x);
+            yCoordinates.add(y);
+        }
     }
     
     function getSnakeHead() {
