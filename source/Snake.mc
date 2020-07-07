@@ -39,7 +39,6 @@ class Snake {
     }
 
     function setDirection(dir) {
-        Sys.println("set");
         if (direction == 0 && dir == -1) {
             direction = West;
         } else {
@@ -72,7 +71,6 @@ class Snake {
     }
 
     function eatAndGrow(x, y) {
-
         size += 1;
         xCoordinates.add(x);
         yCoordinates.add(y);
@@ -80,9 +78,6 @@ class Snake {
     }
 
     function moveForward(x, y) {
-        if (y == 35) {
-            isAlive = false;
-        }
         if (isAlive) {
             xCoordinates.remove(xCoordinates[0]);
             yCoordinates.remove(yCoordinates[0]);
@@ -106,15 +101,12 @@ class Snake {
     }
 
     function arenaCollisionCheck(northWall, eastWall, southWall, westWall) {
-        var head = getSnakeHead();
-        var next = getDirectionCoordinate();
-        Sys.println("North: " + northWall);
-        Sys.println("Ssnake Head: " + getSnakeHead());
+        var head = getNextPlot(); 
         if (head[x] >= eastWall || 
             head[x] <= westWall ||
             head[y] <= northWall || 
             head[y] >= southWall) {
-                isAlive = false;
+            isAlive = false;
         }
     }
 

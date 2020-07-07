@@ -22,9 +22,6 @@ class ArenaView extends Ui.View {
         drawFood(dc);
         drawSnake(dc);
         drawGameOver(dc);
-
-         
-        Ui.requestUpdate();
     }
 
     function onHide() {
