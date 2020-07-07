@@ -36,6 +36,10 @@ class ArenaView extends Ui.View {
         Ui.requestUpdate();
     }
 
+    function onHide() {
+        timer.stop();
+    }
+
     function driver() {
         foodCheck();
         var nextCoordinate = snake.getNextPlot();
