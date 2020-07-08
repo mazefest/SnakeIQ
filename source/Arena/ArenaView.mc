@@ -8,6 +8,7 @@ class ArenaView extends Ui.View {
     var snake; 
     var timer;
     var paused;
+    var scoreSent;
     var darkMode;
     var backgroundColor;
     var forgroundColor;
@@ -15,6 +16,7 @@ class ArenaView extends Ui.View {
     function initialize() {
         View.initialize();
         paused = false;
+        scoreSent = false;
         arena = new Arena();
         snake = new Snake();
         timer = new Timer.Timer();
@@ -56,6 +58,10 @@ class ArenaView extends Ui.View {
             snake.selfCollisionCheck(nextCoordinate[x], nextCoordinate[y]);
             snake.arenaCollisionCheck(arena.northWall, arena.eastWall, arena.southWall, arena.westWall);
             snake.moveForward(nextCoordinate[x], nextCoordinate[y]);
+
+        } else if (!snake.isAlive && !scoreSent) {
+            $.highScores.local.addScore(snake.size - 4);
+            scoreSent = true;
         } 
 
         Ui.requestUpdate();
@@ -105,15 +111,21 @@ class ArenaView extends Ui.View {
     function drawGameOver(dc) {
         if (!snake.isAlive) {
             var screenWidth = Sys.getDeviceSettings().screenWidth; 
-            var screenHeight = Sys.getDeviceSettings().screenHeight; 
+            var screenHeight = Sys.getDeviceSettings().screenHeight;
+            var text = "GAME OVER";
+            if (snake.size - 4 > highScores.local.one) {
+                text = "NEW HIGH SCORE!!!";
+            }
             dc.drawText(
                 screenWidth / 2,
                 screenHeight / 2 - (dc.getFontHeight(Gfx.FONT_MEDIUM) / 2), 
                 Gfx.FONT_MEDIUM,
-                "GAME OVER",
+                text,
                 Gfx.TEXT_JUSTIFY_CENTER
             );
+        
         }
+
     }
 
     

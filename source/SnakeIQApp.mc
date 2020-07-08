@@ -1,10 +1,13 @@
 using Toybox.Application;
 using Toybox.WatchUi;
 
+var highScores;
+
 class SnakeIQApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
+        highScores = new HighScores();
     }
 
     // onStart() is called on application start up
