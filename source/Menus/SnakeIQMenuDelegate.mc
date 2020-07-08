@@ -14,7 +14,9 @@ class SnakeIQMenuDelegate extends Ui.MenuInputDelegate {
         
         } else if (item == :settings) {
             WatchUi.pushView(new Rez.Menus.SettingsMenu(), new SnakeIQSettingsDelegate(), WatchUi.SLIDE_UP);
-
+        
+        } else if (item == :highScores) {
+            WatchUi.pushView(new HighScoreView(), new HighScoreDelegate(), WatchUi.SLIDE_UP);
         }
     }
 
