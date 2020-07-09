@@ -12,6 +12,7 @@ class ArenaView extends Ui.View {
     var darkMode;
     var backgroundColor;
     var forgroundColor;
+    var snakeColor;
 
     function initialize() {
         View.initialize();
@@ -22,6 +23,7 @@ class ArenaView extends Ui.View {
         timer = new Timer.Timer();
 		timer.start(method(:driver), 100, true); 
         configColor();
+        configSnakeColor();
     }
 
     function onUpdate(dc) {
@@ -83,7 +85,7 @@ class ArenaView extends Ui.View {
     }
 
     function drawSnake(dc) {
-       	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
+       	dc.setColor(snakeColor, Gfx.COLOR_TRANSPARENT);
         for (var i = 0; i < snake.size; i++) {
             dc.drawPoint(
                 snake.xCoordinates[i],
@@ -160,6 +162,22 @@ class ArenaView extends Ui.View {
             forgroundColor = Gfx.COLOR_BLACK;
             backgroundColor = Gfx.COLOR_WHITE;
         }
+    }
+
+    function configSnakeColor() {
+        var colorIndex = App.getApp().getProperty("snakeColor");
+        var colors = [
+            Gfx.COLOR_GREEN,
+            Gfx.COLOR_BLUE,
+            Gfx.COLOR_PINK,
+            Gfx.COLOR_YELLOW,
+            Gfx.COLOR_ORANGE,
+            Gfx.COLOR_DK_GRAY,
+            Gfx.COLOR_RED,
+            Gfx.COLOR_BLACK
+        ];
+        Sys.println(colorIndex);
+        snakeColor = colors[colorIndex];
     }
 }
 
