@@ -6,554 +6,545 @@
         <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Delegates/SnakeIQDelegate.mc" id="4" lineNum="9" pc="268435479" symbol="onSelect"/>
         <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Delegates/SnakeIQDelegate.mc" id="4" lineNum="10" pc="268435483" symbol="onSelect"/>
         <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Delegates/SnakeIQDelegate.mc" id="4" lineNum="11" pc="268435567" symbol="onSelect"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="6" lineNum="7" pc="268435571" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="6" lineNum="8" pc="268435575" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="6" lineNum="9" pc="268435593" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="7" lineNum="12" pc="268435604" symbol="onSelect"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="7" lineNum="13" pc="268435608" symbol="onSelect"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="7" lineNum="15" pc="268435635" symbol="onSelect"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="7" lineNum="16" pc="268435652" symbol="onSelect"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="7" lineNum="19" pc="268435673" symbol="onSelect"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="7" lineNum="22" pc="268435691" symbol="onSelect"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="8" lineNum="25" pc="268435695" symbol="onNextPage"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="8" lineNum="26" pc="268435699" symbol="onNextPage"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="9" lineNum="28" pc="268435729" symbol="onPreviousPage"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="9" lineNum="29" pc="268435733" symbol="onPreviousPage"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="11" lineNum="18" pc="268435763" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="11" lineNum="19" pc="268435767" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="11" lineNum="20" pc="268435779" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="11" lineNum="21" pc="268435791" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="11" lineNum="22" pc="268435803" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="12" lineNum="25" pc="268435816" symbol="configArenaDimensions"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="12" lineNum="26" pc="268435820" symbol="configArenaDimensions"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="12" lineNum="27" pc="268435849" symbol="configArenaDimensions"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="12" lineNum="28" pc="268435878" symbol="configArenaDimensions"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="12" lineNum="29" pc="268435914" symbol="configArenaDimensions"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="12" lineNum="30" pc="268435950" symbol="configArenaDimensions"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="12" lineNum="31" pc="268435984" symbol="configArenaDimensions"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="12" lineNum="32" pc="268436018" symbol="configArenaDimensions"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="12" lineNum="33" pc="268436046" symbol="configArenaDimensions"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="13" lineNum="36" pc="268436075" symbol="configPerimeterStartingPoint"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="13" lineNum="37" pc="268436079" symbol="configPerimeterStartingPoint"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="13" lineNum="38" pc="268436110" symbol="configPerimeterStartingPoint"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="13" lineNum="39" pc="268436141" symbol="configPerimeterStartingPoint"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="13" lineNum="40" pc="268436169" symbol="configPerimeterStartingPoint"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="14" lineNum="43" pc="268436198" symbol="configFoodCoordinates"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="14" lineNum="44" pc="268436202" symbol="configFoodCoordinates"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="14" lineNum="45" pc="268436209" symbol="configFoodCoordinates"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="14" lineNum="46" pc="268436256" symbol="configFoodCoordinates"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="14" lineNum="47" pc="268436303" symbol="configFoodCoordinates"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="14" lineNum="48" pc="268436340" symbol="configFoodCoordinates"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="14" lineNum="49" pc="268436377" symbol="configFoodCoordinates"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="14" lineNum="50" pc="268436405" symbol="configFoodCoordinates"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="15" lineNum="53" pc="268436434" symbol="configWallValues"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="15" lineNum="54" pc="268436438" symbol="configWallValues"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="15" lineNum="55" pc="268436454" symbol="configWallValues"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="15" lineNum="56" pc="268436470" symbol="configWallValues"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="15" lineNum="57" pc="268436495" symbol="configWallValues"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="17" lineNum="7" pc="268436521" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="17" lineNum="8" pc="268436525" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="18" lineNum="11" pc="268436544" symbol="onMenuItem"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="18" lineNum="12" pc="268436548" symbol="onMenuItem"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="18" lineNum="13" pc="268436559" symbol="onMenuItem"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="18" lineNum="15" pc="268436574" symbol="onMenuItem"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="18" lineNum="16" pc="268436585" symbol="onMenuItem"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="18" lineNum="18" pc="268436676" symbol="onMenuItem"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="18" lineNum="19" pc="268436687" symbol="onMenuItem"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="20" lineNum="27" pc="268436767" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="20" lineNum="28" pc="268436771" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="21" lineNum="31" pc="268436790" symbol="onMenuItem"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="21" lineNum="32" pc="268436794" symbol="onMenuItem"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="21" lineNum="33" pc="268436805" symbol="onMenuItem"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="22" lineNum="38" pc="268436821" symbol="getDarkModeMenu"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="22" lineNum="39" pc="268436833" symbol="getDarkModeMenu"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="22" lineNum="40" pc="268436861" symbol="getDarkModeMenu"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="22" lineNum="41" pc="268436892" symbol="getDarkModeMenu"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="22" lineNum="42" pc="268436910" symbol="getDarkModeMenu"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="22" lineNum="43" pc="268436927" symbol="getDarkModeMenu"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="22" lineNum="44" pc="268436933" symbol="getDarkModeMenu"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="22" lineNum="46" pc="268436958" symbol="getDarkModeMenu"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="22" lineNum="49" pc="268436980" symbol="getDarkModeMenu"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="24" lineNum="58" pc="268437033" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="24" lineNum="59" pc="268437037" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="25" lineNum="62" pc="268437056" symbol="onMenuItem"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="25" lineNum="63" pc="268437060" symbol="onMenuItem"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="25" lineNum="64" pc="268437071" symbol="onMenuItem"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="25" lineNum="66" pc="268437106" symbol="onMenuItem"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="25" lineNum="67" pc="268437117" symbol="onMenuItem"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="27" lineNum="7" pc="268437153" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="27" lineNum="8" pc="268437157" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="28" lineNum="11" pc="268437176" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="28" lineNum="12" pc="268437180" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="28" lineNum="13" pc="268437200" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="28" lineNum="15" pc="268437236" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="28" lineNum="16" pc="268437250" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="28" lineNum="17" pc="268437264" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="29" lineNum="20" pc="268437279" symbol="drawTitle"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="29" lineNum="21" pc="268437283" symbol="drawTitle"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="30" lineNum="30" pc="268437347" symbol="drawDivider"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="30" lineNum="31" pc="268437351" symbol="drawDivider"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="31" lineNum="39" pc="268437432" symbol="drawScores"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="31" lineNum="40" pc="268437436" symbol="drawScores"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="33" lineNum="57" pc="268437703" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="33" lineNum="58" pc="268437707" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="34" lineNum="61" pc="268437726" symbol="onSelect"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="34" lineNum="62" pc="268437730" symbol="onSelect"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="36" lineNum="7" pc="268437734" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="36" lineNum="8" pc="268437738" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="36" lineNum="9" pc="268437768" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="38" lineNum="20" pc="268437799" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="38" lineNum="21" pc="268437803" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="39" lineNum="24" pc="268437816" symbol="configScores"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="39" lineNum="25" pc="268437820" symbol="configScores"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="39" lineNum="26" pc="268437857" symbol="configScores"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="39" lineNum="27" pc="268437894" symbol="configScores"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="39" lineNum="28" pc="268437931" symbol="configScores"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="39" lineNum="29" pc="268437968" symbol="configScores"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="40" lineNum="32" pc="268438006" symbol="setScores"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="40" lineNum="33" pc="268438010" symbol="setScores"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="40" lineNum="34" pc="268438048" symbol="setScores"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="40" lineNum="35" pc="268438086" symbol="setScores"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="40" lineNum="36" pc="268438124" symbol="setScores"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="40" lineNum="37" pc="268438162" symbol="setScores"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="40" pc="268438201" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="41" pc="268438205" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="42" pc="268438293" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="43" pc="268438296" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="45" pc="268438306" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="46" pc="268438320" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="47" pc="268438344" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="48" pc="268438355" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="52" pc="268438375" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="53" pc="268438382" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="54" pc="268438397" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="55" pc="268438405" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="57" pc="268438415" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="58" pc="268438428" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="64" pc="268438451" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="65" pc="268438467" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="66" pc="268438483" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="67" pc="268438499" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="68" pc="268438515" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="41" lineNum="71" pc="268438534" symbol="addScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="43" lineNum="77" pc="268438547" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="43" lineNum="78" pc="268438551" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="46" lineNum="27" pc="268438573" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="46" lineNum="28" pc="268438577" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="46" lineNum="29" pc="268438587" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="46" lineNum="30" pc="268438597" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="46" lineNum="31" pc="268438613" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="46" lineNum="32" pc="268438627" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="46" lineNum="33" pc="268438641" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="46" lineNum="34" pc="268438654" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="47" lineNum="37" pc="268438667" symbol="getDirection"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="47" lineNum="38" pc="268438671" symbol="getDirection"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="48" lineNum="41" pc="268438681" symbol="setDirection"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="48" lineNum="42" pc="268438685" symbol="setDirection"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="48" lineNum="43" pc="268438716" symbol="setDirection"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="48" lineNum="45" pc="268438735" symbol="setDirection"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="49" lineNum="49" pc="268438761" symbol="getDirectionCoordinate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="49" lineNum="50" pc="268438765" symbol="getDirectionCoordinate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="49" lineNum="51" pc="268438785" symbol="getDirectionCoordinate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="49" lineNum="52" pc="268438821" symbol="getDirectionCoordinate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="49" lineNum="53" pc="268438841" symbol="getDirectionCoordinate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="49" lineNum="54" pc="268438877" symbol="getDirectionCoordinate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="49" lineNum="55" pc="268438897" symbol="getDirectionCoordinate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="49" lineNum="56" pc="268438933" symbol="getDirectionCoordinate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="49" lineNum="57" pc="268438953" symbol="getDirectionCoordinate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="49" lineNum="59" pc="268438989" symbol="getDirectionCoordinate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="50" lineNum="63" pc="268439023" symbol="configInitialXYCoordinates"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="50" lineNum="64" pc="268439027" symbol="configInitialXYCoordinates"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="50" lineNum="65" pc="268439048" symbol="configInitialXYCoordinates"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="50" lineNum="66" pc="268439055" symbol="configInitialXYCoordinates"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="50" lineNum="67" pc="268439071" symbol="configInitialXYCoordinates"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="50" lineNum="68" pc="268439084" symbol="configInitialXYCoordinates"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="50" lineNum="69" pc="268439104" symbol="configInitialXYCoordinates"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="51" lineNum="73" pc="268439138" symbol="eatAndGrow"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="51" lineNum="74" pc="268439142" symbol="eatAndGrow"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="51" lineNum="75" pc="268439161" symbol="eatAndGrow"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="51" lineNum="76" pc="268439181" symbol="eatAndGrow"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="51" lineNum="77" pc="268439201" symbol="eatAndGrow"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="52" lineNum="80" pc="268439212" symbol="moveForward"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="52" lineNum="81" pc="268439216" symbol="moveForward"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="52" lineNum="82" pc="268439227" symbol="moveForward"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="52" lineNum="83" pc="268439259" symbol="moveForward"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="52" lineNum="84" pc="268439291" symbol="moveForward"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="52" lineNum="85" pc="268439311" symbol="moveForward"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="53" lineNum="89" pc="268439335" symbol="getSnakeHead"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="53" lineNum="90" pc="268439339" symbol="getSnakeHead"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="53" lineNum="91" pc="268439373" symbol="getSnakeHead"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="53" lineNum="92" pc="268439407" symbol="getSnakeHead"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="54" lineNum="95" pc="268439435" symbol="selfCollisionCheck"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="54" lineNum="96" pc="268439439" symbol="selfCollisionCheck"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="54" lineNum="97" pc="268439466" symbol="selfCollisionCheck"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="54" lineNum="98" pc="268439503" symbol="selfCollisionCheck"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="55" lineNum="103" pc="268439530" symbol="arenaCollisionCheck"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="55" lineNum="104" pc="268439534" symbol="arenaCollisionCheck"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="55" lineNum="105" pc="268439547" symbol="arenaCollisionCheck"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="55" lineNum="109" pc="268439624" symbol="arenaCollisionCheck"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="56" lineNum="113" pc="268439638" symbol="getNextPlot"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="56" lineNum="114" pc="268439642" symbol="getNextPlot"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="56" lineNum="115" pc="268439655" symbol="getNextPlot"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="56" lineNum="116" pc="268439701" symbol="getNextPlot"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="56" lineNum="117" pc="268439747" symbol="getNextPlot"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="58" lineNum="16" pc="268439775" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="58" lineNum="17" pc="268439779" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="58" lineNum="18" pc="268439797" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="58" lineNum="19" pc="268439807" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="58" lineNum="20" pc="268439817" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="58" lineNum="21" pc="268439847" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="58" lineNum="22" pc="268439877" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="58" lineNum="23" pc="268439913" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="58" lineNum="24" pc="268439954" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="59" lineNum="27" pc="268439967" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="59" lineNum="28" pc="268439971" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="59" lineNum="29" pc="268439985" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="59" lineNum="30" pc="268439999" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="59" lineNum="31" pc="268440013" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="59" lineNum="32" pc="268440027" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="59" lineNum="33" pc="268440041" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="59" lineNum="34" pc="268440055" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="60" lineNum="37" pc="268440070" symbol="start"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="60" lineNum="38" pc="268440074" symbol="start"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="61" lineNum="41" pc="268440085" symbol="pause"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="61" lineNum="42" pc="268440089" symbol="pause"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="62" lineNum="45" pc="268440100" symbol="onHide"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="62" lineNum="46" pc="268440104" symbol="onHide"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="63" lineNum="49" pc="268440123" symbol="driver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="63" lineNum="50" pc="268440127" symbol="driver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="63" lineNum="52" pc="268440146" symbol="driver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="63" lineNum="54" pc="268440158" symbol="driver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="63" lineNum="55" pc="268440175" symbol="driver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="63" lineNum="57" pc="268440218" symbol="driver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="63" lineNum="58" pc="268440250" symbol="driver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="63" lineNum="59" pc="268440290" symbol="driver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="63" lineNum="60" pc="268440364" symbol="driver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="63" lineNum="62" pc="268440407" symbol="driver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="63" lineNum="63" pc="268440440" symbol="driver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="63" lineNum="64" pc="268440488" symbol="driver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="63" lineNum="67" pc="268440501" symbol="driver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="64" lineNum="70" pc="268440518" symbol="clearScreenAndConfig"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="64" lineNum="71" pc="268440522" symbol="clearScreenAndConfig"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="64" lineNum="72" pc="268440550" symbol="clearScreenAndConfig"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="64" lineNum="73" pc="268440562" symbol="clearScreenAndConfig"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="65" lineNum="76" pc="268440580" symbol="drawPerimeter"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="65" lineNum="77" pc="268440584" symbol="drawPerimeter"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="66" lineNum="85" pc="268440665" symbol="drawSnake"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="66" lineNum="86" pc="268440669" symbol="drawSnake"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="66" lineNum="87" pc="268440705" symbol="drawSnake"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="66" lineNum="88" pc="268440732" symbol="drawSnake"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="66" lineNum="93" pc="268440791" symbol="drawSnake"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="67" lineNum="96" pc="268440820" symbol="drawFood"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="67" lineNum="97" pc="268440824" symbol="drawFood"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="68" lineNum="100" pc="268440865" symbol="drawScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="68" lineNum="101" pc="268440869" symbol="drawScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="68" lineNum="102" pc="268440892" symbol="drawScore"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="69" lineNum="111" pc="268440968" symbol="drawGameOver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="69" lineNum="112" pc="268440972" symbol="drawGameOver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="69" lineNum="113" pc="268440990" symbol="drawGameOver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="69" lineNum="114" pc="268441013" symbol="drawGameOver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="69" lineNum="115" pc="268441036" symbol="drawGameOver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="69" lineNum="116" pc="268441043" symbol="drawGameOver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="69" lineNum="117" pc="268441087" symbol="drawGameOver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="69" lineNum="119" pc="268441097" symbol="drawGameOver"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="70" lineNum="132" pc="268441185" symbol="drawPause"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="70" lineNum="133" pc="268441189" symbol="drawPause"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="70" lineNum="134" pc="268441200" symbol="drawPause"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="70" lineNum="135" pc="268441223" symbol="drawPause"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="70" lineNum="136" pc="268441246" symbol="drawPause"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="71" lineNum="146" pc="268441337" symbol="foodCheck"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="71" lineNum="147" pc="268441341" symbol="foodCheck"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="71" lineNum="148" pc="268441360" symbol="foodCheck"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="71" lineNum="149" pc="268441421" symbol="foodCheck"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="71" lineNum="150" pc="268441439" symbol="foodCheck"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="72" lineNum="154" pc="268441459" symbol="configColor"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="72" lineNum="155" pc="268441463" symbol="configColor"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="72" lineNum="156" pc="268441500" symbol="configColor"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="72" lineNum="157" pc="268441511" symbol="configColor"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="72" lineNum="158" pc="268441531" symbol="configColor"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="72" lineNum="160" pc="268441554" symbol="configColor"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="72" lineNum="161" pc="268441574" symbol="configColor"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="73" lineNum="166" pc="268441595" symbol="getArenaView"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="73" lineNum="167" pc="268441607" symbol="getArenaView"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="73" lineNum="168" pc="268441631" symbol="getArenaView"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="73" lineNum="169" pc="268441657" symbol="getArenaView"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/SnakeIQApp.mc" id="75" lineNum="8" pc="268441690" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/SnakeIQApp.mc" id="75" lineNum="9" pc="268441694" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/SnakeIQApp.mc" id="75" lineNum="10" pc="268441712" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/SnakeIQApp.mc" id="76" lineNum="14" pc="268441743" symbol="onStart"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/SnakeIQApp.mc" id="77" lineNum="18" pc="268441748" symbol="onStop"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/SnakeIQApp.mc" id="78" lineNum="22" pc="268441753" symbol="getInitialView"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/SnakeIQApp.mc" id="78" lineNum="23" pc="268441757" symbol="getInitialView"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="80" lineNum="7" pc="268441825" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="80" lineNum="8" pc="268441829" symbol="initialize"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="81" lineNum="14" pc="268441848" symbol="onShow"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="82" lineNum="18" pc="268441853" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="82" lineNum="19" pc="268441857" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="82" lineNum="21" pc="268441877" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="82" lineNum="23" pc="268441913" symbol="onUpdate"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="83" lineNum="26" pc="268441928" symbol="drawTitle"/>
-        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="83" lineNum="27" pc="268441932" symbol="drawTitle"/>
-        <entry filename="Rez" id="89" lineNum="15" pc="268442038" symbol="MainLayout"/>
-        <entry filename="Rez" id="89" lineNum="17" pc="268442050" symbol="MainLayout"/>
-        <entry filename="Rez" id="89" lineNum="19" pc="268442202" symbol="MainLayout"/>
-        <entry filename="Rez" id="92" lineNum="32" pc="268442220" symbol="initialize"/>
-        <entry filename="Rez" id="92" lineNum="33" pc="268442224" symbol="initialize"/>
-        <entry filename="Rez" id="92" lineNum="34" pc="268442242" symbol="initialize"/>
-        <entry filename="Rez" id="92" lineNum="35" pc="268442298" symbol="initialize"/>
-        <entry filename="Rez" id="92" lineNum="36" pc="268442354" symbol="initialize"/>
-        <entry filename="Rez" id="94" lineNum="48" pc="268442411" symbol="initialize"/>
-        <entry filename="Rez" id="94" lineNum="49" pc="268442415" symbol="initialize"/>
-        <entry filename="Rez" id="94" lineNum="50" pc="268442433" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="6" lineNum="18" pc="268435571" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="6" lineNum="19" pc="268435575" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="6" lineNum="20" pc="268435587" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="6" lineNum="21" pc="268435599" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="6" lineNum="22" pc="268435611" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="7" lineNum="25" pc="268435624" symbol="configArenaDimensions"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="7" lineNum="26" pc="268435628" symbol="configArenaDimensions"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="7" lineNum="27" pc="268435657" symbol="configArenaDimensions"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="7" lineNum="28" pc="268435686" symbol="configArenaDimensions"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="7" lineNum="29" pc="268435722" symbol="configArenaDimensions"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="7" lineNum="30" pc="268435758" symbol="configArenaDimensions"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="7" lineNum="31" pc="268435792" symbol="configArenaDimensions"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="7" lineNum="32" pc="268435826" symbol="configArenaDimensions"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="7" lineNum="33" pc="268435854" symbol="configArenaDimensions"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="8" lineNum="36" pc="268435883" symbol="configPerimeterStartingPoint"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="8" lineNum="37" pc="268435887" symbol="configPerimeterStartingPoint"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="8" lineNum="38" pc="268435918" symbol="configPerimeterStartingPoint"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="8" lineNum="39" pc="268435949" symbol="configPerimeterStartingPoint"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="8" lineNum="40" pc="268435977" symbol="configPerimeterStartingPoint"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="9" lineNum="43" pc="268436006" symbol="configFoodCoordinates"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="9" lineNum="44" pc="268436010" symbol="configFoodCoordinates"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="9" lineNum="45" pc="268436017" symbol="configFoodCoordinates"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="9" lineNum="46" pc="268436064" symbol="configFoodCoordinates"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="9" lineNum="47" pc="268436111" symbol="configFoodCoordinates"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="9" lineNum="48" pc="268436148" symbol="configFoodCoordinates"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="9" lineNum="49" pc="268436185" symbol="configFoodCoordinates"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="9" lineNum="50" pc="268436213" symbol="configFoodCoordinates"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="10" lineNum="53" pc="268436242" symbol="configWallValues"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="10" lineNum="54" pc="268436246" symbol="configWallValues"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="10" lineNum="55" pc="268436262" symbol="configWallValues"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="10" lineNum="56" pc="268436278" symbol="configWallValues"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/Arena.mc" id="10" lineNum="57" pc="268436303" symbol="configWallValues"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="12" lineNum="16" pc="268436329" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="12" lineNum="17" pc="268436333" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="12" lineNum="18" pc="268436351" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="12" lineNum="19" pc="268436361" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="12" lineNum="20" pc="268436371" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="12" lineNum="21" pc="268436401" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="12" lineNum="22" pc="268436431" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="12" lineNum="23" pc="268436467" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="12" lineNum="24" pc="268436508" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="13" lineNum="27" pc="268436521" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="13" lineNum="28" pc="268436525" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="13" lineNum="29" pc="268436539" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="13" lineNum="30" pc="268436553" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="13" lineNum="31" pc="268436567" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="13" lineNum="32" pc="268436581" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="13" lineNum="33" pc="268436595" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="13" lineNum="34" pc="268436609" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="14" lineNum="37" pc="268436624" symbol="start"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="14" lineNum="38" pc="268436628" symbol="start"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="15" lineNum="41" pc="268436639" symbol="pause"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="15" lineNum="42" pc="268436643" symbol="pause"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="16" lineNum="45" pc="268436654" symbol="onHide"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="16" lineNum="46" pc="268436658" symbol="onHide"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="17" lineNum="49" pc="268436677" symbol="driver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="17" lineNum="50" pc="268436681" symbol="driver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="17" lineNum="52" pc="268436700" symbol="driver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="17" lineNum="54" pc="268436712" symbol="driver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="17" lineNum="55" pc="268436729" symbol="driver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="17" lineNum="57" pc="268436772" symbol="driver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="17" lineNum="58" pc="268436804" symbol="driver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="17" lineNum="59" pc="268436844" symbol="driver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="17" lineNum="60" pc="268436918" symbol="driver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="17" lineNum="62" pc="268436961" symbol="driver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="17" lineNum="63" pc="268436994" symbol="driver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="17" lineNum="64" pc="268437042" symbol="driver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="17" lineNum="67" pc="268437055" symbol="driver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="18" lineNum="70" pc="268437072" symbol="clearScreenAndConfig"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="18" lineNum="71" pc="268437076" symbol="clearScreenAndConfig"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="18" lineNum="72" pc="268437104" symbol="clearScreenAndConfig"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="18" lineNum="73" pc="268437116" symbol="clearScreenAndConfig"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="19" lineNum="76" pc="268437134" symbol="drawPerimeter"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="19" lineNum="77" pc="268437138" symbol="drawPerimeter"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="20" lineNum="85" pc="268437219" symbol="drawSnake"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="20" lineNum="86" pc="268437223" symbol="drawSnake"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="20" lineNum="87" pc="268437259" symbol="drawSnake"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="20" lineNum="88" pc="268437286" symbol="drawSnake"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="20" lineNum="93" pc="268437345" symbol="drawSnake"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="21" lineNum="96" pc="268437374" symbol="drawFood"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="21" lineNum="97" pc="268437378" symbol="drawFood"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="22" lineNum="100" pc="268437419" symbol="drawScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="22" lineNum="101" pc="268437423" symbol="drawScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="22" lineNum="102" pc="268437446" symbol="drawScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="23" lineNum="111" pc="268437522" symbol="drawGameOver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="23" lineNum="112" pc="268437526" symbol="drawGameOver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="23" lineNum="113" pc="268437544" symbol="drawGameOver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="23" lineNum="114" pc="268437567" symbol="drawGameOver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="23" lineNum="115" pc="268437590" symbol="drawGameOver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="23" lineNum="116" pc="268437597" symbol="drawGameOver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="23" lineNum="117" pc="268437641" symbol="drawGameOver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="23" lineNum="119" pc="268437651" symbol="drawGameOver"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="24" lineNum="132" pc="268437739" symbol="drawPause"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="24" lineNum="133" pc="268437743" symbol="drawPause"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="24" lineNum="134" pc="268437754" symbol="drawPause"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="24" lineNum="135" pc="268437777" symbol="drawPause"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="24" lineNum="136" pc="268437800" symbol="drawPause"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="25" lineNum="146" pc="268437891" symbol="foodCheck"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="25" lineNum="147" pc="268437895" symbol="foodCheck"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="25" lineNum="148" pc="268437914" symbol="foodCheck"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="25" lineNum="149" pc="268437975" symbol="foodCheck"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="25" lineNum="150" pc="268437993" symbol="foodCheck"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="26" lineNum="154" pc="268438013" symbol="configColor"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="26" lineNum="155" pc="268438017" symbol="configColor"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="26" lineNum="156" pc="268438054" symbol="configColor"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="26" lineNum="157" pc="268438065" symbol="configColor"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="26" lineNum="158" pc="268438085" symbol="configColor"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="26" lineNum="160" pc="268438108" symbol="configColor"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="26" lineNum="161" pc="268438128" symbol="configColor"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="27" lineNum="166" pc="268438149" symbol="getArenaView"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="27" lineNum="167" pc="268438161" symbol="getArenaView"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="27" lineNum="168" pc="268438185" symbol="getArenaView"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaView.mc" id="27" lineNum="169" pc="268438211" symbol="getArenaView"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/SnakeIQApp.mc" id="29" lineNum="8" pc="268438244" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/SnakeIQApp.mc" id="29" lineNum="9" pc="268438248" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/SnakeIQApp.mc" id="29" lineNum="10" pc="268438266" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/SnakeIQApp.mc" id="30" lineNum="14" pc="268438297" symbol="onStart"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/SnakeIQApp.mc" id="31" lineNum="18" pc="268438302" symbol="onStop"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/SnakeIQApp.mc" id="32" lineNum="22" pc="268438307" symbol="getInitialView"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/SnakeIQApp.mc" id="32" lineNum="23" pc="268438311" symbol="getInitialView"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="34" lineNum="7" pc="268438379" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="34" lineNum="8" pc="268438383" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="34" lineNum="9" pc="268438401" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="35" lineNum="12" pc="268438412" symbol="onSelect"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="35" lineNum="13" pc="268438416" symbol="onSelect"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="35" lineNum="15" pc="268438443" symbol="onSelect"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="35" lineNum="16" pc="268438460" symbol="onSelect"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="35" lineNum="19" pc="268438481" symbol="onSelect"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="35" lineNum="22" pc="268438499" symbol="onSelect"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="36" lineNum="25" pc="268438503" symbol="onNextPage"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="36" lineNum="26" pc="268438507" symbol="onNextPage"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="37" lineNum="28" pc="268438537" symbol="onPreviousPage"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/ArenaDelegate.mc" id="37" lineNum="29" pc="268438541" symbol="onPreviousPage"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="39" lineNum="7" pc="268438571" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="39" lineNum="8" pc="268438575" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="40" lineNum="11" pc="268438594" symbol="onMenuItem"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="40" lineNum="12" pc="268438598" symbol="onMenuItem"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="40" lineNum="13" pc="268438609" symbol="onMenuItem"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="40" lineNum="15" pc="268438624" symbol="onMenuItem"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="40" lineNum="16" pc="268438635" symbol="onMenuItem"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="40" lineNum="18" pc="268438726" symbol="onMenuItem"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="40" lineNum="19" pc="268438737" symbol="onMenuItem"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="42" lineNum="27" pc="268438817" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="42" lineNum="28" pc="268438821" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="43" lineNum="31" pc="268438840" symbol="onMenuItem"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="43" lineNum="32" pc="268438844" symbol="onMenuItem"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="43" lineNum="33" pc="268438855" symbol="onMenuItem"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="44" lineNum="38" pc="268438871" symbol="getDarkModeMenu"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="44" lineNum="39" pc="268438883" symbol="getDarkModeMenu"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="44" lineNum="40" pc="268438911" symbol="getDarkModeMenu"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="44" lineNum="41" pc="268438942" symbol="getDarkModeMenu"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="44" lineNum="42" pc="268438960" symbol="getDarkModeMenu"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="44" lineNum="43" pc="268438977" symbol="getDarkModeMenu"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="44" lineNum="44" pc="268438983" symbol="getDarkModeMenu"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="44" lineNum="46" pc="268439008" symbol="getDarkModeMenu"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="44" lineNum="49" pc="268439030" symbol="getDarkModeMenu"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="46" lineNum="58" pc="268439083" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="46" lineNum="59" pc="268439087" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="47" lineNum="62" pc="268439106" symbol="onMenuItem"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="47" lineNum="63" pc="268439110" symbol="onMenuItem"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="47" lineNum="64" pc="268439121" symbol="onMenuItem"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="47" lineNum="66" pc="268439156" symbol="onMenuItem"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Menus/SnakeIQMenuDelegate.mc" id="47" lineNum="67" pc="268439167" symbol="onMenuItem"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="49" lineNum="7" pc="268439203" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="49" lineNum="8" pc="268439207" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="50" lineNum="11" pc="268439226" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="50" lineNum="12" pc="268439230" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="50" lineNum="13" pc="268439250" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="50" lineNum="15" pc="268439286" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="50" lineNum="16" pc="268439300" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="50" lineNum="17" pc="268439314" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="51" lineNum="20" pc="268439329" symbol="drawTitle"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="51" lineNum="21" pc="268439333" symbol="drawTitle"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="52" lineNum="30" pc="268439397" symbol="drawDivider"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="52" lineNum="31" pc="268439401" symbol="drawDivider"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="53" lineNum="39" pc="268439482" symbol="drawScores"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="53" lineNum="40" pc="268439486" symbol="drawScores"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="55" lineNum="57" pc="268439753" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="55" lineNum="58" pc="268439757" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="56" lineNum="61" pc="268439776" symbol="onSelect"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/HighScoreView.mc" id="56" lineNum="62" pc="268439780" symbol="onSelect"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="58" lineNum="7" pc="268439784" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="58" lineNum="8" pc="268439788" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="58" lineNum="9" pc="268439818" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="60" lineNum="20" pc="268439849" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="60" lineNum="21" pc="268439853" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="61" lineNum="24" pc="268439866" symbol="configScores"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="61" lineNum="25" pc="268439870" symbol="configScores"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="61" lineNum="26" pc="268439907" symbol="configScores"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="61" lineNum="27" pc="268439944" symbol="configScores"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="61" lineNum="28" pc="268439981" symbol="configScores"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="61" lineNum="29" pc="268440018" symbol="configScores"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="62" lineNum="32" pc="268440056" symbol="setScores"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="62" lineNum="33" pc="268440060" symbol="setScores"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="62" lineNum="34" pc="268440098" symbol="setScores"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="62" lineNum="35" pc="268440136" symbol="setScores"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="62" lineNum="36" pc="268440174" symbol="setScores"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="62" lineNum="37" pc="268440212" symbol="setScores"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="40" pc="268440251" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="41" pc="268440255" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="42" pc="268440343" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="43" pc="268440346" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="45" pc="268440356" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="46" pc="268440370" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="47" pc="268440394" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="48" pc="268440405" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="52" pc="268440425" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="53" pc="268440432" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="54" pc="268440447" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="55" pc="268440455" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="57" pc="268440465" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="58" pc="268440478" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="64" pc="268440501" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="65" pc="268440517" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="66" pc="268440533" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="67" pc="268440549" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="68" pc="268440565" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="63" lineNum="71" pc="268440584" symbol="addScore"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="65" lineNum="77" pc="268440597" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/HighScores.mc" id="65" lineNum="78" pc="268440601" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="68" lineNum="27" pc="268440623" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="68" lineNum="28" pc="268440627" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="68" lineNum="29" pc="268440637" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="68" lineNum="30" pc="268440647" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="68" lineNum="31" pc="268440663" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="68" lineNum="32" pc="268440677" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="68" lineNum="33" pc="268440691" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="68" lineNum="34" pc="268440704" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="69" lineNum="37" pc="268440717" symbol="getDirection"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="69" lineNum="38" pc="268440721" symbol="getDirection"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="70" lineNum="41" pc="268440731" symbol="setDirection"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="70" lineNum="42" pc="268440735" symbol="setDirection"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="70" lineNum="43" pc="268440766" symbol="setDirection"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="70" lineNum="45" pc="268440785" symbol="setDirection"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="71" lineNum="49" pc="268440811" symbol="getDirectionCoordinate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="71" lineNum="50" pc="268440815" symbol="getDirectionCoordinate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="71" lineNum="51" pc="268440835" symbol="getDirectionCoordinate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="71" lineNum="52" pc="268440871" symbol="getDirectionCoordinate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="71" lineNum="53" pc="268440891" symbol="getDirectionCoordinate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="71" lineNum="54" pc="268440927" symbol="getDirectionCoordinate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="71" lineNum="55" pc="268440947" symbol="getDirectionCoordinate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="71" lineNum="56" pc="268440983" symbol="getDirectionCoordinate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="71" lineNum="57" pc="268441003" symbol="getDirectionCoordinate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="71" lineNum="59" pc="268441039" symbol="getDirectionCoordinate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="72" lineNum="63" pc="268441073" symbol="configInitialXYCoordinates"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="72" lineNum="64" pc="268441077" symbol="configInitialXYCoordinates"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="72" lineNum="65" pc="268441098" symbol="configInitialXYCoordinates"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="72" lineNum="66" pc="268441105" symbol="configInitialXYCoordinates"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="72" lineNum="67" pc="268441121" symbol="configInitialXYCoordinates"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="72" lineNum="68" pc="268441134" symbol="configInitialXYCoordinates"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="72" lineNum="69" pc="268441154" symbol="configInitialXYCoordinates"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="73" lineNum="73" pc="268441188" symbol="eatAndGrow"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="73" lineNum="74" pc="268441192" symbol="eatAndGrow"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="73" lineNum="75" pc="268441211" symbol="eatAndGrow"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="73" lineNum="76" pc="268441231" symbol="eatAndGrow"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="73" lineNum="77" pc="268441251" symbol="eatAndGrow"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="74" lineNum="80" pc="268441262" symbol="moveForward"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="74" lineNum="81" pc="268441266" symbol="moveForward"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="74" lineNum="82" pc="268441277" symbol="moveForward"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="74" lineNum="83" pc="268441309" symbol="moveForward"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="74" lineNum="84" pc="268441341" symbol="moveForward"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="74" lineNum="85" pc="268441361" symbol="moveForward"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="75" lineNum="89" pc="268441385" symbol="getSnakeHead"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="75" lineNum="90" pc="268441389" symbol="getSnakeHead"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="75" lineNum="91" pc="268441423" symbol="getSnakeHead"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="75" lineNum="92" pc="268441457" symbol="getSnakeHead"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="76" lineNum="95" pc="268441485" symbol="selfCollisionCheck"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="76" lineNum="96" pc="268441489" symbol="selfCollisionCheck"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="76" lineNum="97" pc="268441516" symbol="selfCollisionCheck"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="76" lineNum="98" pc="268441553" symbol="selfCollisionCheck"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="77" lineNum="103" pc="268441580" symbol="arenaCollisionCheck"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="77" lineNum="104" pc="268441584" symbol="arenaCollisionCheck"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="77" lineNum="105" pc="268441597" symbol="arenaCollisionCheck"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="77" lineNum="109" pc="268441674" symbol="arenaCollisionCheck"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="78" lineNum="113" pc="268441688" symbol="getNextPlot"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="78" lineNum="114" pc="268441692" symbol="getNextPlot"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="78" lineNum="115" pc="268441705" symbol="getNextPlot"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="78" lineNum="116" pc="268441751" symbol="getNextPlot"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Snake.mc" id="78" lineNum="117" pc="268441797" symbol="getNextPlot"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/FeedingFrenzyArenaView.mc" id="80" lineNum="2" pc="268441825" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Arena/FeedingFrenzyArenaView.mc" id="80" lineNum="3" pc="268441829" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="82" lineNum="7" pc="268441848" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="82" lineNum="8" pc="268441852" symbol="initialize"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="83" lineNum="14" pc="268441871" symbol="onShow"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="84" lineNum="18" pc="268441876" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="84" lineNum="19" pc="268441880" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="84" lineNum="21" pc="268441900" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="84" lineNum="23" pc="268441936" symbol="onUpdate"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="85" lineNum="26" pc="268441951" symbol="drawTitle"/>
+        <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="85" lineNum="27" pc="268441955" symbol="drawTitle"/>
+        <entry filename="Rez" id="91" lineNum="15" pc="268442061" symbol="MainLayout"/>
+        <entry filename="Rez" id="91" lineNum="17" pc="268442073" symbol="MainLayout"/>
+        <entry filename="Rez" id="91" lineNum="19" pc="268442225" symbol="MainLayout"/>
+        <entry filename="Rez" id="94" lineNum="32" pc="268442243" symbol="initialize"/>
+        <entry filename="Rez" id="94" lineNum="33" pc="268442247" symbol="initialize"/>
+        <entry filename="Rez" id="94" lineNum="34" pc="268442265" symbol="initialize"/>
+        <entry filename="Rez" id="94" lineNum="35" pc="268442321" symbol="initialize"/>
+        <entry filename="Rez" id="94" lineNum="36" pc="268442377" symbol="initialize"/>
+        <entry filename="Rez" id="96" lineNum="48" pc="268442434" symbol="initialize"/>
+        <entry filename="Rez" id="96" lineNum="49" pc="268442438" symbol="initialize"/>
+        <entry filename="Rez" id="96" lineNum="50" pc="268442456" symbol="initialize"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="8388639" module="true" symbol="Graphics"/>
         <entry id="8389346" symbol="text"/>
-        <entry id="95" method="true" symbol="drawPause"/>
-        <entry id="15" object="true" symbol="DarkModeSettingsDelegate"/>
-        <entry id="49" method="true" symbol="configScores"/>
-        <entry field="true" id="82" symbol="snake"/>
-        <entry id="14" method="true" symbol="getDarkModeMenu"/>
-        <entry field="true" id="44" symbol="one"/>
-        <entry field="true" id="81" symbol="arena"/>
+        <entry id="58" method="true" symbol="drawPause"/>
+        <entry id="19" object="true" symbol="DarkModeSettingsDelegate"/>
+        <entry id="92" method="true" symbol="configScores"/>
+        <entry field="true" id="45" symbol="snake"/>
+        <entry id="18" method="true" symbol="getDarkModeMenu"/>
+        <entry field="true" id="87" symbol="one"/>
+        <entry field="true" id="44" symbol="arena"/>
         <entry id="8390740" method="true" symbol="drawTitle"/>
-        <entry id="96" method="true" symbol="foodCheck"/>
+        <entry id="59" method="true" symbol="foodCheck"/>
         <entry field="true" id="8389671" symbol="screenWidth"/>
-        <entry field="true" id="84" symbol="paused"/>
-        <entry id="41" method="true" symbol="configWallValues"/>
-        <entry id="57" method="true" symbol="MainLayout"/>
-        <entry field="true" id="83" symbol="timer"/>
-        <entry id="90" method="true" symbol="drawPerimeter"/>
-        <entry id="25" object="true" symbol="SnakeInvenotry"/>
-        <entry id="91" method="true" symbol="drawSnake"/>
-        <entry id="56" object="true" symbol="SettingsMenu"/>
-        <entry field="true" id="46" symbol="three"/>
-        <entry field="true" id="64" symbol="remote"/>
-        <entry id="92" method="true" symbol="drawFood"/>
+        <entry field="true" id="47" symbol="paused"/>
+        <entry id="70" method="true" symbol="configWallValues"/>
+        <entry id="38" method="true" symbol="MainLayout"/>
+        <entry field="true" id="46" symbol="timer"/>
+        <entry id="53" method="true" symbol="drawPerimeter"/>
+        <entry id="29" object="true" symbol="SnakeInvenotry"/>
+        <entry id="54" method="true" symbol="drawSnake"/>
+        <entry id="37" object="true" symbol="SettingsMenu"/>
+        <entry field="true" id="89" symbol="three"/>
+        <entry field="true" id="96" symbol="remote"/>
+        <entry id="55" method="true" symbol="drawFood"/>
         <entry field="true" id="8388611" module="true" symbol="Toybox"/>
-        <entry field="true" id="29" symbol="highScores"/>
-        <entry field="true" id="45" symbol="two"/>
+        <entry field="true" id="13" symbol="highScores"/>
+        <entry field="true" id="88" symbol="two"/>
         <entry field="true" id="8388782" method="true" symbol="size"/>
-        <entry field="true" id="62" symbol="AppName"/>
-        <entry id="94" method="true" symbol="drawGameOver"/>
-        <entry id="93" method="true" symbol="drawScore"/>
-        <entry id="74" method="true" symbol="eatAndGrow"/>
+        <entry field="true" id="43" symbol="AppName"/>
+        <entry id="57" method="true" symbol="drawGameOver"/>
+        <entry id="56" method="true" symbol="drawScore"/>
+        <entry id="81" method="true" symbol="eatAndGrow"/>
         <entry id="8388772" module="true" object="true" symbol="Fonts"/>
-        <entry id="98" symbol="enable"/>
-        <entry field="true" id="86" symbol="forgroundColor"/>
-        <entry field="true" id="63" symbol="local"/>
-        <entry field="true" id="48" symbol="five"/>
+        <entry id="99" symbol="enable"/>
+        <entry field="true" id="49" symbol="forgroundColor"/>
+        <entry field="true" id="95" symbol="local"/>
+        <entry field="true" id="91" symbol="five"/>
         <entry id="8388648" module="true" symbol="WatchUi"/>
-        <entry id="40" method="true" symbol="configFoodCoordinates"/>
-        <entry id="39" method="true" symbol="configPerimeterStartingPoint"/>
-        <entry id="27" object="true" symbol="ArenaView"/>
-        <entry field="true" id="65" symbol="isAlive"/>
-        <entry field="true" id="61" symbol="prompt"/>
-        <entry id="50" method="true" symbol="setScores"/>
-        <entry id="89" method="true" symbol="clearScreenAndConfig"/>
+        <entry id="69" method="true" symbol="configFoodCoordinates"/>
+        <entry id="68" method="true" symbol="configPerimeterStartingPoint"/>
+        <entry id="11" object="true" symbol="ArenaView"/>
+        <entry field="true" id="72" symbol="isAlive"/>
+        <entry id="93" method="true" symbol="setScores"/>
+        <entry field="true" id="42" symbol="prompt"/>
+        <entry id="52" method="true" symbol="clearScreenAndConfig"/>
         <entry id="8389124" method="true" symbol="onUpdate"/>
         <entry field="true" id="8389065" symbol="locY"/>
         <entry field="true" id="8389064" symbol="locX"/>
-        <entry field="true" id="47" symbol="four"/>
-        <entry id="51" method="true" symbol="addScore"/>
-        <entry id="28" method="true" symbol="getArenaView"/>
-        <entry field="true" id="69" symbol="xCoordinates"/>
+        <entry field="true" id="90" symbol="four"/>
+        <entry id="94" method="true" symbol="addScore"/>
+        <entry id="12" method="true" symbol="getArenaView"/>
+        <entry field="true" id="76" symbol="xCoordinates"/>
         <entry id="8388771" module="true" object="true" symbol="Drawables"/>
         <entry id="8389348" symbol="font"/>
-        <entry id="19" object="true" symbol="ScoreStorage"/>
+        <entry id="23" object="true" symbol="ScoreStorage"/>
         <entry field="true" id="8389067" symbol="height"/>
-        <entry field="true" id="70" symbol="yCoordinates"/>
+        <entry field="true" id="77" symbol="yCoordinates"/>
         <entry id="8389079" method="true" symbol="onPreviousPage"/>
-        <entry field="true" id="37" symbol="westWall"/>
-        <entry id="53" module="true" symbol="Menus"/>
-        <entry id="43" method="true" symbol="drawScores"/>
-        <entry field="true" id="33" symbol="foodY"/>
-        <entry field="true" id="32" symbol="foodX"/>
-        <entry id="30" object="true" symbol="SnakeIQApp"/>
+        <entry field="true" id="66" symbol="westWall"/>
+        <entry id="34" module="true" symbol="Menus"/>
+        <entry id="98" method="true" symbol="drawScores"/>
+        <entry field="true" id="62" symbol="foodY"/>
+        <entry field="true" id="61" symbol="foodX"/>
+        <entry id="14" object="true" symbol="SnakeIQApp"/>
         <entry field="true" id="8389066" symbol="width"/>
         <entry field="true" id="8389672" symbol="screenHeight"/>
-        <entry field="true" id="66" symbol="hasEaten"/>
-        <entry id="31" object="true" symbol="SnakeIQView"/>
-        <entry id="79" method="true" symbol="getNextPlot"/>
+        <entry field="true" id="73" symbol="hasEaten"/>
+        <entry id="32" object="true" symbol="SnakeIQView"/>
+        <entry id="86" method="true" symbol="getNextPlot"/>
         <entry id="9" object="true" symbol="SnakeIQDelegate"/>
         <entry id="8389349" symbol="justification"/>
-        <entry id="18" object="true" symbol="HighScores"/>
-        <entry field="true" id="35" symbol="eastWall"/>
+        <entry id="22" object="true" symbol="HighScores"/>
+        <entry field="true" id="64" symbol="eastWall"/>
         <entry id="8389119" method="true" symbol="getDirection"/>
-        <entry id="75" method="true" symbol="moveForward"/>
-        <entry id="88" method="true" symbol="driver"/>
-        <entry id="55" object="true" symbol="MainMenu"/>
-        <entry id="38" method="true" symbol="configArenaDimensions"/>
-        <entry field="true" id="22" symbol="East"/>
-        <entry id="16" object="true" symbol="HighScoreView"/>
-        <entry id="73" method="true" symbol="configInitialXYCoordinates"/>
+        <entry id="82" method="true" symbol="moveForward"/>
+        <entry id="51" method="true" symbol="driver"/>
+        <entry id="36" object="true" symbol="MainMenu"/>
+        <entry id="67" method="true" symbol="configArenaDimensions"/>
+        <entry field="true" id="26" symbol="East"/>
+        <entry id="20" object="true" symbol="HighScoreView"/>
+        <entry id="80" method="true" symbol="configInitialXYCoordinates"/>
         <entry id="8389619" method="true" symbol="onSelect"/>
         <entry id="8388769" module="true" object="true" symbol="Rez"/>
-        <entry field="true" id="24" symbol="West"/>
+        <entry field="true" id="28" symbol="West"/>
         <entry id="8390088" module="true" object="true" symbol="JsonData"/>
-        <entry id="13" object="true" symbol="SnakeIQSettingsDelegate"/>
-        <entry field="true" id="54" symbol="LauncherIcon"/>
+        <entry id="17" object="true" symbol="SnakeIQSettingsDelegate"/>
+        <entry field="true" id="35" symbol="LauncherIcon"/>
         <entry id="8389123" method="true" symbol="onShow"/>
-        <entry field="true" id="59" symbol="newGame"/>
-        <entry field="true" id="34" symbol="northWall"/>
+        <entry field="true" id="40" symbol="newGame"/>
+        <entry field="true" id="63" symbol="northWall"/>
         <entry id="8388770" module="true" object="true" symbol="Strings"/>
-        <entry field="true" id="36" symbol="southWall"/>
+        <entry field="true" id="65" symbol="southWall"/>
         <entry id="8388702" method="true" symbol="initialize"/>
-        <entry id="97" method="true" symbol="configColor"/>
+        <entry id="60" method="true" symbol="configColor"/>
         <entry id="8389279" method="true" symbol="onStart"/>
-        <entry field="true" id="60" symbol="darkMode"/>
-        <entry field="true" id="80" symbol="view"/>
-        <entry id="17" object="true" symbol="HighScoreDelegate"/>
+        <entry field="true" id="41" symbol="darkMode"/>
+        <entry id="31" object="true" symbol="FeedingFrenzyArenaView"/>
+        <entry field="true" id="71" symbol="view"/>
+        <entry id="21" object="true" symbol="HighScoreDelegate"/>
         <entry id="8388641" module="true" symbol="Math"/>
-        <entry field="true" id="23" symbol="South"/>
-        <entry field="true" id="58" symbol="settings"/>
-        <entry id="78" method="true" symbol="arenaCollisionCheck"/>
-        <entry id="26" object="true" symbol="Snake"/>
+        <entry field="true" id="27" symbol="South"/>
+        <entry field="true" id="39" symbol="settings"/>
+        <entry id="85" method="true" symbol="arenaCollisionCheck"/>
+        <entry id="30" object="true" symbol="Snake"/>
         <entry id="8389280" method="true" symbol="getInitialView"/>
         <entry id="8389281" method="true" symbol="onStop"/>
-        <entry id="76" method="true" symbol="getSnakeHead"/>
+        <entry id="83" method="true" symbol="getSnakeHead"/>
         <entry id="8389109" method="true" symbol="onMenuItem"/>
         <entry id="8389347" symbol="color"/>
-        <entry id="11" object="true" symbol="Arena"/>
-        <entry id="10" object="true" symbol="ArenaDelegate"/>
-        <entry field="true" id="85" symbol="scoreSent"/>
-        <entry id="77" method="true" symbol="selfCollisionCheck"/>
-        <entry id="52" module="true" symbol="Layouts"/>
+        <entry id="10" object="true" symbol="Arena"/>
+        <entry id="15" object="true" symbol="ArenaDelegate"/>
+        <entry field="true" id="48" symbol="scoreSent"/>
+        <entry id="84" method="true" symbol="selfCollisionCheck"/>
+        <entry id="33" module="true" symbol="Layouts"/>
         <entry id="8388698" method="true" symbol="start"/>
-        <entry id="12" object="true" symbol="SnakeIQMenuDelegate"/>
-        <entry field="true" id="68" symbol="inventory"/>
-        <entry id="99" symbol="disable"/>
-        <entry id="87" method="true" symbol="pause"/>
-        <entry id="72" method="true" symbol="getDirectionCoordinate"/>
+        <entry id="16" object="true" symbol="SnakeIQMenuDelegate"/>
+        <entry field="true" id="75" symbol="inventory"/>
+        <entry id="100" symbol="disable"/>
+        <entry id="50" method="true" symbol="pause"/>
+        <entry id="79" method="true" symbol="getDirectionCoordinate"/>
         <entry field="true" id="8389743" symbol="backgroundColor"/>
         <entry id="8389125" method="true" symbol="onHide"/>
-        <entry field="true" id="67" symbol="direction"/>
-        <entry field="true" id="21" symbol="North"/>
-        <entry id="20" object="true" symbol="RemoteScoreStorage"/>
+        <entry field="true" id="74" symbol="direction"/>
+        <entry field="true" id="25" symbol="North"/>
+        <entry id="24" object="true" symbol="RemoteScoreStorage"/>
         <entry id="8389078" method="true" symbol="onNextPage"/>
         <entry id="8388635" module="true" symbol="Application"/>
         <entry field="true" id="8390079" symbol="y"/>
         <entry field="true" id="8390078" symbol="x"/>
-        <entry id="42" method="true" symbol="drawDivider"/>
-        <entry id="71" method="true" symbol="setDirection"/>
+        <entry id="97" method="true" symbol="drawDivider"/>
+        <entry id="78" method="true" symbol="setDirection"/>
     </symbolTable>
     <localVars>
-        <entry endPc="268435604" name="view" stackId="1" startPc="268435571"/>
-        <entry endPc="268436074" name="sWSquared" stackId="1" startPc="268435820"/>
-        <entry endPc="268436074" name="sHSquared" stackId="2" startPc="268435820"/>
-        <entry endPc="268436433" name="penWidth" stackId="1" startPc="268436202"/>
-        <entry endPc="268436433" name="randY" stackId="3" startPc="268436202"/>
-        <entry endPc="268436433" name="randX" stackId="2" startPc="268436202"/>
-        <entry endPc="268436767" name="item" stackId="1" startPc="268436544"/>
-        <entry endPc="268436821" name="item" stackId="1" startPc="268436790"/>
-        <entry endPc="268437032" name="darkMode" stackId="2" startPc="268436833"/>
-        <entry endPc="268437032" name="menu" stackId="1" startPc="268436833"/>
-        <entry endPc="268437153" name="item" stackId="1" startPc="268437056"/>
-        <entry endPc="268437279" name="dc" stackId="1" startPc="268437176"/>
-        <entry endPc="268437347" name="dc" stackId="1" startPc="268437279"/>
-        <entry endPc="268437432" name="dc" stackId="1" startPc="268437347"/>
-        <entry endPc="268437703" name="dc" stackId="1" startPc="268437432"/>
-        <entry endPc="268438375" name="i" stackId="5" startPc="268438344"/>
-        <entry endPc="268438435" name="a" stackId="7" startPc="268438415"/>
-        <entry endPc="268438448" name="i" stackId="6" startPc="268438397"/>
-        <entry endPc="268438546" name="temp" stackId="4" startPc="268438205"/>
-        <entry endPc="268438546" name="insert" stackId="3" startPc="268438205"/>
-        <entry endPc="268438546" name="scores" stackId="2" startPc="268438205"/>
-        <entry endPc="268438547" name="score" stackId="1" startPc="268438201"/>
-        <entry endPc="268438761" name="dir" stackId="1" startPc="268438681"/>
-        <entry endPc="268439124" name="x" stackId="2" startPc="268439048"/>
-        <entry endPc="268439124" name="y" stackId="3" startPc="268439048"/>
-        <entry endPc="268439137" name="i" stackId="1" startPc="268439048"/>
-        <entry endPc="268439212" name="x" stackId="1" startPc="268439138"/>
-        <entry endPc="268439212" name="y" stackId="2" startPc="268439138"/>
-        <entry endPc="268439335" name="x" stackId="1" startPc="268439212"/>
-        <entry endPc="268439335" name="y" stackId="2" startPc="268439212"/>
-        <entry endPc="268439434" name="x" stackId="1" startPc="268439339"/>
-        <entry endPc="268439434" name="y" stackId="2" startPc="268439339"/>
-        <entry endPc="268439529" name="i" stackId="3" startPc="268439466"/>
-        <entry endPc="268439530" name="x" stackId="1" startPc="268439435"/>
-        <entry endPc="268439530" name="y" stackId="2" startPc="268439435"/>
-        <entry endPc="268439637" name="head" stackId="5" startPc="268439534"/>
-        <entry endPc="268439638" name="eastWall" stackId="2" startPc="268439530"/>
-        <entry endPc="268439638" name="southWall" stackId="3" startPc="268439530"/>
-        <entry endPc="268439638" name="westWall" stackId="4" startPc="268439530"/>
-        <entry endPc="268439638" name="northWall" stackId="1" startPc="268439530"/>
-        <entry endPc="268439774" name="nextCoordinate" stackId="1" startPc="268439642"/>
-        <entry endPc="268439774" name="nextXCoordinate" stackId="2" startPc="268439642"/>
-        <entry endPc="268439774" name="nextYCoordinate" stackId="3" startPc="268439642"/>
-        <entry endPc="268440070" name="dc" stackId="1" startPc="268439967"/>
-        <entry endPc="268440517" name="nextCoordinate" stackId="1" startPc="268440127"/>
-        <entry endPc="268440580" name="dc" stackId="1" startPc="268440518"/>
-        <entry endPc="268440665" name="dc" stackId="1" startPc="268440580"/>
-        <entry endPc="268440791" name="i" stackId="2" startPc="268440732"/>
-        <entry endPc="268440820" name="dc" stackId="1" startPc="268440665"/>
-        <entry endPc="268440865" name="dc" stackId="1" startPc="268440820"/>
-        <entry endPc="268440967" name="screenWidth" stackId="2" startPc="268440869"/>
-        <entry endPc="268440968" name="dc" stackId="1" startPc="268440865"/>
-        <entry endPc="268441181" name="screenWidth" stackId="2" startPc="268440990"/>
-        <entry endPc="268441181" name="text" stackId="4" startPc="268440990"/>
-        <entry endPc="268441181" name="screenHeight" stackId="3" startPc="268440990"/>
-        <entry endPc="268441185" name="dc" stackId="1" startPc="268440968"/>
-        <entry endPc="268441333" name="screenWidth" stackId="2" startPc="268441200"/>
-        <entry endPc="268441333" name="screenHeight" stackId="3" startPc="268441200"/>
-        <entry endPc="268441337" name="dc" stackId="1" startPc="268441185"/>
-        <entry endPc="268441458" name="nextCoordinate" stackId="1" startPc="268441341"/>
-        <entry endPc="268441689" name="view" stackId="1" startPc="268441607"/>
-        <entry endPc="268441689" name="delegate" stackId="2" startPc="268441607"/>
-        <entry endPc="268441748" name="state" stackId="1" startPc="268441743"/>
-        <entry endPc="268441753" name="state" stackId="1" startPc="268441748"/>
-        <entry endPc="268441928" name="dc" stackId="1" startPc="268441853"/>
-        <entry endPc="268442038" name="dc" stackId="1" startPc="268441928"/>
-        <entry endPc="268442219" name="rez_cmp_local_text_1567374968" stackId="2" startPc="268442050"/>
-        <entry endPc="268442220" name="dc" stackId="1" startPc="268442038"/>
+        <entry endPc="268435882" name="sWSquared" stackId="1" startPc="268435628"/>
+        <entry endPc="268435882" name="sHSquared" stackId="2" startPc="268435628"/>
+        <entry endPc="268436241" name="penWidth" stackId="1" startPc="268436010"/>
+        <entry endPc="268436241" name="randY" stackId="3" startPc="268436010"/>
+        <entry endPc="268436241" name="randX" stackId="2" startPc="268436010"/>
+        <entry endPc="268436624" name="dc" stackId="1" startPc="268436521"/>
+        <entry endPc="268437071" name="nextCoordinate" stackId="1" startPc="268436681"/>
+        <entry endPc="268437134" name="dc" stackId="1" startPc="268437072"/>
+        <entry endPc="268437219" name="dc" stackId="1" startPc="268437134"/>
+        <entry endPc="268437345" name="i" stackId="2" startPc="268437286"/>
+        <entry endPc="268437374" name="dc" stackId="1" startPc="268437219"/>
+        <entry endPc="268437419" name="dc" stackId="1" startPc="268437374"/>
+        <entry endPc="268437521" name="screenWidth" stackId="2" startPc="268437423"/>
+        <entry endPc="268437522" name="dc" stackId="1" startPc="268437419"/>
+        <entry endPc="268437735" name="screenWidth" stackId="2" startPc="268437544"/>
+        <entry endPc="268437735" name="text" stackId="4" startPc="268437544"/>
+        <entry endPc="268437735" name="screenHeight" stackId="3" startPc="268437544"/>
+        <entry endPc="268437739" name="dc" stackId="1" startPc="268437522"/>
+        <entry endPc="268437887" name="screenWidth" stackId="2" startPc="268437754"/>
+        <entry endPc="268437887" name="screenHeight" stackId="3" startPc="268437754"/>
+        <entry endPc="268437891" name="dc" stackId="1" startPc="268437739"/>
+        <entry endPc="268438012" name="nextCoordinate" stackId="1" startPc="268437895"/>
+        <entry endPc="268438243" name="view" stackId="1" startPc="268438161"/>
+        <entry endPc="268438243" name="delegate" stackId="2" startPc="268438161"/>
+        <entry endPc="268438302" name="state" stackId="1" startPc="268438297"/>
+        <entry endPc="268438307" name="state" stackId="1" startPc="268438302"/>
+        <entry endPc="268438412" name="view" stackId="1" startPc="268438379"/>
+        <entry endPc="268438817" name="item" stackId="1" startPc="268438594"/>
+        <entry endPc="268438871" name="item" stackId="1" startPc="268438840"/>
+        <entry endPc="268439082" name="darkMode" stackId="2" startPc="268438883"/>
+        <entry endPc="268439082" name="menu" stackId="1" startPc="268438883"/>
+        <entry endPc="268439203" name="item" stackId="1" startPc="268439106"/>
+        <entry endPc="268439329" name="dc" stackId="1" startPc="268439226"/>
+        <entry endPc="268439397" name="dc" stackId="1" startPc="268439329"/>
+        <entry endPc="268439482" name="dc" stackId="1" startPc="268439397"/>
+        <entry endPc="268439753" name="dc" stackId="1" startPc="268439482"/>
+        <entry endPc="268440425" name="i" stackId="5" startPc="268440394"/>
+        <entry endPc="268440485" name="a" stackId="7" startPc="268440465"/>
+        <entry endPc="268440498" name="i" stackId="6" startPc="268440447"/>
+        <entry endPc="268440596" name="temp" stackId="4" startPc="268440255"/>
+        <entry endPc="268440596" name="insert" stackId="3" startPc="268440255"/>
+        <entry endPc="268440596" name="scores" stackId="2" startPc="268440255"/>
+        <entry endPc="268440597" name="score" stackId="1" startPc="268440251"/>
+        <entry endPc="268440811" name="dir" stackId="1" startPc="268440731"/>
+        <entry endPc="268441174" name="x" stackId="2" startPc="268441098"/>
+        <entry endPc="268441174" name="y" stackId="3" startPc="268441098"/>
+        <entry endPc="268441187" name="i" stackId="1" startPc="268441098"/>
+        <entry endPc="268441262" name="x" stackId="1" startPc="268441188"/>
+        <entry endPc="268441262" name="y" stackId="2" startPc="268441188"/>
+        <entry endPc="268441385" name="x" stackId="1" startPc="268441262"/>
+        <entry endPc="268441385" name="y" stackId="2" startPc="268441262"/>
+        <entry endPc="268441484" name="x" stackId="1" startPc="268441389"/>
+        <entry endPc="268441484" name="y" stackId="2" startPc="268441389"/>
+        <entry endPc="268441579" name="i" stackId="3" startPc="268441516"/>
+        <entry endPc="268441580" name="x" stackId="1" startPc="268441485"/>
+        <entry endPc="268441580" name="y" stackId="2" startPc="268441485"/>
+        <entry endPc="268441687" name="head" stackId="5" startPc="268441584"/>
+        <entry endPc="268441688" name="eastWall" stackId="2" startPc="268441580"/>
+        <entry endPc="268441688" name="southWall" stackId="3" startPc="268441580"/>
+        <entry endPc="268441688" name="westWall" stackId="4" startPc="268441580"/>
+        <entry endPc="268441688" name="northWall" stackId="1" startPc="268441580"/>
+        <entry endPc="268441824" name="nextCoordinate" stackId="1" startPc="268441692"/>
+        <entry endPc="268441824" name="nextXCoordinate" stackId="2" startPc="268441692"/>
+        <entry endPc="268441824" name="nextYCoordinate" stackId="3" startPc="268441692"/>
+        <entry endPc="268441951" name="dc" stackId="1" startPc="268441876"/>
+        <entry endPc="268442061" name="dc" stackId="1" startPc="268441951"/>
+        <entry endPc="268442242" name="rez_cmp_local_text_2513404434" stackId="2" startPc="268442073"/>
+        <entry endPc="268442243" name="dc" stackId="1" startPc="268442061"/>
     </localVars>
     <annotations/>
     <dataEntryOffsetMappings>
         <dataEntry offset="87" parentId="" symbolId="globals" type="module"/>
-        <dataEntry offset="334" parentId="globals" symbolId="Arena" type="class"/>
-        <dataEntry offset="509" parentId="globals" symbolId="HighScoreView" type="class"/>
-        <dataEntry offset="588" parentId="globals" symbolId="SnakeIQApp" type="class"/>
-        <dataEntry offset="659" parentId="globals" symbolId="ScoreStorage" type="class"/>
-        <dataEntry offset="770" parentId="globals" symbolId="Rez" type="module"/>
-        <dataEntry offset="849" parentId="Rez" symbolId="Drawables" type="module"/>
-        <dataEntry offset="888" parentId="Rez" symbolId="Menus" type="module"/>
-        <dataEntry offset="935" parentId="Menus" symbolId="MainMenu" type="class"/>
-        <dataEntry offset="982" parentId="Menus" symbolId="SettingsMenu" type="class"/>
-        <dataEntry offset="1029" parentId="Rez" symbolId="Fonts" type="module"/>
-        <dataEntry offset="1060" parentId="Rez" symbolId="Layouts" type="module"/>
-        <dataEntry offset="1099" parentId="Rez" symbolId="JsonData" type="module"/>
-        <dataEntry offset="1130" parentId="Rez" symbolId="Strings" type="module"/>
-        <dataEntry offset="1209" parentId="globals" symbolId="HighScores" type="class"/>
-        <dataEntry offset="1272" parentId="globals" symbolId="SnakeIQView" type="class"/>
-        <dataEntry offset="1343" parentId="globals" symbolId="SnakeInvenotry" type="class"/>
-        <dataEntry offset="1390" parentId="globals" symbolId="RemoteScoreStorage" type="class"/>
-        <dataEntry offset="1437" parentId="globals" symbolId="Snake" type="class"/>
-        <dataEntry offset="1620" parentId="globals" symbolId="SnakeIQMenuDelegate" type="class"/>
-        <dataEntry offset="1675" parentId="globals" symbolId="SnakeIQDelegate" type="class"/>
-        <dataEntry offset="1730" parentId="globals" symbolId="HighScoreDelegate" type="class"/>
-        <dataEntry offset="1785" parentId="globals" symbolId="DarkModeSettingsDelegate" type="class"/>
-        <dataEntry offset="1840" parentId="globals" symbolId="ArenaDelegate" type="class"/>
-        <dataEntry offset="1919" parentId="globals" symbolId="ArenaView" type="class"/>
-        <dataEntry offset="2142" parentId="globals" symbolId="SnakeIQSettingsDelegate" type="class"/>
+        <dataEntry offset="342" parentId="globals" symbolId="HighScoreDelegate" type="class"/>
+        <dataEntry offset="397" parentId="globals" symbolId="FeedingFrenzyArenaView" type="class"/>
+        <dataEntry offset="444" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry offset="523" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry offset="562" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry offset="609" parentId="Menus" symbolId="MainMenu" type="class"/>
+        <dataEntry offset="656" parentId="Menus" symbolId="SettingsMenu" type="class"/>
+        <dataEntry offset="703" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry offset="734" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry offset="773" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry offset="804" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry offset="883" parentId="globals" symbolId="ArenaView" type="class"/>
+        <dataEntry offset="1106" parentId="globals" symbolId="SnakeIQView" type="class"/>
+        <dataEntry offset="1177" parentId="globals" symbolId="SnakeInvenotry" type="class"/>
+        <dataEntry offset="1224" parentId="globals" symbolId="Arena" type="class"/>
+        <dataEntry offset="1399" parentId="globals" symbolId="DarkModeSettingsDelegate" type="class"/>
+        <dataEntry offset="1454" parentId="globals" symbolId="ArenaDelegate" type="class"/>
+        <dataEntry offset="1533" parentId="globals" symbolId="Snake" type="class"/>
+        <dataEntry offset="1716" parentId="globals" symbolId="SnakeIQApp" type="class"/>
+        <dataEntry offset="1787" parentId="globals" symbolId="SnakeIQSettingsDelegate" type="class"/>
+        <dataEntry offset="1842" parentId="globals" symbolId="SnakeIQMenuDelegate" type="class"/>
+        <dataEntry offset="1897" parentId="globals" symbolId="ScoreStorage" type="class"/>
+        <dataEntry offset="2008" parentId="globals" symbolId="RemoteScoreStorage" type="class"/>
+        <dataEntry offset="2055" parentId="globals" symbolId="SnakeIQDelegate" type="class"/>
+        <dataEntry offset="2110" parentId="globals" symbolId="HighScores" type="class"/>
+        <dataEntry offset="2173" parentId="globals" symbolId="HighScoreView" type="class"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" name="initialize" parent="SnakeIQDelegate">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="onSelect" parent="SnakeIQDelegate">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="initialize" parent="ArenaDelegate">
-            <param id="view"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="onSelect" parent="ArenaDelegate">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="onNextPage" parent="ArenaDelegate">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="onPreviousPage" parent="ArenaDelegate">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="initialize" parent="Arena">
@@ -569,6 +560,89 @@
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="configWallValues" parent="Arena">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="ArenaView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onUpdate" parent="ArenaView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="start" parent="ArenaView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="pause" parent="ArenaView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="ArenaView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="driver" parent="ArenaView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="clearScreenAndConfig" parent="ArenaView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="drawPerimeter" parent="ArenaView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="drawSnake" parent="ArenaView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="drawFood" parent="ArenaView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="drawScore" parent="ArenaView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="drawGameOver" parent="ArenaView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="drawPause" parent="ArenaView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="foodCheck" parent="ArenaView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="configColor" parent="ArenaView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getArenaView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="SnakeIQApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStart" parent="SnakeIQApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStop" parent="SnakeIQApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getInitialView" parent="SnakeIQApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="ArenaDelegate">
+            <param id="view"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onSelect" parent="ArenaDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onNextPage" parent="ArenaDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onPreviousPage" parent="ArenaDelegate">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="initialize" parent="SnakeIQMenuDelegate">
@@ -683,74 +757,7 @@
         <functionEntry accessMode="public" name="getNextPlot" parent="Snake">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" name="initialize" parent="ArenaView">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="onUpdate" parent="ArenaView">
-            <param id="dc"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="start" parent="ArenaView">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="pause" parent="ArenaView">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="onHide" parent="ArenaView">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="driver" parent="ArenaView">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="clearScreenAndConfig" parent="ArenaView">
-            <param id="dc"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="drawPerimeter" parent="ArenaView">
-            <param id="dc"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="drawSnake" parent="ArenaView">
-            <param id="dc"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="drawFood" parent="ArenaView">
-            <param id="dc"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="drawScore" parent="ArenaView">
-            <param id="dc"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="drawGameOver" parent="ArenaView">
-            <param id="dc"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="drawPause" parent="ArenaView">
-            <param id="dc"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="foodCheck" parent="ArenaView">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="configColor" parent="ArenaView">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="getArenaView">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="initialize" parent="SnakeIQApp">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="onStart" parent="SnakeIQApp">
-            <param id="state"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="onStop" parent="SnakeIQApp">
-            <param id="state"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="getInitialView" parent="SnakeIQApp">
+        <functionEntry accessMode="public" name="initialize" parent="FeedingFrenzyArenaView">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="initialize" parent="SnakeIQView">
