@@ -121,5 +121,4 @@ class DarkModeSettingsDelegate extends Ui.MenuInputDelegate {
             App.getApp().setProperty("darkMode", true);
         }
     }
-
 }
