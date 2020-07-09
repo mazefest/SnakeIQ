@@ -6,6 +6,7 @@
 </menu>
 <menu id="SettingsMenu">
     <menu-item id="darkMode" label="@Strings.darkMode"/>
+    <menu-item id="snakeColor" label="@Strings.snakeColor"/>
 </menu>
 </menus>
 

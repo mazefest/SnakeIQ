@@ -1,5 +1,6 @@
 	<properties>
 		<property id="darkMode" type="boolean">false</property>
+		<property id="snakeColor" type="number">0</property>
 		<property id="localHS1" type="number">0</property>
 		<property id="localHS2" type="number">0</property>
 		<property id="localHS3" type="number">0</property>
