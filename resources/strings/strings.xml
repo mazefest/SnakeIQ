@@ -6,4 +6,5 @@
     <string id="highScores">High Scores</string>
     <string id="darkMode">Dark Mode</string>
     <string id="snakeColor">Snake Color</string>
+    <string id="difficulty">Difficulty</string>
 </strings>

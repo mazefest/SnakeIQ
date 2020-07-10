@@ -33,6 +33,8 @@ class SnakeIQSettingsDelegate extends Ui.MenuInputDelegate {
             getDarkModeMenu();
         } else if (item == :snakeColor) {
             getSnakeColorMenu();
+        } else if (item == :difficulty) {
+            getDifficultyMenu();
         }
     }
 
@@ -72,6 +74,21 @@ function getSnakeColorMenu() {
     Ui.pushView(
         menu,
         new SnakeColorSettingsDelegate(),
+        Ui.SLIDE_IMMEDIATE
+    );
+}
+
+function getDifficultyMenu() {
+    var menu = new Ui.Menu();
+    menu.setTitle("Difficulty");
+    menu.addItem("Normal", :normal); 
+    menu.addItem("Kinda Easy", :kindaEasy); 
+    menu.addItem("Easy", :easy); 
+
+
+    Ui.pushView(
+        menu,
+        new DifficultySettingsDelegate(),
         Ui.SLIDE_IMMEDIATE
     );
 }
@@ -120,5 +137,25 @@ class DarkModeSettingsDelegate extends Ui.MenuInputDelegate {
         } else if (item == :enable) {
             App.getApp().setProperty("darkMode", true);
         }
+    }
+}
+
+class DifficultySettingsDelegate extends Ui.MenuInputDelegate {
+    var difficulty;
+    function initialize() {
+        MenuInputDelegate.initialize();
+        difficulty = 0;
+    }
+
+    function onMenuItem(item) {
+        if (item == :normal) {
+            difficulty = 0;
+        } else if (item == :kindaEasy) {
+            difficulty = 1;
+        } else if (item == :easy) {
+            difficulty = 2;
+        } 
+
+        App.getApp().setProperty("difficulty", difficulty);
     }
 }

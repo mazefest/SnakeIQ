@@ -21,7 +21,7 @@ class ArenaView extends Ui.View {
         arena = new Arena();
         snake = new Snake();
         timer = new Timer.Timer();
-		timer.start(method(:driver), 100, true); 
+        configDifficulty();
         configColor();
         configSnakeColor();
     }
@@ -151,6 +151,22 @@ class ArenaView extends Ui.View {
             arena.configFoodCoordinates();
             snake.hasEaten = true;
         }
+    }
+
+    function configDifficulty() {
+        var difficulty = App.getApp().getProperty("difficulty");
+        var diffTimer = 0;
+        
+        if (difficulty == 0) {
+            diffTimer = 100;
+        } else if (difficulty == 1) {
+            diffTimer = 300;
+        } else {
+            diffTimer = 500;
+        }
+
+		timer.start(method(:driver), diffTimer, true); 
+
     }
 
     function configColor() {
