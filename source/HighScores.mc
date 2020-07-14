@@ -2,11 +2,33 @@ using Toybox.Application as App;
 using Toybox.System as Sys;
 
 class HighScores {
+    var easy;
+    var medium;
     var local;
     var remote;
     function initialize() {
-        local = new ScoreStorage();
-        remote = new RemoteScoreStorage();
+        easy = new ScoreStorage("elocalHS1", "elocalHS2", "elocalHS3", "elocalHS4", "elocalHS5");   
+        medium = new ScoreStorage("mlocalHS1", "mlocalHS2", "mlocalHS3", "mlocalHS4", "mlocalHS5");   
+        local = new ScoreStorage("localHS1", "localHS2", "localHS3", "localHS4", "localHS5");   
+    }
+
+    function addScore(score, difficulty) {
+        Sys.println("score:" + score +
+        "difficulty:" + difficulty);
+        Sys.println("======");
+        Sys.println(easy);
+        if (difficulty == easy) {
+        Sys.println("easy"); 
+            easy.addScore(score);
+        
+        } else if (difficulty == medium) {
+        Sys.println("medium"); 
+            medium.addScore(score);
+        
+        } else if (difficulty == expert) {
+        Sys.println("expert"); 
+            local.addScore(score);
+        }
     }
 }
 
@@ -16,25 +38,42 @@ class ScoreStorage {
     var three;
     var four;
     var five;
-   
-    function initialize() {
+
+    var keyOne;
+    var keyTwo;
+    var keyThree;
+    var keyFour; 
+    var keyFive;
+
+    function initialize(keyOne, keyTwo, keyThree, keyFour, keyFive) {
+        self.keyOne = keyOne;
+        self.keyTwo = keyTwo;
+        self.keyThree = keyThree;
+        self.keyFour = keyFour;
+        self.keyFive = keyFive;
         configScores();
     } 
 
     function configScores() {
-        one = App.getApp().getProperty("localHS1");
-        two = App.getApp().getProperty("localHS2");
-        three = App.getApp().getProperty("localHS3");
-        four = App.getApp().getProperty("localHS4");
-        five = App.getApp().getProperty("localHS5");
+        one = App.getApp().getProperty(keyOne);
+        two = App.getApp().getProperty(keyTwo);
+        three = App.getApp().getProperty(keyThree);
+        four = App.getApp().getProperty(keyFour);
+        five = App.getApp().getProperty(keyFive);
     }
 
     function setScores() {
-        App.getApp().setProperty("localHS1", one);
-        App.getApp().setProperty("localHS2", two);
-        App.getApp().setProperty("localHS3", three);
-        App.getApp().setProperty("localHS4", four);
-        App.getApp().setProperty("localHS5", five);
+        Sys.println("set");
+        Sys.println(keyOne);
+        App.getApp().setProperty(keyOne, one);
+        App.getApp().setProperty(keyTwo, two);
+        App.getApp().setProperty(keyThree, three);
+        App.getApp().setProperty(keyFour, four);
+        App.getApp().setProperty(keyFive, five);
+    }
+
+    function getScores() {
+        return [one, two, three, four, five];
     }
 
     function addScore(score) {
