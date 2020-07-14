@@ -71,11 +71,3 @@ class ScoreStorage {
         setScores();
     }
 }
-
-class RemoteScoreStorage extends ScoreStorage {
-
-    function initialize() {
-        ScoreStorage.initialize();
-    }
-
-}

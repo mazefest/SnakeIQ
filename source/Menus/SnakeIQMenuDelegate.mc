@@ -16,7 +16,8 @@ class SnakeIQMenuDelegate extends Ui.MenuInputDelegate {
             WatchUi.pushView(new Rez.Menus.SettingsMenu(), new SnakeIQSettingsDelegate(), WatchUi.SLIDE_UP);
         
         } else if (item == :highScores) {
-            WatchUi.pushView(new HighScoreView(), new HighScoreDelegate(), WatchUi.SLIDE_UP);
+            var view = new HighScoreView();
+            WatchUi.pushView(view, new HighScoreDelegate(view), WatchUi.SLIDE_UP);
         }
     }
 
@@ -81,9 +82,9 @@ function getSnakeColorMenu() {
 function getDifficultyMenu() {
     var menu = new Ui.Menu();
     menu.setTitle("Difficulty");
-    menu.addItem("Normal", :normal); 
-    menu.addItem("Kinda Easy", :kindaEasy); 
     menu.addItem("Easy", :easy); 
+    menu.addItem("Medium", :kindaEasy); 
+    menu.addItem("Expert", :normal); 
 
 
     Ui.pushView(
@@ -106,7 +107,6 @@ class SnakeColorSettingsDelegate extends Ui.MenuInputDelegate {
         } else if (item == :blue) {
             colorIndex = 1;
         } else if (item == :pink) {
-            Sys.println("Here");
             colorIndex = 2;
         } else if (item == :yellow) {
             colorIndex = 3;
@@ -144,16 +144,16 @@ class DifficultySettingsDelegate extends Ui.MenuInputDelegate {
     var difficulty;
     function initialize() {
         MenuInputDelegate.initialize();
-        difficulty = 0;
+        difficulty = expert;
     }
 
     function onMenuItem(item) {
         if (item == :normal) {
-            difficulty = 0;
+            difficulty = expert;
         } else if (item == :kindaEasy) {
-            difficulty = 1;
+            difficulty = medium;
         } else if (item == :easy) {
-            difficulty = 2;
+            difficulty = easy;
         } 
 
         App.getApp().setProperty("difficulty", difficulty);
