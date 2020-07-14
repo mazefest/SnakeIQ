@@ -194,7 +194,6 @@ class ArenaView extends Ui.View {
             Gfx.COLOR_RED,
             Gfx.COLOR_BLACK
         ];
-        Sys.println(colorIndex);
         snakeColor = colors[colorIndex];
     }
 }

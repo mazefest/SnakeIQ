@@ -13,20 +13,13 @@ class HighScores {
     }
 
     function addScore(score, difficulty) {
-        Sys.println("score:" + score +
-        "difficulty:" + difficulty);
-        Sys.println("======");
-        Sys.println(easy);
-        if (difficulty == easy) {
-        Sys.println("easy"); 
+        if (difficulty == 2) {
             easy.addScore(score);
         
-        } else if (difficulty == medium) {
-        Sys.println("medium"); 
+        } else if (difficulty == 1) {
             medium.addScore(score);
         
-        } else if (difficulty == expert) {
-        Sys.println("expert"); 
+        } else if (difficulty == 0) {
             local.addScore(score);
         }
     }
@@ -63,8 +56,6 @@ class ScoreStorage {
     }
 
     function setScores() {
-        Sys.println("set");
-        Sys.println(keyOne);
         App.getApp().setProperty(keyOne, one);
         App.getApp().setProperty(keyTwo, two);
         App.getApp().setProperty(keyThree, three);

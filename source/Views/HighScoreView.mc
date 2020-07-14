@@ -10,6 +10,7 @@ class HighScoreView extends Ui.View {
     var expertScores;
     var scores;
     var difficulty;
+    
     function initialize() {
         View.initialize();
         page = 0;
@@ -31,7 +32,6 @@ class HighScoreView extends Ui.View {
         mediumScores = $.highScores.medium.getScores();
         expertScores = $.highScores.local.getScores();
         scores = [expertScores, mediumScores, easyScores];
-        Sys.println(scores);
     }
 
     function getTitle() {

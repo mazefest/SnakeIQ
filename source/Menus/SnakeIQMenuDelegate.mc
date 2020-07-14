@@ -44,7 +44,6 @@ class SnakeIQSettingsDelegate extends Ui.MenuInputDelegate {
 function getDarkModeMenu() {
     var menu = new Ui.Menu();
     var darkMode = App.getApp().getProperty("darkMode");
-    Sys.println(darkMode);
     menu.setTitle("DarkMode");
     if (!darkMode) {
         menu.addItem("Enable", :enable); 
