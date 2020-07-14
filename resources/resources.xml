@@ -7,4 +7,14 @@
 		<property id="localHS3" type="number">0</property>
 		<property id="localHS4" type="number">0</property>
 		<property id="localHS5" type="number">0</property>
+		<property id="mlocalHS1" type="number">0</property>
+		<property id="mlocalHS2" type="number">0</property>
+		<property id="mlocalHS3" type="number">0</property>
+		<property id="mlocalHS4" type="number">0</property>
+		<property id="mlocalHS5" type="number">0</property>
+		<property id="elocalHS1" type="number">0</property>
+		<property id="elocalHS2" type="number">0</property>
+		<property id="elocalHS3" type="number">0</property>
+		<property id="elocalHS4" type="number">0</property>
+		<property id="elocalHS5" type="number">0</property>
 	</properties>

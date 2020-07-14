@@ -2,7 +2,7 @@ using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
 using Toybox.Application as App;
-
+enum {expert, medium, easy}
 class ArenaView extends Ui.View {
     var arena;
     var snake; 
@@ -62,7 +62,9 @@ class ArenaView extends Ui.View {
             snake.moveForward(nextCoordinate[x], nextCoordinate[y]);
 
         } else if (!snake.isAlive && !scoreSent) {
-            $.highScores.local.addScore(snake.size - 4);
+            var difficulty = App.getApp().getProperty("difficulty");
+            var score = snake.size - 4;
+            $.highScores.addScore(score, difficulty);
             scoreSent = true;
         } 
 
@@ -192,7 +194,6 @@ class ArenaView extends Ui.View {
             Gfx.COLOR_RED,
             Gfx.COLOR_BLACK
         ];
-        Sys.println(colorIndex);
         snakeColor = colors[colorIndex];
     }
 }
