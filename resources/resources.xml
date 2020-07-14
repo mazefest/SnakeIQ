@@ -12,9 +12,9 @@
 		<property id="mlocalHS3" type="number">0</property>
 		<property id="mlocalHS4" type="number">0</property>
 		<property id="mlocalHS5" type="number">0</property>
-		<property id="eocalHS1" type="number">0</property>
-		<property id="eocalHS2" type="number">0</property>
-		<property id="eocalHS3" type="number">0</property>
-		<property id="eocalHS4" type="number">0</property>
-		<property id="eocalHS5" type="number">0</property>
+		<property id="elocalHS1" type="number">0</property>
+		<property id="elocalHS2" type="number">0</property>
+		<property id="elocalHS3" type="number">0</property>
+		<property id="elocalHS4" type="number">0</property>
+		<property id="elocalHS5" type="number">0</property>
 	</properties>
