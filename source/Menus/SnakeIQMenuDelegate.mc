@@ -33,7 +33,8 @@ class SnakeIQSettingsDelegate extends Ui.MenuInputDelegate {
         if (item == :darkMode) {
             getDarkModeMenu();
         } else if (item == :snakeColor) {
-            getSnakeColorMenu();
+            //getSnakeColorMenu();
+            getSnakeColorView();
         } else if (item == :difficulty) {
             getDifficultyMenu();
         }

@@ -1,4 +1,6 @@
+using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
+using Toybox.Application as App;
 
 enum {
     North,
@@ -17,18 +19,24 @@ class Snake {
     var hasEaten;
     var direction;
     var inventory;
-    var size;
     var xCoordinates;
     var yCoordinates;
+    var initialX;
+    var initialY;
+    var size;
+    var color;
 
-    function initialize() {
+    function initialize(size, x, y) {
         isAlive = true;
         hasEaten = false;
         direction = South;
         xCoordinates = [];
         yCoordinates = [];
-        size = 4;
+        self.size = size;
+        initialX = x;
+        initialY = y;
         configInitialXYCoordinates();
+        configColor();
     }
 
     function getDirection() {
@@ -57,10 +65,31 @@ class Snake {
         }
     }
 
+    function configColor() {
+        var colorIndex = App.getApp().getProperty("snakeColor");
+        var colors = [
+            Gfx.COLOR_GREEN,
+            Gfx.COLOR_BLUE,
+            Gfx.COLOR_PINK,
+            Gfx.COLOR_YELLOW,
+            Gfx.COLOR_ORANGE,
+            Gfx.COLOR_DK_GRAY,
+            Gfx.COLOR_RED,
+            Gfx.COLOR_BLACK
+        ];
+        Sys.println(colorIndex);
+        color = colors[colorIndex];
+    }
+
     function configInitialXYCoordinates() {
+        if (initialX == null || initialY == null) {
+            initialX = 120;
+            initialY = 120;
+        }
+        
         for (var i = size; i > 0; i--) {
-            var x = 120;
-            var y = (120 / 2) - (i * 5);
+            var y = (initialX / 2) - (i * 5);
+            var x = initialX;
             y -= y % 5;
             xCoordinates.add(x);
             yCoordinates.add(y);

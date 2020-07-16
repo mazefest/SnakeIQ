@@ -175,15 +175,15 @@ class ArenaView extends Ui.View {
     function configColor() {
         darkMode = App.getApp().getProperty("darkMode");
         if (darkMode) {
-            forgroundColor = Gfx.COLOR_WHITE;
+            foregroundColor = Gfx.COLOR_WHITE;
             backgroundColor = Gfx.COLOR_BLACK;
         } else {
-            forgroundColor = Gfx.COLOR_BLACK;
+            foregroundColor = Gfx.COLOR_BLACK;
             backgroundColor = Gfx.COLOR_WHITE;
         }
     }
 
-    function configSnakeColor() {
+    /*function configSnakeColor() {
         var colorIndex = App.getApp().getProperty("snakeColor");
         var colors = [
             Gfx.COLOR_GREEN,
@@ -196,7 +196,7 @@ class ArenaView extends Ui.View {
             Gfx.COLOR_BLACK
         ];
         snakeColor = colors[colorIndex];
-    }
+    }*/
 }
 
 function getArenaView() {
