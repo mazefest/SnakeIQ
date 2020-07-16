@@ -11,7 +11,7 @@ class ArenaView extends Ui.View {
     var scoreSent;
     var darkMode;
     var backgroundColor;
-    var forgroundColor;
+    var foregroundColor;
     var snakeColor;
 
     function initialize() {
@@ -19,11 +19,12 @@ class ArenaView extends Ui.View {
         paused = false;
         scoreSent = false;
         arena = new Arena();
-        snake = new Snake();
+        snake = new Snake(4, null, null);
         timer = new Timer.Timer();
+        snakeColor = snake.color;
         configDifficulty();
         configColor();
-        configSnakeColor();
+        //configSnakeColor();
     }
 
     function onUpdate(dc) {
@@ -72,7 +73,7 @@ class ArenaView extends Ui.View {
     }
 
     function clearScreenAndConfig(dc) {
-       	dc.setColor(forgroundColor, backgroundColor);
+       	dc.setColor(foregroundColor, backgroundColor);
         dc.clear();
         dc.setPenWidth(5);
     } 
@@ -94,7 +95,7 @@ class ArenaView extends Ui.View {
                 snake.yCoordinates[i]
             );
         }
-       	dc.setColor(forgroundColor, backgroundColor);
+       	dc.setColor(foregroundColor, backgroundColor);
     }
 
     function drawFood(dc) {
