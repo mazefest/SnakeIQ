@@ -12,9 +12,6 @@ enum {
     y
 }
 
-class SnakeInvenotry {
-}
-
 class Snake {
     var isAlive;
     var hasEaten;
