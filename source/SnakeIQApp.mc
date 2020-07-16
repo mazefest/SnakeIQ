@@ -1,15 +1,20 @@
 using Toybox.Application;
 using Toybox.WatchUi;
+using Toybox.System as Sys;
 
 var highScores;
-
+var screenWidth;
+var screenHeight;
+var center;
 class SnakeIQApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
         highScores = new HighScores();
+        screenWidth = Sys.getDeviceSettings().screenWidth;
+        screenHeight= Sys.getDeviceSettings().screenHeight;
+        center = Sys.getDeviceSettings().screenWidth / 2;
     }
-
     // onStart() is called on application start up
     function onStart(state) {
     }
