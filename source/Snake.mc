@@ -25,6 +25,8 @@ class Snake {
     var initialY;
     var size;
     var color;
+    var rainbowMode;
+    var colorIndex;
 
     function initialize(size, x, y) {
         isAlive = true;
@@ -66,7 +68,11 @@ class Snake {
     }
 
     function configColor() {
-        var colorIndex = App.getApp().getProperty("snakeColor");
+        colorIndex = App.getApp().getProperty("snakeColor");
+        color = $.crayon.colors[colorIndex];
+        /*if (colorIndex == 8) {
+            color = $.crayon.getRainbowColor();
+        } else  {
         var colors = [
             Gfx.COLOR_GREEN,
             Gfx.COLOR_BLUE,
@@ -75,16 +81,17 @@ class Snake {
             Gfx.COLOR_ORANGE,
             Gfx.COLOR_DK_GRAY,
             Gfx.COLOR_RED,
-            Gfx.COLOR_BLACK
+            $.crayon.getSystemColor()
         ];
-        Sys.println(colorIndex);
         color = colors[colorIndex];
+        }*/
     }
 
     function configInitialXYCoordinates() {
+        Sys.println(initialX + " " + initialY);
         if (initialX == null || initialY == null) {
             initialX = 120;
-            initialY = 120;
+            initialY = 160;
         }
         
         for (var i = size; i > 0; i--) {
