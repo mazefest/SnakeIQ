@@ -15,16 +15,6 @@ class SnakeColorView extends ArenaView{
         snake = new Snake(10, $.center + 25, 140);
         colorIndex = App.getApp().getProperty("snakeColor");
         count = -1;
-        colors = [
-            Gfx.COLOR_GREEN,
-            Gfx.COLOR_BLUE,
-            Gfx.COLOR_PINK,
-            Gfx.COLOR_YELLOW,
-            Gfx.COLOR_ORANGE,
-            Gfx.COLOR_DK_GRAY,
-            Gfx.COLOR_RED,
-            Gfx.COLOR_BLACK
-        ];
     }
 
     function onUpdate(dc) {
@@ -32,11 +22,13 @@ class SnakeColorView extends ArenaView{
         drawSnake(dc);
         configLabel();
         drawText(dc);
+        drawBar(dc);
     }
 
     function driver() {
         var nextCoordinate = snake.getNextPlot();
         snake.moveForward(nextCoordinate[x], nextCoordinate[y]);
+        $.crayon.configColors();
 
         if (count == 10 || count == -1) {
             snake.setDirection(1);
@@ -45,6 +37,24 @@ class SnakeColorView extends ArenaView{
 
         count += 1;
         Ui.requestUpdate();
+    }
+    function drawBar(dc) {
+        for (var i = 0; i < $.crayon.colors.size(); i ++) {
+            var focus = 0;
+            var y = (($.screenHeight / 3) * 2) + 15;
+            if (colorIndex == i) {
+                focus = 10;
+                y -= 5;
+            }
+            
+            dc.setColor($.crayon.colors[i], Gfx.COLOR_TRANSPARENT);
+            dc.fillRectangle(
+                $.screenWidth / 3 + (10 * i),
+                y,
+                10,
+                10 + focus               
+            );
+        }
     }
     function drawText(dc) {
         dc.setColor(foregroundColor, Gfx.COLOR_TRANSPARENT);

@@ -25,6 +25,8 @@ class Snake {
     var initialY;
     var size;
     var color;
+    var rainbowMode;
+    var colorIndex;
 
     function initialize(size, x, y) {
         isAlive = true;
@@ -66,7 +68,11 @@ class Snake {
     }
 
     function configColor() {
-        var colorIndex = App.getApp().getProperty("snakeColor");
+        colorIndex = App.getApp().getProperty("snakeColor");
+        color = $.crayon.colors[colorIndex];
+        /*if (colorIndex == 8) {
+            color = $.crayon.getRainbowColor();
+        } else  {
         var colors = [
             Gfx.COLOR_GREEN,
             Gfx.COLOR_BLUE,
