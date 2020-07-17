@@ -137,6 +137,9 @@ class DarkModeSettingsDelegate extends Ui.MenuInputDelegate {
         } else if (item == :enable) {
             App.getApp().setProperty("darkMode", true);
         }
+
+        $.crayon.configDarkMode();
+        $.crayon.configColors();
     }
 }
 
