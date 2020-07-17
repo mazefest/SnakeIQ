@@ -24,7 +24,6 @@ class ArenaView extends Ui.View {
         snakeColor = snake.color;
         configDifficulty();
         configColor();
-        //configSnakeColor();
     }
 
     function onUpdate(dc) {
@@ -51,9 +50,9 @@ class ArenaView extends Ui.View {
 
     function driver() {
         var nextCoordinate = snake.getNextPlot();
-        
         foodCheck();
-
+        $.crayon.configColors();
+        
         if (snake.hasEaten) {
             snake.eatAndGrow(nextCoordinate[x], nextCoordinate[y]);
         
@@ -86,9 +85,12 @@ class ArenaView extends Ui.View {
             arena.height + (1)
         );
     }
-
+    function configSnakeColor() {
+        snakeColor = $.crayon.colors[snake.colorIndex];
+    }
     function drawSnake(dc) {
-       	dc.setColor(snakeColor, Gfx.COLOR_TRANSPARENT);
+        configSnakeColor();
+        dc.setColor(snakeColor, Gfx.COLOR_TRANSPARENT);
         for (var i = 0; i < snake.size; i++) {
             dc.drawPoint(
                 snake.xCoordinates[i],
@@ -182,21 +184,6 @@ class ArenaView extends Ui.View {
             backgroundColor = Gfx.COLOR_WHITE;
         }
     }
-
-    /*function configSnakeColor() {
-        var colorIndex = App.getApp().getProperty("snakeColor");
-        var colors = [
-            Gfx.COLOR_GREEN,
-            Gfx.COLOR_BLUE,
-            Gfx.COLOR_PINK,
-            Gfx.COLOR_YELLOW,
-            Gfx.COLOR_ORANGE,
-            Gfx.COLOR_DK_GRAY,
-            Gfx.COLOR_RED,
-            Gfx.COLOR_BLACK
-        ];
-        snakeColor = colors[colorIndex];
-    }*/
 }
 
 function getArenaView() {

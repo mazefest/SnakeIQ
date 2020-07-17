@@ -75,16 +75,17 @@ class Snake {
             Gfx.COLOR_ORANGE,
             Gfx.COLOR_DK_GRAY,
             Gfx.COLOR_RED,
-            Gfx.COLOR_BLACK
+            $.crayon.getSystemColor()
         ];
-        Sys.println(colorIndex);
         color = colors[colorIndex];
+        }*/
     }
 
     function configInitialXYCoordinates() {
+        Sys.println(initialX + " " + initialY);
         if (initialX == null || initialY == null) {
             initialX = 120;
-            initialY = 120;
+            initialY = 160;
         }
         
         for (var i = size; i > 0; i--) {
