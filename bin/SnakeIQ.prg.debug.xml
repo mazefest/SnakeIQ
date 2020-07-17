@@ -529,18 +529,18 @@
         <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="124" lineNum="26" pc="268446493" symbol="drawTitle"/>
         <entry filename="/Users/mazefest/Documents/SideProjects/SnakeIQ/source/Views/SnakeIQView.mc" id="124" lineNum="27" pc="268446497" symbol="drawTitle"/>
         <entry filename="Rez" id="130" lineNum="15" pc="268446603" symbol="MainLayout"/>
-        <entry filename="Rez" id="130" lineNum="17" pc="268446615" symbol="MainLayout"/>
-        <entry filename="Rez" id="130" lineNum="19" pc="268446767" symbol="MainLayout"/>
-        <entry filename="Rez" id="133" lineNum="32" pc="268446785" symbol="initialize"/>
-        <entry filename="Rez" id="133" lineNum="33" pc="268446789" symbol="initialize"/>
-        <entry filename="Rez" id="133" lineNum="34" pc="268446807" symbol="initialize"/>
-        <entry filename="Rez" id="133" lineNum="35" pc="268446863" symbol="initialize"/>
-        <entry filename="Rez" id="133" lineNum="36" pc="268446919" symbol="initialize"/>
-        <entry filename="Rez" id="135" lineNum="48" pc="268446976" symbol="initialize"/>
-        <entry filename="Rez" id="135" lineNum="49" pc="268446980" symbol="initialize"/>
-        <entry filename="Rez" id="135" lineNum="50" pc="268446998" symbol="initialize"/>
-        <entry filename="Rez" id="135" lineNum="51" pc="268447054" symbol="initialize"/>
-        <entry filename="Rez" id="135" lineNum="52" pc="268447110" symbol="initialize"/>
+        <entry filename="Rez" id="130" lineNum="18" pc="268446615" symbol="MainLayout"/>
+        <entry filename="Rez" id="130" lineNum="20" pc="268446779" symbol="MainLayout"/>
+        <entry filename="Rez" id="133" lineNum="33" pc="268446797" symbol="initialize"/>
+        <entry filename="Rez" id="133" lineNum="34" pc="268446801" symbol="initialize"/>
+        <entry filename="Rez" id="133" lineNum="35" pc="268446819" symbol="initialize"/>
+        <entry filename="Rez" id="133" lineNum="36" pc="268446875" symbol="initialize"/>
+        <entry filename="Rez" id="133" lineNum="37" pc="268446931" symbol="initialize"/>
+        <entry filename="Rez" id="135" lineNum="49" pc="268446988" symbol="initialize"/>
+        <entry filename="Rez" id="135" lineNum="50" pc="268446992" symbol="initialize"/>
+        <entry filename="Rez" id="135" lineNum="51" pc="268447010" symbol="initialize"/>
+        <entry filename="Rez" id="135" lineNum="52" pc="268447066" symbol="initialize"/>
+        <entry filename="Rez" id="135" lineNum="53" pc="268447122" symbol="initialize"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="8388639" module="true" symbol="Graphics"/>
@@ -834,8 +834,8 @@
         <entry endPc="268446366" name="nextYCoordinate" stackId="3" startPc="268446234"/>
         <entry endPc="268446493" name="dc" stackId="1" startPc="268446418"/>
         <entry endPc="268446603" name="dc" stackId="1" startPc="268446493"/>
-        <entry endPc="268446784" name="rez_cmp_local_text_8731031275" stackId="2" startPc="268446615"/>
-        <entry endPc="268446785" name="dc" stackId="1" startPc="268446603"/>
+        <entry endPc="268446796" name="rez_cmp_local_text_2154820321" stackId="2" startPc="268446615"/>
+        <entry endPc="268446797" name="dc" stackId="1" startPc="268446603"/>
     </localVars>
     <annotations/>
     <dataEntryOffsetMappings>

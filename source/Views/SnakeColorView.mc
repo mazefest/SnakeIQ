@@ -68,7 +68,10 @@ class SnakeColorView extends ArenaView{
             Gfx.TEXT_JUSTIFY_CENTER
         );
     }
-
+    function configSnakeColor() {
+        Sys.println("hre");
+        snakeColor = $.crayon.colors[colorIndex];
+    }
     function configLabel() {
         if (colorIndex == 0) {
             label = "Green";
@@ -85,8 +88,9 @@ class SnakeColorView extends ArenaView{
         } else if (colorIndex == 6) {
             label = "Red";
         } else if (colorIndex == 7) {
-            label = "Black";
-            
+            label = "System";
+        } else if (colorIndex == 8) {
+            label = "Rainbow";
         }
     }
 
@@ -95,11 +99,10 @@ class SnakeColorView extends ArenaView{
     }
 
     function changeColor(val) {
-        colorIndex = (colorIndex + val) % colors.size();
+        colorIndex = (colorIndex + val) % ($.crayon.colors.size());
         if (colorIndex < 0) {
-            colorIndex = colors.size() - 1;
+            colorIndex = $.crayon.colors.size() - 1;
         }
-        snakeColor = colors[colorIndex];
     }
 
     function configDifficulty() {
