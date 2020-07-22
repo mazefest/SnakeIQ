@@ -836,7 +836,7 @@
         <entry endPc="268446410" name="nextYCoordinate" stackId="3" startPc="268446278"/>
         <entry endPc="268446537" name="dc" stackId="1" startPc="268446462"/>
         <entry endPc="268446647" name="dc" stackId="1" startPc="268446537"/>
-        <entry endPc="268446828" name="rez_cmp_local_text_4881763556" stackId="2" startPc="268446659"/>
+        <entry endPc="268446828" name="rez_cmp_local_text_1131417181" stackId="2" startPc="268446659"/>
         <entry endPc="268446829" name="dc" stackId="1" startPc="268446647"/>
     </localVars>
     <annotations/>
