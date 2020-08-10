@@ -1,7 +1,7 @@
 using Toybox.WatchUi as Ui;
 using Toybox.System as Sys;
 
-class ArenaDelegate extends Ui.BehaviorDelegate {
+class ArenaDelegate extends UpDownWrapper {
     var view;
     
     function initialize(view) {
@@ -29,4 +29,23 @@ class ArenaDelegate extends Ui.BehaviorDelegate {
         view.snake.setDirection(-1);
     }
 
+}
+
+class UpDownWrapper extends Ui.BehaviorDelegate {
+	function initialize() {
+		BehaviorDelegate.initialize();
+	}
+	function onSwipe(evt) {
+		if (evt.getDirection() == Ui.SWIPE_LEFT) {
+			return onNextPage();
+		} else if (evt.getDirection() == Ui.SWIPE_RIGHT) {
+			return onPreviousPage();
+		} else if (evt.getDirection() == Ui.SWIPE_UP) {
+			return onNextPage();
+		} else if (evt.getDirection() == Ui.SWIPE_DOWN) {
+			return onPreviousPage();
+		} else {
+			return true;
+		}
+	}
 }
