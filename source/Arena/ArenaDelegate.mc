@@ -37,6 +37,7 @@ class UpDownWrapper extends Ui.BehaviorDelegate {
 	}
 	function onSwipe(evt) {
 		if (evt.getDirection() == Ui.SWIPE_LEFT) {
+            Sys.println("Left Swipe");
 			return onNextPage();
 		} else if (evt.getDirection() == Ui.SWIPE_RIGHT) {
 			return onPreviousPage();
