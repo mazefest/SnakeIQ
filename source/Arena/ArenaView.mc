@@ -187,8 +187,14 @@ class ArenaView extends Ui.View {
 }
 
 function getArenaView() {
+    var isTouchScreen = Sys.getDeviceSettings().isTouchScreen;
+    var delegate;
     var view = new ArenaView();
-    var delegate = new ArenaDelegate(view);
+    if (isTouchScreen) {
+        delegate = new ArenaDelegateTouch(view);
+    } else {
+        delegate = new ArenaDelegateTactile(view);
+    }
     Ui.pushView(
         view,
         delegate,
