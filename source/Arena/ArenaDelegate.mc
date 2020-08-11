@@ -54,6 +54,17 @@ class ArenaDelegateTouch extends UpDownWrapper {
         return true;
     }
 
+    function onBack() {
+        var direction = view.snake.getDirection();
+        var event = Ui.SWIPE_RIGHT;
+        if (direction == North) {
+            onNorthSwipe(event);
+        } else if (direction == South) {
+            onSouthSwipe(event);
+        }
+        return true;
+    }
+
     //function onNextPage() {
         //Sys.println("onNextPage()");
         //view.snake.setDirection(1);
@@ -79,18 +90,6 @@ class UpDownWrapper extends Ui.BehaviorDelegate {
 		BehaviorDelegate.initialize();
     }
 
-    /*function onNextPage() {
-        Sys.println("onNextPage()");
-        //view.snake.setDirection(1);
-        //return true;
-    }
-
-    function onPreviousPage() {
-        Sys.println("onPreviousPage()");
-        //view.snake.setDirection(-1);
-        //return true;
-    }*/
-
     function onSwipe(evt) {
         Sys.println("SWIPE");
         var event = evt.getDirection();
@@ -108,6 +107,7 @@ class UpDownWrapper extends Ui.BehaviorDelegate {
         
         return true;
     }
+
 
     function onSouthSwipe(event) {
         if (event == Ui.SWIPE_LEFT) {
