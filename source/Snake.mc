@@ -70,32 +70,17 @@ class Snake {
     function configColor() {
         colorIndex = App.getApp().getProperty("snakeColor");
         color = $.crayon.colors[colorIndex];
-        /*if (colorIndex == 8) {
-            color = $.crayon.getRainbowColor();
-        } else  {
-        var colors = [
-            Gfx.COLOR_GREEN,
-            Gfx.COLOR_BLUE,
-            Gfx.COLOR_PINK,
-            Gfx.COLOR_YELLOW,
-            Gfx.COLOR_ORANGE,
-            Gfx.COLOR_DK_GRAY,
-            Gfx.COLOR_RED,
-            $.crayon.getSystemColor()
-        ];
-        color = colors[colorIndex];
-        }*/
     }
 
     function configInitialXYCoordinates() {
-        Sys.println(initialX + " " + initialY);
         if (initialX == null || initialY == null) {
-            initialX = 120;
-            initialY = 160;
+            initialX = ($.screenWidth / 2) - (($.screenWidth / 2) % 5);
+            initialY = ($.screenHeight / 3) - (($.screenHeight/ 2) % 5);
+            Sys.println(initialY);
         }
         
         for (var i = size; i > 0; i--) {
-            var y = (initialX / 2) - (i * 5);
+            var y = (initialY) - (i * 5);
             var x = initialX;
             y -= y % 5;
             xCoordinates.add(x);
