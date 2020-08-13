@@ -13,13 +13,26 @@ class SnakeIQMenuDelegate extends Ui.MenuInputDelegate {
             getArenaView();
         
         } else if (item == :settings) {
-            WatchUi.pushView(new Rez.Menus.SettingsMenu(), new SnakeIQSettingsDelegate(), WatchUi.SLIDE_UP);
-        
+            getSettingsMenu();
+
         } else if (item == :highScores) {
             var view = new HighScoreView();
             WatchUi.pushView(view, new HighScoreDelegate(view), WatchUi.SLIDE_UP);
         }
     }
+
+    function getSettingsMenu() {
+        var view = new Rez.Menus.SettingsMenu();
+        var delegate = new SnakeIQSettingsDelegate(); 
+        WatchUi.pushView(view, delegate, WatchUi.SLIDE_UP);
+    }
+
+    function getHighScoreMenu() {
+        var view = new HighScoreView();
+        var delegate = new HighScoreDelegate(view);
+        WatchUi.pushView(view, delegate, WatchUi.SLIDE_UP);
+    }
+    
 
 }
 
@@ -32,9 +45,10 @@ class SnakeIQSettingsDelegate extends Ui.MenuInputDelegate {
     function onMenuItem(item) {
         if (item == :darkMode) {
             getDarkModeMenu();
+
         } else if (item == :snakeColor) {
-            //getSnakeColorMenu();
             getSnakeColorView();
+
         } else if (item == :difficulty) {
             getDifficultyMenu();
         }
