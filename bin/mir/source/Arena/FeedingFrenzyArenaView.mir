@@ -1,0 +1,22 @@
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/FeedingFrenzyArenaView.mc"; @line = 1; ]
+class FeedingFrenzyArenaView extends ArenaView{
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/FeedingFrenzyArenaView.mc"; @line = 1; ]
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/FeedingFrenzyArenaView.mc"; @line = 1; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/FeedingFrenzyArenaView.mc"; @line = 2; ]
+    function initialize() as Void {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_FeedingFrenzyArenaView_mc_2_26_4_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/FeedingFrenzyArenaView.mc" 3 8 ]
+        %tmp.2 = getv ? :ArenaView;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_FeedingFrenzyArenaView_mc_2_26_4_4_stop:
+    }
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/FeedingFrenzyArenaView.mc"; @line = 1; ]
+<init> {
+}

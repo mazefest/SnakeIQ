@@ -1,0 +1,624 @@
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 1; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 2; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 3; ]
+using Toybox.System as :Sys;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 4; ]
+using Toybox.Application as :App;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 6; ]
+class SnakeColorView extends ArenaView{
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 7; @position = 8; ]
+    var colorIndex;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 8; @position = 8; ]
+    var colors;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 9; @position = 8; ]
+    var count;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 10; @position = 8; ]
+    var label;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 12; ]
+    function initialize() as Void {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_12_26_18_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 13 8 ]
+        %tmp.2 = getv ? :ArenaView;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 14 8 ]
+        %tmp.4 = self;
+        %tmp.5 = getv function %tmp.4 :configArenaPerimeter;
+        invoke %tmp.4 %tmp.5();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 15 8 ]
+        %tmp.9 = getv ? :Snake;
+        %tmp.10 = 10;
+        %tmp.11 = getm $;
+        %tmp.12 = getv %tmp.11 :center;
+        %tmp.13 = 25;
+        %tmp.14 = add %tmp.12 %tmp.13;
+        %tmp.15 = 140;
+        %tmp.6 = newc %tmp.9 (%tmp.10, %tmp.14, %tmp.15);
+        putv self :snake %tmp.6;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 16 8 ]
+        %tmp.16 = getm $.Toybox.Application;
+        %tmp.17 = getv function %tmp.16 :getApp;
+        %tmp.18 = invoke %tmp.16 %tmp.17();
+        %tmp.19 = getv function %tmp.18 :getProperty;
+        %tmp.20 = "snakeColor";
+        %tmp.21 = invoke %tmp.18 %tmp.19(%tmp.20);
+        putv self :colorIndex %tmp.21;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 17 8 ]
+        %tmp.22 = -1;
+        putv self :count %tmp.22;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_12_26_18_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 20; ]
+    function onUpdate(dc) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_20_26_26_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 21 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :clearScreenAndConfig;
+        %tmp.4 = lgetv %dc;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 22 8 ]
+        %tmp.5 = self;
+        %tmp.6 = getv function %tmp.5 :drawSnake;
+        %tmp.8 = lgetv %dc;
+        invoke %tmp.5 %tmp.6(%tmp.8);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 23 8 ]
+        %tmp.9 = self;
+        %tmp.10 = getv function %tmp.9 :configLabel;
+        invoke %tmp.9 %tmp.10();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 24 8 ]
+        %tmp.11 = self;
+        %tmp.12 = getv function %tmp.11 :drawText;
+        %tmp.14 = lgetv %dc;
+        invoke %tmp.11 %tmp.12(%tmp.14);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 25 8 ]
+        %tmp.15 = self;
+        %tmp.16 = getv function %tmp.15 :drawBar;
+        %tmp.18 = lgetv %dc;
+        invoke %tmp.15 %tmp.16(%tmp.18);
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_20_26_26_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 28; ]
+    function driver() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_28_22_40_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 29 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_28_22_40_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_28_22_40_4_stop" ]
+        %nextCoordinate.1 = local;
+        %tmp.2 = getv ? :snake;
+        %tmp.3 = getv function %tmp.2 :getNextPlot;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %nextCoordinate.1 %tmp.4;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 30 8 ]
+        %tmp.6 = getv ? :snake;
+        %tmp.7 = getv function %tmp.6 :moveForward;
+        %tmp.9 = lgetv %nextCoordinate.1;
+        %tmp.11 = getv ? :x;
+        %tmp.12 = agetv %tmp.9 %tmp.11;
+        %tmp.14 = lgetv %nextCoordinate.1;
+        %tmp.16 = getv ? :y;
+        %tmp.17 = agetv %tmp.14 %tmp.16;
+        invoke %tmp.6 %tmp.7(%tmp.12, %tmp.17);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 31 8 ]
+        %tmp.18 = getm $;
+        %tmp.19 = getv %tmp.18 :crayon;
+        %tmp.20 = getv function %tmp.19 :configColors;
+        invoke %tmp.19 %tmp.20();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 33 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_33_8_36_8_if_stmt:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_33_12_33_37_begin:
+        %tmp.22 = getv ? :count;
+        %tmp.23 = 10;
+        %tmp.24 = eq %tmp.22 %tmp.23;
+        bt %tmp.24 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_33_8_36_8_if_true;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_33_27_33_37_false:
+        %tmp.26 = getv ? :count;
+        %tmp.27 = -1;
+        %tmp.28 = eq %tmp.26 %tmp.27;
+        push %tmp.28;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_33_27_33_37_end:
+        %tmp.29 = phi [%tmp.24 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_33_12_33_37_begin] [%tmp.28 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_33_27_33_37_false] [%tmp.29 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_33_27_33_37_end];
+        bf %tmp.29 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_33_8_36_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_33_8_36_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_33_40_36_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 34 12 ]
+        %tmp.31 = getv ? :snake;
+        %tmp.32 = getv function %tmp.31 :setDirection;
+        %tmp.33 = 1;
+        invoke %tmp.31 %tmp.32(%tmp.33);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 35 12 ]
+        %tmp.34 = 0;
+        putv self :count %tmp.34;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_33_40_36_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_33_8_36_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_33_8_36_8_if_end:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 38 8 ]
+        %tmp.35 = getv self :count;
+        %tmp.36 = 1;
+        %tmp.37 = add %tmp.35 %tmp.36;
+        putv self :count dup %tmp.37;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 39 8 ]
+        %tmp.38 = getm $.Toybox.WatchUi;
+        %tmp.39 = getv function %tmp.38 :requestUpdate;
+        invoke %tmp.38 %tmp.39();
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_28_22_40_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 41; ]
+    function drawBar(dc) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_41_25_58_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 42 8 ]
+        for @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_8_57_8_for_test @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_8_57_8_for_incr @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_8_57_8_for_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_8_57_8_for_init:
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_8_57_8_for_begin" "_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_8_57_8_for_end" ]
+        %i.1 = local;
+        %tmp.1 = 0;
+        lputv %i.1 %tmp.1;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_8_57_8_for_test:
+        %tmp.3 = lgetv %i.1;
+        %tmp.4 = getm $;
+        %tmp.5 = getv %tmp.4 :crayon;
+        %tmp.6 = getv %tmp.5 :colors;
+        %tmp.7 = getv function %tmp.6 :size;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = lt %tmp.3 %tmp.8;
+        bf %tmp.9 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_8_57_8_for_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_8_57_8_for_begin:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_58_57_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 43 12 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_58_57_8_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_58_57_8_stop" ]
+        %focus.2 = local;
+        %tmp.10 = 0;
+        lputv %focus.2 %tmp.10;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 44 12 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_58_57_8_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_58_57_8_stop" ]
+        %y.3 = local;
+        %tmp.11 = getm $;
+        %tmp.12 = getv %tmp.11 :screenHeight;
+        %tmp.13 = 3;
+        %tmp.14 = div %tmp.12 %tmp.13;
+        %tmp.15 = 2;
+        %tmp.16 = mul %tmp.14 %tmp.15;
+        %tmp.17 = 15;
+        %tmp.18 = add %tmp.16 %tmp.17;
+        lputv %y.3 %tmp.18;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 45 12 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_45_12_48_12_if_stmt:
+        %tmp.20 = getv ? :colorIndex;
+        %tmp.22 = lgetv %i.1;
+        %tmp.23 = eq %tmp.20 %tmp.22;
+        bf %tmp.23 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_45_12_48_12_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_45_12_48_12_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_45_33_48_12_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 46 16 ]
+        %tmp.24 = 10;
+        lputv %focus.2 %tmp.24;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 47 16 ]
+        %tmp.25 = lgetv %y.3;
+        %tmp.26 = 5;
+        %tmp.27 = sub %tmp.25 %tmp.26;
+        lputv %y.3 %tmp.27;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_45_33_48_12_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_45_12_48_12_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_45_12_48_12_if_end:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 50 12 ]
+        %tmp.28 = lgetv %dc;
+        %tmp.29 = getv function %tmp.28 :setColor;
+        %tmp.30 = getm $;
+        %tmp.31 = getv %tmp.30 :crayon;
+        %tmp.32 = getv %tmp.31 :colors;
+        %tmp.34 = lgetv %i.1;
+        %tmp.35 = agetv %tmp.32 %tmp.34;
+        %tmp.36 = getm $.Toybox.Graphics;
+        %tmp.37 = getv %tmp.36 :COLOR_TRANSPARENT;
+        invoke %tmp.28 %tmp.29(%tmp.35, %tmp.37);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 51 12 ]
+        %tmp.38 = lgetv %dc;
+        %tmp.39 = getv function %tmp.38 :fillRectangle;
+        %tmp.40 = getm $;
+        %tmp.41 = getv %tmp.40 :screenWidth;
+        %tmp.42 = 3;
+        %tmp.43 = div %tmp.41 %tmp.42;
+        %tmp.44 = 10;
+        %tmp.46 = lgetv %i.1;
+        %tmp.47 = mul %tmp.44 %tmp.46;
+        %tmp.48 = add %tmp.43 %tmp.47;
+        %tmp.50 = lgetv %y.3;
+        %tmp.51 = 10;
+        %tmp.52 = 10;
+        %tmp.54 = lgetv %focus.2;
+        %tmp.55 = add %tmp.52 %tmp.54;
+        invoke %tmp.38 %tmp.39(%tmp.48, %tmp.50, %tmp.51, %tmp.55);
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_58_57_8_stop:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_8_57_8_for_incr:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 42 ]
+        %tmp.58 = lgetv %i.1;
+        %tmp.59 = add %tmp.58 1;
+        lputv %i.1 %tmp.59;
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_8_57_8_for_test;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_42_8_57_8_for_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_41_25_58_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 59; ]
+    function drawText(dc) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_59_26_70_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 60 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.4 = getv ? :foregroundColor;
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 61 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_59_26_70_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_59_26_70_4_stop" ]
+        %x.1 = local;
+        %tmp.7 = getm $;
+        %tmp.8 = getv %tmp.7 :screenWidth;
+        %tmp.9 = 2;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        lputv %x.1 %tmp.10;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 62 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_59_26_70_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_59_26_70_4_stop" ]
+        %y.2 = local;
+        %tmp.11 = getm $;
+        %tmp.12 = getv %tmp.11 :screenHeight;
+        %tmp.13 = 2;
+        %tmp.14 = div %tmp.12 %tmp.13;
+        lputv %y.2 %tmp.14;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 63 8 ]
+        %tmp.15 = lgetv %dc;
+        %tmp.16 = getv function %tmp.15 :drawText;
+        %tmp.18 = lgetv %x.1;
+        %tmp.20 = lgetv %y.2;
+        %tmp.21 = getm $.Toybox.Graphics;
+        %tmp.22 = getv %tmp.21 :FONT_MEDIUM;
+        %tmp.24 = getv ? :label;
+        %tmp.25 = getm $.Toybox.Graphics;
+        %tmp.26 = getv %tmp.25 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20, %tmp.22, %tmp.24, %tmp.26);
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_59_26_70_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 71; ]
+    function configSnakeColor() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_71_32_74_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 72 8 ]
+        %tmp.1 = getm $.Toybox.System;
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "hre";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 73 8 ]
+        %tmp.4 = getm $;
+        %tmp.5 = getv %tmp.4 :crayon;
+        %tmp.6 = getv %tmp.5 :colors;
+        %tmp.8 = getv ? :colorIndex;
+        %tmp.9 = agetv %tmp.6 %tmp.8;
+        putv self :snakeColor %tmp.9;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_71_32_74_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 75; ]
+    function configLabel() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_75_27_95_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 76 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_76_8_94_8_if_stmt:
+        %tmp.2 = getv ? :colorIndex;
+        %tmp.3 = 0;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_76_8_94_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_76_8_94_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_76_29_78_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 77 12 ]
+        %tmp.5 = "Green";
+        putv self :label %tmp.5;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_76_29_78_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_76_8_94_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_76_8_94_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 78 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_78_15_94_8_if_stmt:
+        %tmp.7 = getv ? :colorIndex;
+        %tmp.8 = 1;
+        %tmp.9 = eq %tmp.7 %tmp.8;
+        bf %tmp.9 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_78_15_94_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_78_15_94_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_78_36_80_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 79 12 ]
+        %tmp.10 = "Blue";
+        putv self :label %tmp.10;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_78_36_80_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_78_15_94_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_78_15_94_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 80 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_80_15_94_8_if_stmt:
+        %tmp.12 = getv ? :colorIndex;
+        %tmp.13 = 2;
+        %tmp.14 = eq %tmp.12 %tmp.13;
+        bf %tmp.14 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_80_15_94_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_80_15_94_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_80_36_82_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 81 12 ]
+        %tmp.15 = "Pink";
+        putv self :label %tmp.15;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_80_36_82_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_80_15_94_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_80_15_94_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 82 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_82_15_94_8_if_stmt:
+        %tmp.17 = getv ? :colorIndex;
+        %tmp.18 = 3;
+        %tmp.19 = eq %tmp.17 %tmp.18;
+        bf %tmp.19 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_82_15_94_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_82_15_94_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_82_36_84_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 83 12 ]
+        %tmp.20 = "Yellow";
+        putv self :label %tmp.20;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_82_36_84_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_82_15_94_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_82_15_94_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 84 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_84_15_94_8_if_stmt:
+        %tmp.22 = getv ? :colorIndex;
+        %tmp.23 = 4;
+        %tmp.24 = eq %tmp.22 %tmp.23;
+        bf %tmp.24 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_84_15_94_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_84_15_94_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_84_36_86_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 85 12 ]
+        %tmp.25 = "Orange";
+        putv self :label %tmp.25;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_84_36_86_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_84_15_94_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_84_15_94_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 86 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_86_15_94_8_if_stmt:
+        %tmp.27 = getv ? :colorIndex;
+        %tmp.28 = 5;
+        %tmp.29 = eq %tmp.27 %tmp.28;
+        bf %tmp.29 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_86_15_94_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_86_15_94_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_86_36_88_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 87 12 ]
+        %tmp.30 = "Gray";
+        putv self :label %tmp.30;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_86_36_88_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_86_15_94_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_86_15_94_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 88 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_88_15_94_8_if_stmt:
+        %tmp.32 = getv ? :colorIndex;
+        %tmp.33 = 6;
+        %tmp.34 = eq %tmp.32 %tmp.33;
+        bf %tmp.34 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_88_15_94_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_88_15_94_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_88_36_90_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 89 12 ]
+        %tmp.35 = "Red";
+        putv self :label %tmp.35;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_88_36_90_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_88_15_94_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_88_15_94_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 90 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_90_15_94_8_if_stmt:
+        %tmp.37 = getv ? :colorIndex;
+        %tmp.38 = 7;
+        %tmp.39 = eq %tmp.37 %tmp.38;
+        bf %tmp.39 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_90_15_94_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_90_15_94_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_90_36_92_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 91 12 ]
+        %tmp.40 = "System";
+        putv self :label %tmp.40;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_90_36_92_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_90_15_94_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_90_15_94_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 92 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_92_15_94_8_if_stmt:
+        %tmp.42 = getv ? :colorIndex;
+        %tmp.43 = 8;
+        %tmp.44 = eq %tmp.42 %tmp.43;
+        bf %tmp.44 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_92_15_94_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_92_15_94_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_92_36_94_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 93 12 ]
+        %tmp.45 = "Rainbow";
+        putv self :label %tmp.45;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_92_36_94_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_92_15_94_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_92_15_94_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_90_15_94_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_88_15_94_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_86_15_94_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_84_15_94_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_82_15_94_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_80_15_94_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_78_15_94_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_76_8_94_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_75_27_95_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 97; ]
+    function drawPerimeter() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_97_29_99_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 98 8 ]
+        %tmp.1 = true;
+        ret %tmp.1;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_97_29_99_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 101; ]
+    function changeColor(val) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_101_30_106_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 102 8 ]
+        %tmp.2 = getv ? :colorIndex;
+        %tmp.4 = lgetv %val;
+        %tmp.5 = add %tmp.2 %tmp.4;
+        %tmp.6 = getm $;
+        %tmp.7 = getv %tmp.6 :crayon;
+        %tmp.8 = getv %tmp.7 :colors;
+        %tmp.9 = getv function %tmp.8 :size;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        %tmp.11 = mod %tmp.5 %tmp.10;
+        putv self :colorIndex %tmp.11;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 103 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_103_8_105_8_if_stmt:
+        %tmp.13 = getv ? :colorIndex;
+        %tmp.14 = 0;
+        %tmp.15 = lt %tmp.13 %tmp.14;
+        bf %tmp.15 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_103_8_105_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_103_8_105_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_103_28_105_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 104 12 ]
+        %tmp.16 = getm $;
+        %tmp.17 = getv %tmp.16 :crayon;
+        %tmp.18 = getv %tmp.17 :colors;
+        %tmp.19 = getv function %tmp.18 :size;
+        %tmp.20 = invoke %tmp.18 %tmp.19();
+        %tmp.21 = 1;
+        %tmp.22 = sub %tmp.20 %tmp.21;
+        putv self :colorIndex %tmp.22;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_103_28_105_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_103_8_105_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_103_8_105_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_101_30_106_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 108; ]
+    function configDifficulty() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_108_32_110_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 109 2 ]
+        %tmp.2 = getv ? :timer;
+        %tmp.3 = getv function %tmp.2 :start;
+        %tmp.4 = self;
+        %tmp.5 = getv function %tmp.4 :method;
+        %tmp.7 = const :driver;
+        %tmp.8 = invoke %tmp.4 %tmp.5(%tmp.7);
+        %tmp.9 = 100;
+        %tmp.10 = true;
+        invoke %tmp.2 %tmp.3(%tmp.8, %tmp.9, %tmp.10);
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_108_32_110_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 112; ]
+    function configArenaPerimeter() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_112_36_117_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 113 8 ]
+        %tmp.1 = getv self :arena;
+        %tmp.2 = 0;
+        putv %tmp.1 :northWall %tmp.2;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 114 8 ]
+        %tmp.3 = getv self :arena;
+        %tmp.4 = 0;
+        putv %tmp.3 :westWall %tmp.4;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 115 8 ]
+        %tmp.5 = getv self :arena;
+        %tmp.6 = 600;
+        putv %tmp.5 :eastWall %tmp.6;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 116 8 ]
+        %tmp.7 = getv self :arena;
+        %tmp.8 = 600;
+        putv %tmp.7 :southWall %tmp.8;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_112_36_117_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 119; ]
+    function setColor() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_119_24_121_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 120 8 ]
+        %tmp.1 = getm $.Toybox.Application;
+        %tmp.2 = getv function %tmp.1 :getApp;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = getv function %tmp.3 :setProperty;
+        %tmp.5 = "snakeColor";
+        %tmp.7 = getv ? :colorIndex;
+        invoke %tmp.3 %tmp.4(%tmp.5, %tmp.7);
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_119_24_121_4_stop:
+    }
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 124; ]
+class SnakecolorDelegate extends Ui.BehaviorDelegate{
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 124; ]
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 124; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 125; @position = 8; ]
+    var view;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 127; ]
+    function initialize(view) as Void {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_127_30_130_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 128 8 ]
+        %tmp.2 = getv ? :BehaviorDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 129 8 ]
+        %tmp.5 = lgetv %view;
+        putv self :view %tmp.5;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_127_30_130_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 132; ]
+    function onSelect() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_132_24_135_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 133 8 ]
+        %tmp.2 = getv ? :view;
+        %tmp.3 = getv function %tmp.2 :setColor;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 134 8 ]
+        %tmp.4 = getm $.Toybox.WatchUi;
+        %tmp.5 = getv function %tmp.4 :popView;
+        %tmp.6 = getm $.Toybox.WatchUi;
+        %tmp.7 = getv %tmp.6 :SLIDE_IMMEDIATE;
+        invoke %tmp.4 %tmp.5(%tmp.7);
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_132_24_135_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 137; ]
+    function onNextPage() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_137_26_139_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 138 8 ]
+        %tmp.2 = getv ? :view;
+        %tmp.3 = getv function %tmp.2 :changeColor;
+        %tmp.4 = 1;
+        invoke %tmp.2 %tmp.3(%tmp.4);
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_137_26_139_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 140; ]
+    function onPreviousPage() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_140_30_142_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 141 8 ]
+        %tmp.2 = getv ? :view;
+        %tmp.3 = getv function %tmp.2 :changeColor;
+        %tmp.4 = -1;
+        invoke %tmp.2 %tmp.3(%tmp.4);
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_140_30_142_4_stop:
+    }
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 146; ]
+function getSnakeColorView() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_146_29_154_0_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 147 4 ]
+    [ "_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_146_29_154_0_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_146_29_154_0_stop" ]
+    %view.1 = local;
+    %tmp.4 = getv ? :SnakeColorView;
+    %tmp.1 = newc %tmp.4 ();
+    lputv %view.1 %tmp.1;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 148 4 ]
+    [ "_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_146_29_154_0_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_146_29_154_0_stop" ]
+    %delegate.2 = local;
+    %tmp.8 = getv ? :SnakecolorDelegate;
+    %tmp.10 = lgetv %view.1;
+    %tmp.5 = newc %tmp.8 (%tmp.10);
+    lputv %delegate.2 %tmp.5;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc" 149 4 ]
+    %tmp.11 = getm $.Toybox.WatchUi;
+    %tmp.12 = getv function %tmp.11 :pushView;
+    %tmp.14 = lgetv %view.1;
+    %tmp.16 = lgetv %delegate.2;
+    %tmp.17 = getm $.Toybox.WatchUi;
+    %tmp.18 = getv %tmp.17 :SLIDE_IMMEDIATE;
+    invoke %tmp.11 %tmp.12(%tmp.14, %tmp.16, %tmp.18);
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeColorView_mc_146_29_154_0_stop:
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeColorView.mc"; @line = 1; ]
+<init> {
+}

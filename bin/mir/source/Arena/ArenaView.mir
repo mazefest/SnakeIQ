@@ -1,0 +1,791 @@
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 1; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 2; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 3; ]
+using Toybox.System as :Sys;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 4; ]
+using Toybox.Application as :App;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 5; ]
+enum {
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 5; @position = 6; ]
+    expert,
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 5; @position = 14; ]
+    medium,
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 5; @position = 22; ]
+    easy
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 6; ]
+class ArenaView extends Ui.View{
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 7; @position = 8; ]
+    var arena;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 8; @position = 8; ]
+    var snake;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 9; @position = 8; ]
+    var timer;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 10; @position = 8; ]
+    var paused;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 11; @position = 8; ]
+    var scoreSent;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 12; @position = 8; ]
+    var darkMode;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 13; @position = 8; ]
+    var backgroundColor;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 14; @position = 8; ]
+    var foregroundColor;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 15; @position = 8; ]
+    var snakeColor;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 17; ]
+    function initialize() as Void {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_17_26_27_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 18 8 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 19 8 ]
+        %tmp.4 = false;
+        putv self :paused %tmp.4;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 20 8 ]
+        %tmp.5 = false;
+        putv self :scoreSent %tmp.5;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 21 8 ]
+        %tmp.9 = getv ? :Arena;
+        %tmp.6 = newc %tmp.9 ();
+        putv self :arena %tmp.6;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 22 8 ]
+        %tmp.13 = getv ? :Snake;
+        %tmp.14 = 4;
+        %tmp.15 = null;
+        %tmp.16 = null;
+        %tmp.10 = newc %tmp.13 (%tmp.14, %tmp.15, %tmp.16);
+        putv self :snake %tmp.10;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 23 8 ]
+        %tmp.20 = getv ? :Timer;
+        %tmp.21 = getv function ? %tmp.20 :Timer;
+        %tmp.17 = newc %tmp.21 ();
+        putv self :timer %tmp.17;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 24 8 ]
+        %tmp.23 = getv ? :snake;
+        %tmp.24 = getv %tmp.23 :color;
+        putv self :snakeColor %tmp.24;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 25 8 ]
+        %tmp.25 = self;
+        %tmp.26 = getv function %tmp.25 :configDifficulty;
+        invoke %tmp.25 %tmp.26();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 26 8 ]
+        %tmp.27 = self;
+        %tmp.28 = getv function %tmp.27 :configColor;
+        invoke %tmp.27 %tmp.28();
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_17_26_27_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 29; ]
+    function onUpdate(dc) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_29_26_37_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 30 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :clearScreenAndConfig;
+        %tmp.4 = lgetv %dc;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 31 8 ]
+        %tmp.5 = self;
+        %tmp.6 = getv function %tmp.5 :drawPerimeter;
+        %tmp.8 = lgetv %dc;
+        invoke %tmp.5 %tmp.6(%tmp.8);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 32 8 ]
+        %tmp.9 = self;
+        %tmp.10 = getv function %tmp.9 :drawScore;
+        %tmp.12 = lgetv %dc;
+        invoke %tmp.9 %tmp.10(%tmp.12);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 33 8 ]
+        %tmp.13 = self;
+        %tmp.14 = getv function %tmp.13 :drawFood;
+        %tmp.16 = lgetv %dc;
+        invoke %tmp.13 %tmp.14(%tmp.16);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 34 8 ]
+        %tmp.17 = self;
+        %tmp.18 = getv function %tmp.17 :drawSnake;
+        %tmp.20 = lgetv %dc;
+        invoke %tmp.17 %tmp.18(%tmp.20);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 35 8 ]
+        %tmp.21 = self;
+        %tmp.22 = getv function %tmp.21 :drawGameOver;
+        %tmp.24 = lgetv %dc;
+        invoke %tmp.21 %tmp.22(%tmp.24);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 36 8 ]
+        %tmp.25 = self;
+        %tmp.26 = getv function %tmp.25 :drawPause;
+        %tmp.28 = lgetv %dc;
+        invoke %tmp.25 %tmp.26(%tmp.28);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_29_26_37_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 39; ]
+    function start() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_39_21_41_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 40 8 ]
+        %tmp.1 = false;
+        putv self :paused %tmp.1;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_39_21_41_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 43; ]
+    function pause() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_43_21_45_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 44 8 ]
+        %tmp.1 = true;
+        putv self :paused %tmp.1;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_43_21_45_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 47; ]
+    function onHide() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_47_22_49_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 48 8 ]
+        %tmp.2 = getv ? :timer;
+        %tmp.3 = getv function %tmp.2 :stop;
+        invoke %tmp.2 %tmp.3();
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_47_22_49_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 51; ]
+    function driver() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_51_22_72_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 52 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_51_22_72_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_51_22_72_4_stop" ]
+        %nextCoordinate.1 = local;
+        %tmp.2 = getv ? :snake;
+        %tmp.3 = getv function %tmp.2 :getNextPlot;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %nextCoordinate.1 %tmp.4;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 53 8 ]
+        %tmp.5 = self;
+        %tmp.6 = getv function %tmp.5 :foodCheck;
+        invoke %tmp.5 %tmp.6();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 54 8 ]
+        %tmp.7 = getm $;
+        %tmp.8 = getv %tmp.7 :crayon;
+        %tmp.9 = getv function %tmp.8 :configColors;
+        invoke %tmp.8 %tmp.9();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 56 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_56_8_69_8_if_stmt:
+        %tmp.11 = getv ? :snake;
+        %tmp.12 = getv %tmp.11 :hasEaten;
+        bf %tmp.12 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_56_8_69_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_56_8_69_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_56_28_59_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 57 12 ]
+        %tmp.14 = getv ? :snake;
+        %tmp.15 = getv function %tmp.14 :eatAndGrow;
+        %tmp.17 = lgetv %nextCoordinate.1;
+        %tmp.19 = getv ? :x;
+        %tmp.20 = agetv %tmp.17 %tmp.19;
+        %tmp.22 = lgetv %nextCoordinate.1;
+        %tmp.24 = getv ? :y;
+        %tmp.25 = agetv %tmp.22 %tmp.24;
+        invoke %tmp.14 %tmp.15(%tmp.20, %tmp.25);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_56_28_59_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_56_8_69_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_56_8_69_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 59 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_59_15_69_8_if_stmt:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_59_19_59_37_begin:
+        %tmp.27 = getv ? :snake;
+        %tmp.28 = getv %tmp.27 :isAlive;
+        bf %tmp.28 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_59_15_69_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_59_36_59_37_true:
+        %tmp.30 = getv ? :paused;
+        %tmp.31 = not %tmp.30;
+        push %tmp.31;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_59_36_59_37_end:
+        %tmp.32 = phi [%tmp.28 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_59_19_59_37_begin] [%tmp.31 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_59_36_59_37_true] [%tmp.32 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_59_36_59_37_end];
+        bf %tmp.32 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_59_15_69_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_59_15_69_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_59_45_64_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 60 12 ]
+        %tmp.34 = getv ? :snake;
+        %tmp.35 = getv function %tmp.34 :selfCollisionCheck;
+        %tmp.37 = lgetv %nextCoordinate.1;
+        %tmp.39 = getv ? :x;
+        %tmp.40 = agetv %tmp.37 %tmp.39;
+        %tmp.42 = lgetv %nextCoordinate.1;
+        %tmp.44 = getv ? :y;
+        %tmp.45 = agetv %tmp.42 %tmp.44;
+        invoke %tmp.34 %tmp.35(%tmp.40, %tmp.45);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 61 12 ]
+        %tmp.47 = getv ? :snake;
+        %tmp.48 = getv function %tmp.47 :arenaCollisionCheck;
+        %tmp.50 = getv ? :arena;
+        %tmp.51 = getv %tmp.50 :northWall;
+        %tmp.53 = getv ? :arena;
+        %tmp.54 = getv %tmp.53 :eastWall;
+        %tmp.56 = getv ? :arena;
+        %tmp.57 = getv %tmp.56 :southWall;
+        %tmp.59 = getv ? :arena;
+        %tmp.60 = getv %tmp.59 :westWall;
+        invoke %tmp.47 %tmp.48(%tmp.51, %tmp.54, %tmp.57, %tmp.60);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 62 12 ]
+        %tmp.62 = getv ? :snake;
+        %tmp.63 = getv function %tmp.62 :moveForward;
+        %tmp.65 = lgetv %nextCoordinate.1;
+        %tmp.67 = getv ? :x;
+        %tmp.68 = agetv %tmp.65 %tmp.67;
+        %tmp.70 = lgetv %nextCoordinate.1;
+        %tmp.72 = getv ? :y;
+        %tmp.73 = agetv %tmp.70 %tmp.72;
+        invoke %tmp.62 %tmp.63(%tmp.68, %tmp.73);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_59_45_64_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_59_15_69_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_59_15_69_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 64 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_15_69_8_if_stmt:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_19_64_38_begin:
+        %tmp.75 = getv ? :snake;
+        %tmp.76 = getv %tmp.75 :isAlive;
+        %tmp.77 = not %tmp.76;
+        bf %tmp.77 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_15_69_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_37_64_38_true:
+        %tmp.79 = getv ? :scoreSent;
+        %tmp.80 = not %tmp.79;
+        push %tmp.80;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_37_64_38_end:
+        %tmp.81 = phi [%tmp.77 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_19_64_38_begin] [%tmp.80 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_37_64_38_true] [%tmp.81 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_37_64_38_end];
+        bf %tmp.81 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_15_69_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_15_69_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_49_69_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 65 12 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_49_69_8_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_49_69_8_stop" ]
+        %difficulty.2 = local;
+        %tmp.82 = getm $.Toybox.Application;
+        %tmp.83 = getv function %tmp.82 :getApp;
+        %tmp.84 = invoke %tmp.82 %tmp.83();
+        %tmp.85 = getv function %tmp.84 :getProperty;
+        %tmp.86 = "difficulty";
+        %tmp.87 = invoke %tmp.84 %tmp.85(%tmp.86);
+        lputv %difficulty.2 %tmp.87;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 66 12 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_49_69_8_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_49_69_8_stop" ]
+        %score.3 = local;
+        %tmp.89 = getv ? :snake;
+        %tmp.90 = getv %tmp.89 :size;
+        %tmp.91 = 4;
+        %tmp.92 = sub %tmp.90 %tmp.91;
+        lputv %score.3 %tmp.92;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 67 12 ]
+        %tmp.93 = getm $;
+        %tmp.94 = getv %tmp.93 :highScores;
+        %tmp.95 = getv function %tmp.94 :addScore;
+        %tmp.97 = lgetv %score.3;
+        %tmp.99 = lgetv %difficulty.2;
+        invoke %tmp.94 %tmp.95(%tmp.97, %tmp.99);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 68 12 ]
+        %tmp.100 = true;
+        putv self :scoreSent %tmp.100;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_49_69_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_15_69_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_64_15_69_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_59_15_69_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_56_8_69_8_if_end:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 71 8 ]
+        %tmp.101 = getm $.Toybox.WatchUi;
+        %tmp.102 = getv function %tmp.101 :requestUpdate;
+        invoke %tmp.101 %tmp.102();
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_51_22_72_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 74; ]
+    function clearScreenAndConfig(dc) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_74_38_78_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 75 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.4 = getv ? :foregroundColor;
+        %tmp.6 = getv ? :backgroundColor;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 76 8 ]
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 77 8 ]
+        %tmp.9 = lgetv %dc;
+        %tmp.10 = getv function %tmp.9 :setPenWidth;
+        %tmp.11 = 5;
+        invoke %tmp.9 %tmp.10(%tmp.11);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_74_38_78_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 80; ]
+    function drawPerimeter(dc) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_80_31_87_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 81 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :drawRectangle;
+        %tmp.4 = getv ? :arena;
+        %tmp.5 = getv %tmp.4 :x;
+        %tmp.7 = getv ? :arena;
+        %tmp.8 = getv %tmp.7 :y;
+        %tmp.10 = getv ? :arena;
+        %tmp.11 = getv %tmp.10 :width;
+        %tmp.12 = 1;
+        %tmp.13 = add %tmp.11 %tmp.12;
+        %tmp.15 = getv ? :arena;
+        %tmp.16 = getv %tmp.15 :height;
+        %tmp.17 = 1;
+        %tmp.18 = add %tmp.16 %tmp.17;
+        invoke %tmp.1 %tmp.2(%tmp.5, %tmp.8, %tmp.13, %tmp.18);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_80_31_87_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 88; ]
+    function configSnakeColor() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_88_32_90_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 89 8 ]
+        %tmp.1 = getm $;
+        %tmp.2 = getv %tmp.1 :crayon;
+        %tmp.3 = getv %tmp.2 :colors;
+        %tmp.5 = getv ? :snake;
+        %tmp.6 = getv %tmp.5 :colorIndex;
+        %tmp.7 = agetv %tmp.3 %tmp.6;
+        putv self :snakeColor %tmp.7;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_88_32_90_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 91; ]
+    function drawSnake(dc) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_91_27_101_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 92 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :configSnakeColor;
+        invoke %tmp.1 %tmp.2();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 93 8 ]
+        %tmp.3 = lgetv %dc;
+        %tmp.4 = getv function %tmp.3 :setColor;
+        %tmp.6 = getv ? :snakeColor;
+        %tmp.7 = getm $.Toybox.Graphics;
+        %tmp.8 = getv %tmp.7 :COLOR_TRANSPARENT;
+        invoke %tmp.3 %tmp.4(%tmp.6, %tmp.8);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 94 8 ]
+        for @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_94_8_99_8_for_test @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_94_8_99_8_for_incr @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_94_8_99_8_for_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_94_8_99_8_for_init:
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_94_8_99_8_for_begin" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_94_8_99_8_for_end" ]
+        %i.1 = local;
+        %tmp.9 = 0;
+        lputv %i.1 %tmp.9;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_94_8_99_8_for_test:
+        %tmp.11 = lgetv %i.1;
+        %tmp.13 = getv ? :snake;
+        %tmp.14 = getv %tmp.13 :size;
+        %tmp.15 = lt %tmp.11 %tmp.14;
+        bf %tmp.15 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_94_8_99_8_for_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_94_8_99_8_for_begin:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_94_45_99_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 95 12 ]
+        %tmp.16 = lgetv %dc;
+        %tmp.17 = getv function %tmp.16 :drawPoint;
+        %tmp.19 = getv ? :snake;
+        %tmp.20 = getv %tmp.19 :xCoordinates;
+        %tmp.22 = lgetv %i.1;
+        %tmp.23 = agetv %tmp.20 %tmp.22;
+        %tmp.25 = getv ? :snake;
+        %tmp.26 = getv %tmp.25 :yCoordinates;
+        %tmp.28 = lgetv %i.1;
+        %tmp.29 = agetv %tmp.26 %tmp.28;
+        invoke %tmp.16 %tmp.17(%tmp.23, %tmp.29);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_94_45_99_8_stop:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_94_8_99_8_for_incr:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 94 ]
+        %tmp.32 = lgetv %i.1;
+        %tmp.33 = add %tmp.32 1;
+        lputv %i.1 %tmp.33;
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_94_8_99_8_for_test;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_94_8_99_8_for_end:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 100 8 ]
+        %tmp.34 = lgetv %dc;
+        %tmp.35 = getv function %tmp.34 :setColor;
+        %tmp.37 = getv ? :foregroundColor;
+        %tmp.39 = getv ? :backgroundColor;
+        invoke %tmp.34 %tmp.35(%tmp.37, %tmp.39);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_91_27_101_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 103; ]
+    function drawFood(dc) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_103_26_105_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 104 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :drawPoint;
+        %tmp.4 = getv ? :arena;
+        %tmp.5 = getv %tmp.4 :foodX;
+        %tmp.7 = getv ? :arena;
+        %tmp.8 = getv %tmp.7 :foodY;
+        invoke %tmp.1 %tmp.2(%tmp.5, %tmp.8);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_103_26_105_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 107; ]
+    function drawScore(dc) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_107_27_116_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 108 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_107_27_116_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_107_27_116_4_stop" ]
+        %screenWidth.1 = local;
+        %tmp.1 = getm $.Toybox.System;
+        %tmp.2 = getv function %tmp.1 :getDeviceSettings;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = getv %tmp.3 :screenWidth;
+        lputv %screenWidth.1 %tmp.4;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 109 8 ]
+        %tmp.5 = lgetv %dc;
+        %tmp.6 = getv function %tmp.5 :drawText;
+        %tmp.8 = lgetv %screenWidth.1;
+        %tmp.9 = 2;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        %tmp.11 = 3;
+        %tmp.12 = getm $.Toybox.Graphics;
+        %tmp.13 = getv %tmp.12 :FONT_SMALL;
+        %tmp.14 = "Score:";
+        %tmp.16 = getv ? :snake;
+        %tmp.17 = getv %tmp.16 :size;
+        %tmp.18 = 4;
+        %tmp.19 = sub %tmp.17 %tmp.18;
+        %tmp.20 = add %tmp.14 %tmp.19;
+        %tmp.21 = getm $.Toybox.Graphics;
+        %tmp.22 = getv %tmp.21 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.5 %tmp.6(%tmp.10, %tmp.11, %tmp.13, %tmp.20, %tmp.22);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_107_27_116_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 118; ]
+    function drawGameOver(dc) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_118_30_136_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 119 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_119_8_134_8_if_stmt:
+        %tmp.2 = getv ? :snake;
+        %tmp.3 = getv %tmp.2 :isAlive;
+        %tmp.4 = not %tmp.3;
+        bf %tmp.4 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_119_8_134_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_119_8_134_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_119_28_134_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 120 12 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_119_28_134_8_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_119_28_134_8_stop" ]
+        %screenWidth.1 = local;
+        %tmp.5 = getm $.Toybox.System;
+        %tmp.6 = getv function %tmp.5 :getDeviceSettings;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        %tmp.8 = getv %tmp.7 :screenWidth;
+        lputv %screenWidth.1 %tmp.8;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 121 12 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_119_28_134_8_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_119_28_134_8_stop" ]
+        %screenHeight.2 = local;
+        %tmp.9 = getm $.Toybox.System;
+        %tmp.10 = getv function %tmp.9 :getDeviceSettings;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        %tmp.12 = getv %tmp.11 :screenHeight;
+        lputv %screenHeight.2 %tmp.12;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 122 12 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_119_28_134_8_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_119_28_134_8_stop" ]
+        %text.3 = local;
+        %tmp.13 = "GAME OVER";
+        lputv %text.3 %tmp.13;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 123 12 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_123_12_125_12_if_stmt:
+        %tmp.15 = getv ? :snake;
+        %tmp.16 = getv %tmp.15 :size;
+        %tmp.17 = 4;
+        %tmp.18 = sub %tmp.16 %tmp.17;
+        %tmp.20 = getv ? :highScores;
+        %tmp.21 = getv %tmp.20 :local;
+        %tmp.22 = getv %tmp.21 :one;
+        %tmp.23 = gt %tmp.18 %tmp.22;
+        bf %tmp.23 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_123_12_125_12_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_123_12_125_12_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_123_55_125_12_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 124 16 ]
+        %tmp.24 = "NEW HIGH SCORE!!!";
+        lputv %text.3 %tmp.24;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_123_55_125_12_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_123_12_125_12_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_123_12_125_12_if_end:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 126 12 ]
+        %tmp.25 = lgetv %dc;
+        %tmp.26 = getv function %tmp.25 :drawText;
+        %tmp.28 = lgetv %screenWidth.1;
+        %tmp.29 = 2;
+        %tmp.30 = div %tmp.28 %tmp.29;
+        %tmp.32 = lgetv %screenHeight.2;
+        %tmp.33 = 2;
+        %tmp.34 = div %tmp.32 %tmp.33;
+        %tmp.35 = lgetv %dc;
+        %tmp.36 = getv function %tmp.35 :getFontHeight;
+        %tmp.37 = getm $.Toybox.Graphics;
+        %tmp.38 = getv %tmp.37 :FONT_MEDIUM;
+        %tmp.39 = invoke %tmp.35 %tmp.36(%tmp.38);
+        %tmp.40 = 2;
+        %tmp.41 = div %tmp.39 %tmp.40;
+        %tmp.42 = sub %tmp.34 %tmp.41;
+        %tmp.43 = getm $.Toybox.Graphics;
+        %tmp.44 = getv %tmp.43 :FONT_MEDIUM;
+        %tmp.46 = lgetv %text.3;
+        %tmp.47 = getm $.Toybox.Graphics;
+        %tmp.48 = getv %tmp.47 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.25 %tmp.26(%tmp.30, %tmp.42, %tmp.44, %tmp.46, %tmp.48);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_119_28_134_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_119_8_134_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_119_8_134_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_118_30_136_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 139; ]
+    function drawPause(dc) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_139_27_151_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 140 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_140_8_150_8_if_stmt:
+        %tmp.2 = getv ? :paused;
+        bf %tmp.2 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_140_8_150_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_140_8_150_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_140_20_150_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 141 12 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_140_20_150_8_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_140_20_150_8_stop" ]
+        %screenWidth.1 = local;
+        %tmp.3 = getm $.Toybox.System;
+        %tmp.4 = getv function %tmp.3 :getDeviceSettings;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        %tmp.6 = getv %tmp.5 :screenWidth;
+        lputv %screenWidth.1 %tmp.6;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 142 12 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_140_20_150_8_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_140_20_150_8_stop" ]
+        %screenHeight.2 = local;
+        %tmp.7 = getm $.Toybox.System;
+        %tmp.8 = getv function %tmp.7 :getDeviceSettings;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        %tmp.10 = getv %tmp.9 :screenHeight;
+        lputv %screenHeight.2 %tmp.10;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 143 12 ]
+        %tmp.11 = lgetv %dc;
+        %tmp.12 = getv function %tmp.11 :drawText;
+        %tmp.14 = lgetv %screenWidth.1;
+        %tmp.15 = 2;
+        %tmp.16 = div %tmp.14 %tmp.15;
+        %tmp.18 = lgetv %screenHeight.2;
+        %tmp.19 = 2;
+        %tmp.20 = div %tmp.18 %tmp.19;
+        %tmp.21 = lgetv %dc;
+        %tmp.22 = getv function %tmp.21 :getFontHeight;
+        %tmp.23 = getm $.Toybox.Graphics;
+        %tmp.24 = getv %tmp.23 :FONT_MEDIUM;
+        %tmp.25 = invoke %tmp.21 %tmp.22(%tmp.24);
+        %tmp.26 = 2;
+        %tmp.27 = div %tmp.25 %tmp.26;
+        %tmp.28 = sub %tmp.20 %tmp.27;
+        %tmp.29 = getm $.Toybox.Graphics;
+        %tmp.30 = getv %tmp.29 :FONT_MEDIUM;
+        %tmp.31 = "PAUSED";
+        %tmp.32 = getm $.Toybox.Graphics;
+        %tmp.33 = getv %tmp.32 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.11 %tmp.12(%tmp.16, %tmp.28, %tmp.30, %tmp.31, %tmp.33);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_140_20_150_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_140_8_150_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_140_8_150_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_139_27_151_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 153; ]
+    function foodCheck() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_153_25_159_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 154 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_153_25_159_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_153_25_159_4_stop" ]
+        %nextCoordinate.1 = local;
+        %tmp.2 = getv ? :snake;
+        %tmp.3 = getv function %tmp.2 :getSnakeHead;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %nextCoordinate.1 %tmp.4;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 155 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_155_8_158_8_if_stmt:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_155_12_155_75_begin:
+        %tmp.6 = lgetv %nextCoordinate.1;
+        %tmp.8 = getv ? :x;
+        %tmp.9 = agetv %tmp.6 %tmp.8;
+        %tmp.11 = getv ? :arena;
+        %tmp.12 = getv %tmp.11 :foodX;
+        %tmp.13 = eq %tmp.9 %tmp.12;
+        bf %tmp.13 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_155_8_158_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_155_48_155_75_true:
+        %tmp.15 = lgetv %nextCoordinate.1;
+        %tmp.17 = getv ? :y;
+        %tmp.18 = agetv %tmp.15 %tmp.17;
+        %tmp.20 = getv ? :arena;
+        %tmp.21 = getv %tmp.20 :foodY;
+        %tmp.22 = eq %tmp.18 %tmp.21;
+        push %tmp.22;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_155_48_155_75_end:
+        %tmp.23 = phi [%tmp.13 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_155_12_155_75_begin] [%tmp.22 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_155_48_155_75_true] [%tmp.23 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_155_48_155_75_end];
+        bf %tmp.23 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_155_8_158_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_155_8_158_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_155_82_158_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 156 12 ]
+        %tmp.25 = getv ? :arena;
+        %tmp.26 = getv function %tmp.25 :configFoodCoordinates;
+        invoke %tmp.25 %tmp.26();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 157 12 ]
+        %tmp.27 = getv self :snake;
+        %tmp.28 = true;
+        putv %tmp.27 :hasEaten %tmp.28;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_155_82_158_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_155_8_158_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_155_8_158_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_153_25_159_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 161; ]
+    function configDifficulty() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_161_32_175_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 162 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_161_32_175_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_161_32_175_4_stop" ]
+        %difficulty.1 = local;
+        %tmp.1 = getm $.Toybox.Application;
+        %tmp.2 = getv function %tmp.1 :getApp;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = getv function %tmp.3 :getProperty;
+        %tmp.5 = "difficulty";
+        %tmp.6 = invoke %tmp.3 %tmp.4(%tmp.5);
+        lputv %difficulty.1 %tmp.6;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 163 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_161_32_175_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_161_32_175_4_stop" ]
+        %diffTimer.2 = local;
+        %tmp.7 = 0;
+        lputv %diffTimer.2 %tmp.7;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 165 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_165_8_171_8_if_stmt:
+        %tmp.9 = lgetv %difficulty.1;
+        %tmp.10 = 0;
+        %tmp.11 = eq %tmp.9 %tmp.10;
+        bf %tmp.11 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_165_8_171_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_165_8_171_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_165_29_167_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 166 12 ]
+        %tmp.12 = 100;
+        lputv %diffTimer.2 %tmp.12;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_165_29_167_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_165_8_171_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_165_8_171_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 167 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_167_15_171_8_if_stmt:
+        %tmp.14 = lgetv %difficulty.1;
+        %tmp.15 = 1;
+        %tmp.16 = eq %tmp.14 %tmp.15;
+        bf %tmp.16 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_167_15_171_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_167_15_171_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_167_36_169_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 168 12 ]
+        %tmp.17 = 300;
+        lputv %diffTimer.2 %tmp.17;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_167_36_169_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_167_15_171_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_167_15_171_8_if_false:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_169_15_171_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 170 12 ]
+        %tmp.18 = 500;
+        lputv %diffTimer.2 %tmp.18;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_169_15_171_8_stop:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_167_15_171_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_165_8_171_8_if_end:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 173 2 ]
+        %tmp.20 = getv ? :timer;
+        %tmp.21 = getv function %tmp.20 :start;
+        %tmp.22 = self;
+        %tmp.23 = getv function %tmp.22 :method;
+        %tmp.25 = const :driver;
+        %tmp.26 = invoke %tmp.22 %tmp.23(%tmp.25);
+        %tmp.28 = lgetv %diffTimer.2;
+        %tmp.29 = true;
+        invoke %tmp.20 %tmp.21(%tmp.26, %tmp.28, %tmp.29);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_161_32_175_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 177; ]
+    function configColor() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_177_27_186_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 178 8 ]
+        %tmp.1 = getm $.Toybox.Application;
+        %tmp.2 = getv function %tmp.1 :getApp;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = getv function %tmp.3 :getProperty;
+        %tmp.5 = "darkMode";
+        %tmp.6 = invoke %tmp.3 %tmp.4(%tmp.5);
+        putv self :darkMode %tmp.6;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 179 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_179_8_185_8_if_stmt:
+        %tmp.8 = getv ? :darkMode;
+        bf %tmp.8 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_179_8_185_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_179_8_185_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_179_22_182_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 180 12 ]
+        %tmp.9 = getm $.Toybox.Graphics;
+        %tmp.10 = getv %tmp.9 :COLOR_WHITE;
+        putv self :foregroundColor %tmp.10;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 181 12 ]
+        %tmp.11 = getm $.Toybox.Graphics;
+        %tmp.12 = getv %tmp.11 :COLOR_BLACK;
+        putv self :backgroundColor %tmp.12;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_179_22_182_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_179_8_185_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_179_8_185_8_if_false:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_182_15_185_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 183 12 ]
+        %tmp.13 = getm $.Toybox.Graphics;
+        %tmp.14 = getv %tmp.13 :COLOR_BLACK;
+        putv self :foregroundColor %tmp.14;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 184 12 ]
+        %tmp.15 = getm $.Toybox.Graphics;
+        %tmp.16 = getv %tmp.15 :COLOR_WHITE;
+        putv self :backgroundColor %tmp.16;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_182_15_185_8_stop:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_179_8_185_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_177_27_186_4_stop:
+    }
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 189; ]
+function getArenaView() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_189_24_203_0_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 190 4 ]
+    [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_189_24_203_0_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_189_24_203_0_stop" ]
+    %isTouchScreen.1 = local;
+    %tmp.1 = getm $.Toybox.System;
+    %tmp.2 = getv function %tmp.1 :getDeviceSettings;
+    %tmp.3 = invoke %tmp.1 %tmp.2();
+    %tmp.4 = getv %tmp.3 :isTouchScreen;
+    lputv %isTouchScreen.1 %tmp.4;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 191 4 ]
+    [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_189_24_203_0_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_189_24_203_0_stop" ]
+    %delegate.2 = local;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 192 4 ]
+    [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_189_24_203_0_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_189_24_203_0_stop" ]
+    %view.3 = local;
+    %tmp.8 = getv ? :ArenaView;
+    %tmp.5 = newc %tmp.8 ();
+    lputv %view.3 %tmp.5;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 193 4 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_193_4_197_4_if_stmt:
+    %tmp.10 = lgetv %isTouchScreen.1;
+    bf %tmp.10 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_193_4_197_4_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_193_4_197_4_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_193_23_195_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 194 8 ]
+    %tmp.14 = getv ? :ArenaDelegateTouch;
+    %tmp.16 = lgetv %view.3;
+    %tmp.11 = newc %tmp.14 (%tmp.16);
+    lputv %delegate.2 %tmp.11;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_193_23_195_4_stop:
+    goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_193_4_197_4_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_193_4_197_4_if_false:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_195_11_197_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 196 8 ]
+    %tmp.20 = getv ? :ArenaDelegateTactile;
+    %tmp.22 = lgetv %view.3;
+    %tmp.17 = newc %tmp.20 (%tmp.22);
+    lputv %delegate.2 %tmp.17;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_195_11_197_4_stop:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_193_4_197_4_if_end:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc" 198 4 ]
+    %tmp.23 = getm $.Toybox.WatchUi;
+    %tmp.24 = getv function %tmp.23 :pushView;
+    %tmp.26 = lgetv %view.3;
+    %tmp.28 = lgetv %delegate.2;
+    %tmp.29 = getm $.Toybox.WatchUi;
+    %tmp.30 = getv %tmp.29 :SLIDE_IMMEDIATE;
+    invoke %tmp.23 %tmp.24(%tmp.26, %tmp.28, %tmp.30);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaView_mc_189_24_203_0_stop:
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaView.mc"; @line = 1; ]
+<init> {
+}

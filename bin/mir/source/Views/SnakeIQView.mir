@@ -1,0 +1,86 @@
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeIQView.mc"; @line = 1; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeIQView.mc"; @line = 2; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeIQView.mc"; @line = 3; ]
+using Toybox.Application as :App;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeIQView.mc"; @line = 5; ]
+class SnakeIQView extends Ui.View{
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeIQView.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeIQView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeIQView.mc"; @line = 7; ]
+    function initialize() as Void {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeIQView_mc_7_26_9_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeIQView.mc" 8 8 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeIQView_mc_7_26_9_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeIQView.mc"; @line = 14; ]
+    function onShow() {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeIQView.mc"; @line = 18; ]
+    function onUpdate(dc) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeIQView_mc_18_26_24_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeIQView.mc" 19 8 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :onUpdate;
+        %tmp.5 = lgetv %dc;
+        invoke %tmp.2 %tmp.3(%tmp.5);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeIQView.mc" 21 8 ]
+        %tmp.6 = lgetv %dc;
+        %tmp.7 = getv function %tmp.6 :setColor;
+        %tmp.8 = getm $.Toybox.Graphics;
+        %tmp.9 = getv %tmp.8 :COLOR_WHITE;
+        %tmp.10 = getm $.Toybox.Graphics;
+        %tmp.11 = getv %tmp.10 :COLOR_TRANSPARENT;
+        invoke %tmp.6 %tmp.7(%tmp.9, %tmp.11);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeIQView.mc" 23 8 ]
+        %tmp.12 = self;
+        %tmp.13 = getv function %tmp.12 :drawTitle;
+        %tmp.15 = lgetv %dc;
+        invoke %tmp.12 %tmp.13(%tmp.15);
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeIQView_mc_18_26_24_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeIQView.mc"; @line = 26; ]
+    function drawTitle(dc) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeIQView_mc_26_27_34_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeIQView.mc" 27 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :drawText;
+        %tmp.3 = lgetv %dc;
+        %tmp.4 = getv function %tmp.3 :getWidth;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        %tmp.6 = 2;
+        %tmp.7 = div %tmp.5 %tmp.6;
+        %tmp.8 = lgetv %dc;
+        %tmp.9 = getv function %tmp.8 :getWidth;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        %tmp.11 = 2;
+        %tmp.12 = div %tmp.10 %tmp.11;
+        %tmp.13 = lgetv %dc;
+        %tmp.14 = getv function %tmp.13 :getFontHeight;
+        %tmp.15 = getm $.Toybox.Graphics;
+        %tmp.16 = getv %tmp.15 :FONT_LARGE;
+        %tmp.17 = invoke %tmp.13 %tmp.14(%tmp.16);
+        %tmp.18 = 2;
+        %tmp.19 = div %tmp.17 %tmp.18;
+        %tmp.20 = sub %tmp.12 %tmp.19;
+        %tmp.21 = getm $.Toybox.Graphics;
+        %tmp.22 = getv %tmp.21 :FONT_LARGE;
+        %tmp.23 = "SNAKEIQ";
+        %tmp.24 = getm $.Toybox.Graphics;
+        %tmp.25 = getv %tmp.24 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.1 %tmp.2(%tmp.7, %tmp.20, %tmp.22, %tmp.23, %tmp.25);
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_SnakeIQView_mc_26_27_34_4_stop:
+    }
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/SnakeIQView.mc"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,88 @@
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc"; @line = 1; ]
+using Toybox.Application;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc"; @line = 3; ]
+using Toybox.System as :Sys;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc"; @line = 5; @position = 4; ]
+var highScores;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc"; @line = 6; @position = 4; ]
+var crayon;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc"; @line = 7; @position = 4; ]
+var screenWidth;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc"; @line = 8; @position = 4; ]
+var screenHeight;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc"; @line = 9; @position = 4; ]
+var center;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc"; @line = 10; ]
+class SnakeIQApp extends Application.AppBase{
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc"; @line = 10; ]
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc"; @line = 10; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc"; @line = 12; ]
+    function initialize() as Void {
+_Users_colbymehmen_Developer_SnakeIQ_source_SnakeIQApp_mc_12_26_19_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc" 13 8 ]
+        %tmp.2 = getv ? :AppBase;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc" 14 8 ]
+        %tmp.7 = getv ? :HighScores;
+        %tmp.4 = newc %tmp.7 ();
+        putv self :highScores %tmp.4;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc" 15 8 ]
+        %tmp.11 = getv ? :Crayon;
+        %tmp.8 = newc %tmp.11 ();
+        putv self :crayon %tmp.8;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc" 16 8 ]
+        %tmp.12 = getm $.Toybox.System;
+        %tmp.13 = getv function %tmp.12 :getDeviceSettings;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = getv %tmp.14 :screenWidth;
+        putv self :screenWidth %tmp.15;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc" 17 8 ]
+        %tmp.16 = getm $.Toybox.System;
+        %tmp.17 = getv function %tmp.16 :getDeviceSettings;
+        %tmp.18 = invoke %tmp.16 %tmp.17();
+        %tmp.19 = getv %tmp.18 :screenHeight;
+        putv self :screenHeight %tmp.19;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc" 18 8 ]
+        %tmp.20 = getm $.Toybox.System;
+        %tmp.21 = getv function %tmp.20 :getDeviceSettings;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        %tmp.23 = getv %tmp.22 :screenWidth;
+        %tmp.24 = 2;
+        %tmp.25 = div %tmp.23 %tmp.24;
+        putv self :center %tmp.25;
+_Users_colbymehmen_Developer_SnakeIQ_source_SnakeIQApp_mc_12_26_19_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc"; @line = 21; ]
+    function onStart(state) {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc"; @line = 25; ]
+    function onStop(state) {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc"; @line = 29; ]
+    function getInitialView() {
+_Users_colbymehmen_Developer_SnakeIQ_source_SnakeIQApp_mc_29_30_31_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc" 30 8 ]
+        %tmp.1 = newa 2;
+        %tmp.5 = getv ? :SnakeIQView;
+        %tmp.2 = newc %tmp.5 ();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.2;
+        %tmp.11 = getv ? :SnakeIQDelegate;
+        %tmp.8 = newc %tmp.11 ();
+        %tmp.12 = dup %tmp.7;
+        %tmp.13 = aputv %tmp.12 1 %tmp.8;
+        ret %tmp.13;
+_Users_colbymehmen_Developer_SnakeIQ_source_SnakeIQApp_mc_29_30_31_4_stop:
+    }
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/SnakeIQApp.mc"; @line = 1; ]
+<init> {
+}

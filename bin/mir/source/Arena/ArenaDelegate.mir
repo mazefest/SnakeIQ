@@ -1,0 +1,516 @@
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 1; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 2; ]
+using Toybox.System as :Sys;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 5; ]
+class ArenaDelegateTactile extends Ui.BehaviorDelegate{
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 6; @position = 8; ]
+    var view;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 8; ]
+    function initialize(view) as Void {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_8_30_11_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 9 8 ]
+        %tmp.2 = getv ? :UpDownWrapper;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 10 8 ]
+        %tmp.5 = lgetv %view;
+        putv self :view %tmp.5;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_8_30_11_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 13; ]
+    function onSelect() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_13_24_23_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 14 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_14_8_20_8_if_stmt:
+        %tmp.2 = getv ? :view;
+        %tmp.3 = getv %tmp.2 :snake;
+        %tmp.4 = getv %tmp.3 :isAlive;
+        %tmp.5 = not %tmp.4;
+        bf %tmp.5 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_14_8_20_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_14_8_20_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_14_33_16_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 15 12 ]
+        %tmp.6 = getm $.Toybox.WatchUi;
+        %tmp.7 = getv function %tmp.6 :popView;
+        %tmp.8 = getm $.Toybox.WatchUi;
+        %tmp.9 = getv %tmp.8 :SLIDE_IMMEDIATE;
+        invoke %tmp.6 %tmp.7(%tmp.9);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_14_33_16_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_14_8_20_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_14_8_20_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 16 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_16_15_20_8_if_stmt:
+        %tmp.11 = getv ? :view;
+        %tmp.12 = getv %tmp.11 :paused;
+        bf %tmp.12 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_16_15_20_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_16_15_20_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_16_32_18_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 17 12 ]
+        %tmp.14 = getv ? :view;
+        %tmp.15 = getv function %tmp.14 :start;
+        invoke %tmp.14 %tmp.15();
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_16_32_18_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_16_15_20_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_16_15_20_8_if_false:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_18_15_20_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 19 12 ]
+        %tmp.17 = getv ? :view;
+        %tmp.18 = getv function %tmp.17 :pause;
+        invoke %tmp.17 %tmp.18();
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_18_15_20_8_stop:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_16_15_20_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_14_8_20_8_if_end:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 22 8 ]
+        %tmp.19 = true;
+        ret %tmp.19;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_13_24_23_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 25; ]
+    function onNextPage() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_25_26_28_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 26 8 ]
+        %tmp.2 = getv ? :view;
+        %tmp.3 = getv %tmp.2 :snake;
+        %tmp.4 = getv function %tmp.3 :setDirection;
+        %tmp.5 = 1;
+        invoke %tmp.3 %tmp.4(%tmp.5);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 27 8 ]
+        %tmp.6 = true;
+        ret %tmp.6;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_25_26_28_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 30; ]
+    function onPreviousPage() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_30_30_33_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 31 8 ]
+        %tmp.2 = getv ? :view;
+        %tmp.3 = getv %tmp.2 :snake;
+        %tmp.4 = getv function %tmp.3 :setDirection;
+        %tmp.5 = -1;
+        invoke %tmp.3 %tmp.4(%tmp.5);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 32 8 ]
+        %tmp.6 = true;
+        ret %tmp.6;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_30_30_33_4_stop:
+    }
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 37; ]
+class ArenaDelegateTouch extends UpDownWrapper{
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 37; ]
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 37; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 38; @position = 8; ]
+    var view;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 40; ]
+    function initialize(view) as Void {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_40_30_43_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 41 8 ]
+        %tmp.2 = getv ? :UpDownWrapper;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 42 8 ]
+        %tmp.5 = lgetv %view;
+        putv self :view %tmp.5;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_40_30_43_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 45; ]
+    function onSelect() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_45_24_55_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 46 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_46_8_52_8_if_stmt:
+        %tmp.2 = getv ? :view;
+        %tmp.3 = getv %tmp.2 :snake;
+        %tmp.4 = getv %tmp.3 :isAlive;
+        %tmp.5 = not %tmp.4;
+        bf %tmp.5 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_46_8_52_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_46_8_52_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_46_33_48_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 47 12 ]
+        %tmp.6 = getm $.Toybox.WatchUi;
+        %tmp.7 = getv function %tmp.6 :popView;
+        %tmp.8 = getm $.Toybox.WatchUi;
+        %tmp.9 = getv %tmp.8 :SLIDE_IMMEDIATE;
+        invoke %tmp.6 %tmp.7(%tmp.9);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_46_33_48_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_46_8_52_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_46_8_52_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 48 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_48_15_52_8_if_stmt:
+        %tmp.11 = getv ? :view;
+        %tmp.12 = getv %tmp.11 :paused;
+        bf %tmp.12 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_48_15_52_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_48_15_52_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_48_32_50_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 49 12 ]
+        %tmp.14 = getv ? :view;
+        %tmp.15 = getv function %tmp.14 :start;
+        invoke %tmp.14 %tmp.15();
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_48_32_50_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_48_15_52_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_48_15_52_8_if_false:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_50_15_52_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 51 12 ]
+        %tmp.17 = getv ? :view;
+        %tmp.18 = getv function %tmp.17 :pause;
+        invoke %tmp.17 %tmp.18();
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_50_15_52_8_stop:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_48_15_52_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_46_8_52_8_if_end:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 54 8 ]
+        %tmp.19 = true;
+        ret %tmp.19;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_45_24_55_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 57; ]
+    function onBack() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_57_22_66_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 58 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_57_22_66_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_57_22_66_4_stop" ]
+        %direction.1 = local;
+        %tmp.2 = getv ? :view;
+        %tmp.3 = getv %tmp.2 :snake;
+        %tmp.4 = getv function %tmp.3 :getDirection;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        lputv %direction.1 %tmp.5;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 59 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_57_22_66_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_57_22_66_4_stop" ]
+        %event.2 = local;
+        %tmp.6 = getm $.Toybox.WatchUi;
+        %tmp.7 = getv %tmp.6 :SWIPE_RIGHT;
+        lputv %event.2 %tmp.7;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 60 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_60_8_64_8_if_stmt:
+        %tmp.9 = lgetv %direction.1;
+        %tmp.11 = getv ? :North;
+        %tmp.12 = eq %tmp.9 %tmp.11;
+        bf %tmp.12 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_60_8_64_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_60_8_64_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_60_32_62_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 61 12 ]
+        %tmp.13 = self;
+        %tmp.14 = getv function %tmp.13 :onNorthSwipe;
+        %tmp.16 = lgetv %event.2;
+        invoke %tmp.13 %tmp.14(%tmp.16);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_60_32_62_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_60_8_64_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_60_8_64_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 62 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_62_15_64_8_if_stmt:
+        %tmp.18 = lgetv %direction.1;
+        %tmp.20 = getv ? :South;
+        %tmp.21 = eq %tmp.18 %tmp.20;
+        bf %tmp.21 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_62_15_64_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_62_15_64_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_62_39_64_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 63 12 ]
+        %tmp.22 = self;
+        %tmp.23 = getv function %tmp.22 :onSouthSwipe;
+        %tmp.25 = lgetv %event.2;
+        invoke %tmp.22 %tmp.23(%tmp.25);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_62_39_64_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_62_15_64_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_62_15_64_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_60_8_64_8_if_end:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 65 8 ]
+        %tmp.26 = true;
+        ret %tmp.26;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_57_22_66_4_stop:
+    }
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 87; ]
+class UpDownWrapper extends Ui.BehaviorDelegate{
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 87; ]
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 87; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 89; ]
+    function initialize() as Void {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_89_26_91_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 90 2 ]
+        %tmp.2 = getv ? :BehaviorDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_89_26_91_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 93; ]
+    function onSwipe(evt) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_93_26_109_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 94 8 ]
+        %tmp.1 = getm $.Toybox.System;
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "SWIPE";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 95 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_93_26_109_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_93_26_109_4_stop" ]
+        %event.1 = local;
+        %tmp.4 = lgetv %evt;
+        %tmp.5 = getv function %tmp.4 :getDirection;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %event.1 %tmp.6;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 96 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_93_26_109_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_93_26_109_4_stop" ]
+        %direction.2 = local;
+        %tmp.8 = getv ? :view;
+        %tmp.9 = getv %tmp.8 :snake;
+        %tmp.10 = getv function %tmp.9 :getDirection;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %direction.2 %tmp.11;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 98 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_98_8_106_8_if_stmt:
+        %tmp.13 = lgetv %direction.2;
+        %tmp.15 = getv ? :North;
+        %tmp.16 = eq %tmp.13 %tmp.15;
+        bf %tmp.16 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_98_8_106_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_98_8_106_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_98_32_100_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 99 12 ]
+        %tmp.17 = self;
+        %tmp.18 = getv function %tmp.17 :onNorthSwipe;
+        %tmp.20 = lgetv %event.1;
+        invoke %tmp.17 %tmp.18(%tmp.20);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_98_32_100_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_98_8_106_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_98_8_106_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 100 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_100_15_106_8_if_stmt:
+        %tmp.22 = lgetv %direction.2;
+        %tmp.24 = getv ? :South;
+        %tmp.25 = eq %tmp.22 %tmp.24;
+        bf %tmp.25 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_100_15_106_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_100_15_106_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_100_39_102_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 101 12 ]
+        %tmp.26 = self;
+        %tmp.27 = getv function %tmp.26 :onSouthSwipe;
+        %tmp.29 = lgetv %event.1;
+        invoke %tmp.26 %tmp.27(%tmp.29);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_100_39_102_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_100_15_106_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_100_15_106_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 102 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_102_15_106_8_if_stmt:
+        %tmp.31 = lgetv %direction.2;
+        %tmp.33 = getv ? :East;
+        %tmp.34 = eq %tmp.31 %tmp.33;
+        bf %tmp.34 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_102_15_106_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_102_15_106_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_102_38_104_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 103 12 ]
+        %tmp.35 = self;
+        %tmp.36 = getv function %tmp.35 :onEastSwipe;
+        %tmp.38 = lgetv %event.1;
+        invoke %tmp.35 %tmp.36(%tmp.38);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_102_38_104_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_102_15_106_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_102_15_106_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 104 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_104_15_106_8_if_stmt:
+        %tmp.40 = lgetv %direction.2;
+        %tmp.42 = getv ? :West;
+        %tmp.43 = eq %tmp.40 %tmp.42;
+        bf %tmp.43 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_104_15_106_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_104_15_106_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_104_38_106_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 105 12 ]
+        %tmp.44 = self;
+        %tmp.45 = getv function %tmp.44 :onWestSwipe;
+        %tmp.47 = lgetv %event.1;
+        invoke %tmp.44 %tmp.45(%tmp.47);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_104_38_106_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_104_15_106_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_104_15_106_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_102_15_106_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_100_15_106_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_98_8_106_8_if_end:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 108 8 ]
+        %tmp.48 = true;
+        ret %tmp.48;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_93_26_109_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 112; ]
+    function onSouthSwipe(event) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_112_33_118_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 113 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_113_8_117_8_if_stmt:
+        %tmp.2 = lgetv %event;
+        %tmp.3 = getm $.Toybox.WatchUi;
+        %tmp.4 = getv %tmp.3 :SWIPE_LEFT;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_113_8_117_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_113_8_117_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_113_36_115_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 114 12 ]
+        %tmp.7 = getv ? :view;
+        %tmp.8 = getv %tmp.7 :snake;
+        %tmp.9 = getv function %tmp.8 :setDirection;
+        %tmp.10 = 1;
+        invoke %tmp.8 %tmp.9(%tmp.10);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_113_36_115_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_113_8_117_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_113_8_117_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 115 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_115_15_117_8_if_stmt:
+        %tmp.12 = lgetv %event;
+        %tmp.13 = getm $.Toybox.WatchUi;
+        %tmp.14 = getv %tmp.13 :SWIPE_RIGHT;
+        %tmp.15 = eq %tmp.12 %tmp.14;
+        bf %tmp.15 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_115_15_117_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_115_15_117_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_115_44_117_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 116 12 ]
+        %tmp.17 = getv ? :view;
+        %tmp.18 = getv %tmp.17 :snake;
+        %tmp.19 = getv function %tmp.18 :setDirection;
+        %tmp.20 = -1;
+        invoke %tmp.18 %tmp.19(%tmp.20);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_115_44_117_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_115_15_117_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_115_15_117_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_113_8_117_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_112_33_118_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 120; ]
+    function onNorthSwipe(event) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_120_33_126_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 121 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_121_8_125_8_if_stmt:
+        %tmp.2 = lgetv %event;
+        %tmp.3 = getm $.Toybox.WatchUi;
+        %tmp.4 = getv %tmp.3 :SWIPE_LEFT;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_121_8_125_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_121_8_125_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_121_36_123_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 122 12 ]
+        %tmp.7 = getv ? :view;
+        %tmp.8 = getv %tmp.7 :snake;
+        %tmp.9 = getv function %tmp.8 :setDirection;
+        %tmp.10 = -1;
+        invoke %tmp.8 %tmp.9(%tmp.10);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_121_36_123_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_121_8_125_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_121_8_125_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 123 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_123_15_125_8_if_stmt:
+        %tmp.12 = lgetv %event;
+        %tmp.13 = getm $.Toybox.WatchUi;
+        %tmp.14 = getv %tmp.13 :SWIPE_RIGHT;
+        %tmp.15 = eq %tmp.12 %tmp.14;
+        bf %tmp.15 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_123_15_125_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_123_15_125_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_123_44_125_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 124 12 ]
+        %tmp.17 = getv ? :view;
+        %tmp.18 = getv %tmp.17 :snake;
+        %tmp.19 = getv function %tmp.18 :setDirection;
+        %tmp.20 = 1;
+        invoke %tmp.18 %tmp.19(%tmp.20);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_123_44_125_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_123_15_125_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_123_15_125_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_121_8_125_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_120_33_126_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 128; ]
+    function onEastSwipe(event) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_128_32_134_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 129 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_129_8_133_8_if_stmt:
+        %tmp.2 = lgetv %event;
+        %tmp.3 = getm $.Toybox.WatchUi;
+        %tmp.4 = getv %tmp.3 :SWIPE_UP;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_129_8_133_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_129_8_133_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_129_34_131_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 130 12 ]
+        %tmp.7 = getv ? :view;
+        %tmp.8 = getv %tmp.7 :snake;
+        %tmp.9 = getv function %tmp.8 :setDirection;
+        %tmp.10 = -1;
+        invoke %tmp.8 %tmp.9(%tmp.10);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_129_34_131_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_129_8_133_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_129_8_133_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 131 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_131_15_133_8_if_stmt:
+        %tmp.12 = lgetv %event;
+        %tmp.13 = getm $.Toybox.WatchUi;
+        %tmp.14 = getv %tmp.13 :SWIPE_DOWN;
+        %tmp.15 = eq %tmp.12 %tmp.14;
+        bf %tmp.15 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_131_15_133_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_131_15_133_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_131_43_133_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 132 12 ]
+        %tmp.17 = getv ? :view;
+        %tmp.18 = getv %tmp.17 :snake;
+        %tmp.19 = getv function %tmp.18 :setDirection;
+        %tmp.20 = 1;
+        invoke %tmp.18 %tmp.19(%tmp.20);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_131_43_133_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_131_15_133_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_131_15_133_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_129_8_133_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_128_32_134_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 136; ]
+    function onWestSwipe(event) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_136_32_142_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 137 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_137_8_141_8_if_stmt:
+        %tmp.2 = lgetv %event;
+        %tmp.3 = getm $.Toybox.WatchUi;
+        %tmp.4 = getv %tmp.3 :SWIPE_UP;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_137_8_141_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_137_8_141_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_137_34_139_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 138 12 ]
+        %tmp.7 = getv ? :view;
+        %tmp.8 = getv %tmp.7 :snake;
+        %tmp.9 = getv function %tmp.8 :setDirection;
+        %tmp.10 = 1;
+        invoke %tmp.8 %tmp.9(%tmp.10);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_137_34_139_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_137_8_141_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_137_8_141_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 139 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_139_15_141_8_if_stmt:
+        %tmp.12 = lgetv %event;
+        %tmp.13 = getm $.Toybox.WatchUi;
+        %tmp.14 = getv %tmp.13 :SWIPE_DOWN;
+        %tmp.15 = eq %tmp.12 %tmp.14;
+        bf %tmp.15 @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_139_15_141_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_139_15_141_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_139_43_141_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc" 140 12 ]
+        %tmp.17 = getv ? :view;
+        %tmp.18 = getv %tmp.17 :snake;
+        %tmp.19 = getv function %tmp.18 :setDirection;
+        %tmp.20 = -1;
+        invoke %tmp.18 %tmp.19(%tmp.20);
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_139_43_141_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_139_15_141_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_139_15_141_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_137_8_141_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Arena_ArenaDelegate_mc_136_32_142_4_stop:
+    }
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Arena/ArenaDelegate.mc"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,228 @@
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 3; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 4; ]
+using Toybox.Graphics;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 5; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 7; ]
+module Rez {
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 8; ]
+    module Drawables {
+        [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 12; ]
+    module Layouts {
+        [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+        [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 13; ]
+        function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+_Users_colbymehmen_Developer_SnakeIQ_bin_gen_006_B2819_00_source_Rez_mcgen_13_74_17_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen" 14 12 ]
+            [ "_Users_colbymehmen_Developer_SnakeIQ_bin_gen_006_B2819_00_source_Rez_mcgen_13_74_17_8_start" "_Users_colbymehmen_Developer_SnakeIQ_bin_gen_006_B2819_00_source_Rez_mcgen_13_74_17_8_stop" ]
+            %rez_cmp_local_text_1429029201.1 = local;
+            %tmp.3 = getm $.Toybox.WatchUi;
+            %tmp.4 = getv function ? %tmp.3 :Text;
+            %tmp.5 = newd 6;
+            %tmp.7 = const :color;
+            %tmp.8 = getm $.Toybox.Graphics;
+            %tmp.9 = getv %tmp.8 :COLOR_WHITE;
+            %tmp.10 = dup %tmp.5;
+            %tmp.11 = aputv %tmp.10 %tmp.7 %tmp.9;
+            %tmp.13 = const :locX;
+            %tmp.14 = 240;
+            %tmp.15 = 0.5;
+            %tmp.16 = mul %tmp.14 %tmp.15;
+            %tmp.17 = dup %tmp.11;
+            %tmp.18 = aputv %tmp.17 %tmp.13 %tmp.16;
+            %tmp.20 = const :locY;
+            %tmp.21 = 5;
+            %tmp.22 = dup %tmp.18;
+            %tmp.23 = aputv %tmp.22 %tmp.20 %tmp.21;
+            %tmp.25 = const :text;
+            %tmp.26 = getm $;
+            %tmp.27 = getv %tmp.26 :Rez;
+            %tmp.28 = getv %tmp.27 :Strings;
+            %tmp.29 = getv %tmp.28 :prompt;
+            %tmp.30 = dup %tmp.23;
+            %tmp.31 = aputv %tmp.30 %tmp.25 %tmp.29;
+            %tmp.33 = const :justification;
+            %tmp.34 = getm $.Toybox.Graphics;
+            %tmp.35 = getv %tmp.34 :TEXT_JUSTIFY_CENTER;
+            %tmp.36 = dup %tmp.31;
+            %tmp.37 = aputv %tmp.36 %tmp.33 %tmp.35;
+            %tmp.39 = const :font;
+            %tmp.40 = getm $.Toybox.Graphics;
+            %tmp.41 = getv %tmp.40 :FONT_MEDIUM;
+            %tmp.42 = dup %tmp.37;
+            %tmp.43 = aputv %tmp.42 %tmp.39 %tmp.41;
+            %tmp.1 = newc %tmp.4 (%tmp.43);
+            lputv %rez_cmp_local_text_1429029201.1 %tmp.1;
+[ "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen" 16 12 ]
+            %tmp.44 = newa 1 Array<WatchUi.Drawable>;
+            %tmp.46 = lgetv %rez_cmp_local_text_1429029201.1;
+            %tmp.47 = dup %tmp.44;
+            %tmp.48 = aputv %tmp.47 0 %tmp.46;
+            ret %tmp.48;
+_Users_colbymehmen_Developer_SnakeIQ_bin_gen_006_B2819_00_source_Rez_mcgen_13_74_17_8_stop:
+        }
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 20; ]
+    module Menus {
+        [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 20; ]
+        <init> {
+        }
+        [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 21; ]
+        class MainMenu extends WatchUi.Menu{
+            [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 21; ]
+            <init> {
+            }
+            [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 21; ]
+            static
+            <init> {
+            }
+            [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 22; ]
+            function initialize() as Void {
+_Users_colbymehmen_Developer_SnakeIQ_bin_gen_006_B2819_00_source_Rez_mcgen_22_34_27_12_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen" 23 16 ]
+                %tmp.2 = getv ? :Menu;
+                %tmp.3 = getv function %tmp.2 :initialize;
+                invoke %tmp.2 %tmp.3();
+[ "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen" 24 16 ]
+                %tmp.4 = self;
+                %tmp.5 = getv function %tmp.4 :addItem;
+                %tmp.6 = getm $.Toybox.WatchUi;
+                %tmp.7 = getv function %tmp.6 :loadResource;
+                %tmp.8 = getm $;
+                %tmp.9 = getv %tmp.8 :Rez;
+                %tmp.10 = getv %tmp.9 :Strings;
+                %tmp.11 = getv %tmp.10 :newGame;
+                %tmp.12 = invoke %tmp.6 %tmp.7(%tmp.11);
+                %tmp.13 = as %tmp.12 String;
+                %tmp.15 = const :newGame;
+                invoke %tmp.4 %tmp.5(%tmp.13, %tmp.15);
+[ "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen" 25 16 ]
+                %tmp.16 = self;
+                %tmp.17 = getv function %tmp.16 :addItem;
+                %tmp.18 = getm $.Toybox.WatchUi;
+                %tmp.19 = getv function %tmp.18 :loadResource;
+                %tmp.20 = getm $;
+                %tmp.21 = getv %tmp.20 :Rez;
+                %tmp.22 = getv %tmp.21 :Strings;
+                %tmp.23 = getv %tmp.22 :highScores;
+                %tmp.24 = invoke %tmp.18 %tmp.19(%tmp.23);
+                %tmp.25 = as %tmp.24 String;
+                %tmp.27 = const :highScores;
+                invoke %tmp.16 %tmp.17(%tmp.25, %tmp.27);
+[ "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen" 26 16 ]
+                %tmp.28 = self;
+                %tmp.29 = getv function %tmp.28 :addItem;
+                %tmp.30 = getm $.Toybox.WatchUi;
+                %tmp.31 = getv function %tmp.30 :loadResource;
+                %tmp.32 = getm $;
+                %tmp.33 = getv %tmp.32 :Rez;
+                %tmp.34 = getv %tmp.33 :Strings;
+                %tmp.35 = getv %tmp.34 :settings;
+                %tmp.36 = invoke %tmp.30 %tmp.31(%tmp.35);
+                %tmp.37 = as %tmp.36 String;
+                %tmp.39 = const :settings;
+                invoke %tmp.28 %tmp.29(%tmp.37, %tmp.39);
+_Users_colbymehmen_Developer_SnakeIQ_bin_gen_006_B2819_00_source_Rez_mcgen_22_34_27_12_stop:
+            }
+        }
+        [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 30; ]
+        class SettingsMenu extends WatchUi.Menu{
+            [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 30; ]
+            <init> {
+            }
+            [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 30; ]
+            static
+            <init> {
+            }
+            [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 31; ]
+            function initialize() as Void {
+_Users_colbymehmen_Developer_SnakeIQ_bin_gen_006_B2819_00_source_Rez_mcgen_31_34_36_12_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen" 32 16 ]
+                %tmp.2 = getv ? :Menu;
+                %tmp.3 = getv function %tmp.2 :initialize;
+                invoke %tmp.2 %tmp.3();
+[ "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen" 33 16 ]
+                %tmp.4 = self;
+                %tmp.5 = getv function %tmp.4 :addItem;
+                %tmp.6 = getm $.Toybox.WatchUi;
+                %tmp.7 = getv function %tmp.6 :loadResource;
+                %tmp.8 = getm $;
+                %tmp.9 = getv %tmp.8 :Rez;
+                %tmp.10 = getv %tmp.9 :Strings;
+                %tmp.11 = getv %tmp.10 :darkMode;
+                %tmp.12 = invoke %tmp.6 %tmp.7(%tmp.11);
+                %tmp.13 = as %tmp.12 String;
+                %tmp.15 = const :darkMode;
+                invoke %tmp.4 %tmp.5(%tmp.13, %tmp.15);
+[ "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen" 34 16 ]
+                %tmp.16 = self;
+                %tmp.17 = getv function %tmp.16 :addItem;
+                %tmp.18 = getm $.Toybox.WatchUi;
+                %tmp.19 = getv function %tmp.18 :loadResource;
+                %tmp.20 = getm $;
+                %tmp.21 = getv %tmp.20 :Rez;
+                %tmp.22 = getv %tmp.21 :Strings;
+                %tmp.23 = getv %tmp.22 :snakeColor;
+                %tmp.24 = invoke %tmp.18 %tmp.19(%tmp.23);
+                %tmp.25 = as %tmp.24 String;
+                %tmp.27 = const :snakeColor;
+                invoke %tmp.16 %tmp.17(%tmp.25, %tmp.27);
+[ "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen" 35 16 ]
+                %tmp.28 = self;
+                %tmp.29 = getv function %tmp.28 :addItem;
+                %tmp.30 = getm $.Toybox.WatchUi;
+                %tmp.31 = getv function %tmp.30 :loadResource;
+                %tmp.32 = getm $;
+                %tmp.33 = getv %tmp.32 :Rez;
+                %tmp.34 = getv %tmp.33 :Strings;
+                %tmp.35 = getv %tmp.34 :difficulty;
+                %tmp.36 = invoke %tmp.30 %tmp.31(%tmp.35);
+                %tmp.37 = as %tmp.36 String;
+                %tmp.39 = const :difficulty;
+                invoke %tmp.28 %tmp.29(%tmp.37, %tmp.39);
+_Users_colbymehmen_Developer_SnakeIQ_bin_gen_006_B2819_00_source_Rez_mcgen_31_34_36_12_stop:
+            }
+        }
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 40; ]
+    module Strings {
+        [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 40; ]
+        <init> {
+        }
+        [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 41; @position = 27; initialized = true; ]
+        var difficulty as ResourceId;
+        [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 42; @position = 27; initialized = true; ]
+        var settings as ResourceId;
+        [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 43; @position = 27; initialized = true; ]
+        var highScores as ResourceId;
+        [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 44; @position = 27; initialized = true; ]
+        var newGame as ResourceId;
+        [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 45; @position = 27; initialized = true; ]
+        var darkMode as ResourceId;
+        [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 46; @position = 27; initialized = true; ]
+        var snakeColor as ResourceId;
+        [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 47; @position = 27; initialized = true; ]
+        var prompt as ResourceId;
+        [ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 48; @position = 27; initialized = true; ]
+        var AppName as ResourceId;
+    }
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/bin/gen/006-B2819-00/source/Rez.mcgen"; @line = 1; ]
+<init> {
+}

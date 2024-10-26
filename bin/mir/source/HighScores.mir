@@ -1,0 +1,462 @@
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 1; ]
+using Toybox.Application as :App;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 2; ]
+using Toybox.System as :Sys;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 4; ]
+class HighScores{
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 5; @position = 8; ]
+    var easy;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 6; @position = 8; ]
+    var medium;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 7; @position = 8; ]
+    var local;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 8; @position = 8; ]
+    var remote;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 9; ]
+    function initialize() as Void {
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_9_26_13_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 10 8 ]
+        %tmp.4 = getv ? :ScoreStorage;
+        %tmp.5 = "elocalHS1";
+        %tmp.6 = "elocalHS2";
+        %tmp.7 = "elocalHS3";
+        %tmp.8 = "elocalHS4";
+        %tmp.9 = "elocalHS5";
+        %tmp.1 = newc %tmp.4 (%tmp.5, %tmp.6, %tmp.7, %tmp.8, %tmp.9);
+        putv self :easy %tmp.1;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 11 8 ]
+        %tmp.13 = getv ? :ScoreStorage;
+        %tmp.14 = "mlocalHS1";
+        %tmp.15 = "mlocalHS2";
+        %tmp.16 = "mlocalHS3";
+        %tmp.17 = "mlocalHS4";
+        %tmp.18 = "mlocalHS5";
+        %tmp.10 = newc %tmp.13 (%tmp.14, %tmp.15, %tmp.16, %tmp.17, %tmp.18);
+        putv self :medium %tmp.10;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 12 8 ]
+        %tmp.22 = getv ? :ScoreStorage;
+        %tmp.23 = "localHS1";
+        %tmp.24 = "localHS2";
+        %tmp.25 = "localHS3";
+        %tmp.26 = "localHS4";
+        %tmp.27 = "localHS5";
+        %tmp.19 = newc %tmp.22 (%tmp.23, %tmp.24, %tmp.25, %tmp.26, %tmp.27);
+        putv self :local %tmp.19;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_9_26_13_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 15; ]
+    function addScore(score, difficulty) {
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_15_41_25_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 16 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_16_8_24_8_if_stmt:
+        %tmp.2 = lgetv %difficulty;
+        %tmp.3 = 2;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_16_8_24_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_16_8_24_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_16_29_19_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 17 12 ]
+        %tmp.6 = getv ? :easy;
+        %tmp.7 = getv function %tmp.6 :addScore;
+        %tmp.9 = lgetv %score;
+        invoke %tmp.6 %tmp.7(%tmp.9);
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_16_29_19_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_16_8_24_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_16_8_24_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 19 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_19_15_24_8_if_stmt:
+        %tmp.11 = lgetv %difficulty;
+        %tmp.12 = 1;
+        %tmp.13 = eq %tmp.11 %tmp.12;
+        bf %tmp.13 @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_19_15_24_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_19_15_24_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_19_36_22_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 20 12 ]
+        %tmp.15 = getv ? :medium;
+        %tmp.16 = getv function %tmp.15 :addScore;
+        %tmp.18 = lgetv %score;
+        invoke %tmp.15 %tmp.16(%tmp.18);
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_19_36_22_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_19_15_24_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_19_15_24_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 22 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_22_15_24_8_if_stmt:
+        %tmp.20 = lgetv %difficulty;
+        %tmp.21 = 0;
+        %tmp.22 = eq %tmp.20 %tmp.21;
+        bf %tmp.22 @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_22_15_24_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_22_15_24_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_22_36_24_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 23 12 ]
+        %tmp.24 = getv ? :local;
+        %tmp.25 = getv function %tmp.24 :addScore;
+        %tmp.27 = lgetv %score;
+        invoke %tmp.24 %tmp.25(%tmp.27);
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_22_36_24_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_22_15_24_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_22_15_24_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_19_15_24_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_16_8_24_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_15_41_25_4_stop:
+    }
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 28; ]
+class ScoreStorage{
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 28; ]
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 28; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 29; @position = 8; ]
+    var one;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 30; @position = 8; ]
+    var two;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 31; @position = 8; ]
+    var three;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 32; @position = 8; ]
+    var four;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 33; @position = 8; ]
+    var five;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 35; @position = 8; ]
+    var keyOne;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 36; @position = 8; ]
+    var keyTwo;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 37; @position = 8; ]
+    var keyThree;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 38; @position = 8; ]
+    var keyFour;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 39; @position = 8; ]
+    var keyFive;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 41; ]
+    function initialize(keyOne, keyTwo, keyThree, keyFour, keyFive) as Void {
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_41_68_48_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 42 8 ]
+        %tmp.2 = lgetv %keyOne;
+        putv self :keyOne %tmp.2;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 43 8 ]
+        %tmp.4 = lgetv %keyTwo;
+        putv self :keyTwo %tmp.4;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 44 8 ]
+        %tmp.6 = lgetv %keyThree;
+        putv self :keyThree %tmp.6;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 45 8 ]
+        %tmp.8 = lgetv %keyFour;
+        putv self :keyFour %tmp.8;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 46 8 ]
+        %tmp.10 = lgetv %keyFive;
+        putv self :keyFive %tmp.10;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 47 8 ]
+        %tmp.11 = self;
+        %tmp.12 = getv function %tmp.11 :configScores;
+        invoke %tmp.11 %tmp.12();
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_41_68_48_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 50; ]
+    function configScores() {
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_50_28_56_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 51 8 ]
+        %tmp.1 = getm $.Toybox.Application;
+        %tmp.2 = getv function %tmp.1 :getApp;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = getv function %tmp.3 :getProperty;
+        %tmp.6 = getv ? :keyOne;
+        %tmp.7 = invoke %tmp.3 %tmp.4(%tmp.6);
+        putv self :one %tmp.7;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 52 8 ]
+        %tmp.8 = getm $.Toybox.Application;
+        %tmp.9 = getv function %tmp.8 :getApp;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        %tmp.11 = getv function %tmp.10 :getProperty;
+        %tmp.13 = getv ? :keyTwo;
+        %tmp.14 = invoke %tmp.10 %tmp.11(%tmp.13);
+        putv self :two %tmp.14;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 53 8 ]
+        %tmp.15 = getm $.Toybox.Application;
+        %tmp.16 = getv function %tmp.15 :getApp;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        %tmp.18 = getv function %tmp.17 :getProperty;
+        %tmp.20 = getv ? :keyThree;
+        %tmp.21 = invoke %tmp.17 %tmp.18(%tmp.20);
+        putv self :three %tmp.21;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 54 8 ]
+        %tmp.22 = getm $.Toybox.Application;
+        %tmp.23 = getv function %tmp.22 :getApp;
+        %tmp.24 = invoke %tmp.22 %tmp.23();
+        %tmp.25 = getv function %tmp.24 :getProperty;
+        %tmp.27 = getv ? :keyFour;
+        %tmp.28 = invoke %tmp.24 %tmp.25(%tmp.27);
+        putv self :four %tmp.28;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 55 8 ]
+        %tmp.29 = getm $.Toybox.Application;
+        %tmp.30 = getv function %tmp.29 :getApp;
+        %tmp.31 = invoke %tmp.29 %tmp.30();
+        %tmp.32 = getv function %tmp.31 :getProperty;
+        %tmp.34 = getv ? :keyFive;
+        %tmp.35 = invoke %tmp.31 %tmp.32(%tmp.34);
+        putv self :five %tmp.35;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_50_28_56_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 58; ]
+    function setScores() {
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_58_25_64_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 59 8 ]
+        %tmp.1 = getm $.Toybox.Application;
+        %tmp.2 = getv function %tmp.1 :getApp;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = getv function %tmp.3 :setProperty;
+        %tmp.6 = getv ? :keyOne;
+        %tmp.8 = getv ? :one;
+        invoke %tmp.3 %tmp.4(%tmp.6, %tmp.8);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 60 8 ]
+        %tmp.9 = getm $.Toybox.Application;
+        %tmp.10 = getv function %tmp.9 :getApp;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        %tmp.12 = getv function %tmp.11 :setProperty;
+        %tmp.14 = getv ? :keyTwo;
+        %tmp.16 = getv ? :two;
+        invoke %tmp.11 %tmp.12(%tmp.14, %tmp.16);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 61 8 ]
+        %tmp.17 = getm $.Toybox.Application;
+        %tmp.18 = getv function %tmp.17 :getApp;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = getv function %tmp.19 :setProperty;
+        %tmp.22 = getv ? :keyThree;
+        %tmp.24 = getv ? :three;
+        invoke %tmp.19 %tmp.20(%tmp.22, %tmp.24);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 62 8 ]
+        %tmp.25 = getm $.Toybox.Application;
+        %tmp.26 = getv function %tmp.25 :getApp;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        %tmp.28 = getv function %tmp.27 :setProperty;
+        %tmp.30 = getv ? :keyFour;
+        %tmp.32 = getv ? :four;
+        invoke %tmp.27 %tmp.28(%tmp.30, %tmp.32);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 63 8 ]
+        %tmp.33 = getm $.Toybox.Application;
+        %tmp.34 = getv function %tmp.33 :getApp;
+        %tmp.35 = invoke %tmp.33 %tmp.34();
+        %tmp.36 = getv function %tmp.35 :setProperty;
+        %tmp.38 = getv ? :keyFive;
+        %tmp.40 = getv ? :five;
+        invoke %tmp.35 %tmp.36(%tmp.38, %tmp.40);
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_58_25_64_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 66; ]
+    function getScores() {
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_66_25_68_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 67 8 ]
+        %tmp.1 = newa 5;
+        %tmp.3 = getv ? :one;
+        %tmp.4 = dup %tmp.1;
+        %tmp.5 = aputv %tmp.4 0 %tmp.3;
+        %tmp.7 = getv ? :two;
+        %tmp.8 = dup %tmp.5;
+        %tmp.9 = aputv %tmp.8 1 %tmp.7;
+        %tmp.11 = getv ? :three;
+        %tmp.12 = dup %tmp.9;
+        %tmp.13 = aputv %tmp.12 2 %tmp.11;
+        %tmp.15 = getv ? :four;
+        %tmp.16 = dup %tmp.13;
+        %tmp.17 = aputv %tmp.16 3 %tmp.15;
+        %tmp.19 = getv ? :five;
+        %tmp.20 = dup %tmp.17;
+        %tmp.21 = aputv %tmp.20 4 %tmp.19;
+        ret %tmp.21;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_66_25_68_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 70; ]
+    function addScore(score) {
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_70_29_102_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 71 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_70_29_102_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_70_29_102_4_stop" ]
+        %scores.1 = local;
+        %tmp.1 = newa 5;
+        %tmp.3 = getv ? :five;
+        %tmp.4 = dup %tmp.1;
+        %tmp.5 = aputv %tmp.4 0 %tmp.3;
+        %tmp.7 = getv ? :four;
+        %tmp.8 = dup %tmp.5;
+        %tmp.9 = aputv %tmp.8 1 %tmp.7;
+        %tmp.11 = getv ? :three;
+        %tmp.12 = dup %tmp.9;
+        %tmp.13 = aputv %tmp.12 2 %tmp.11;
+        %tmp.15 = getv ? :two;
+        %tmp.16 = dup %tmp.13;
+        %tmp.17 = aputv %tmp.16 3 %tmp.15;
+        %tmp.19 = getv ? :one;
+        %tmp.20 = dup %tmp.17;
+        %tmp.21 = aputv %tmp.20 4 %tmp.19;
+        lputv %scores.1 %tmp.21;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 72 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_70_29_102_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_70_29_102_4_stop" ]
+        %insert.2 = local;
+        %tmp.22 = null;
+        lputv %insert.2 %tmp.22;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 73 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_70_29_102_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_70_29_102_4_stop" ]
+        %temp.3 = local;
+        %tmp.24 = getv ? :five;
+        lputv %temp.3 %tmp.24;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 75 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_75_8_99_8_if_stmt:
+        %tmp.26 = lgetv %score;
+        %tmp.28 = getv ? :five;
+        %tmp.29 = gt %tmp.26 %tmp.28;
+        bf %tmp.29 @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_75_8_99_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_75_8_99_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_75_26_99_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 76 12 ]
+        for @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_76_12_80_12_for_test @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_76_12_80_12_for_incr @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_76_12_80_12_for_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_76_12_80_12_for_init:
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_76_12_80_12_for_begin" "_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_76_12_80_12_for_end" ]
+        %i.4 = local;
+        %tmp.30 = 0;
+        lputv %i.4 %tmp.30;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_76_12_80_12_for_test:
+        %tmp.32 = lgetv %i.4;
+        %tmp.33 = lgetv %scores.1;
+        %tmp.34 = getv function %tmp.33 :size;
+        %tmp.35 = invoke %tmp.33 %tmp.34();
+        %tmp.36 = lt %tmp.32 %tmp.35;
+        bf %tmp.36 @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_76_12_80_12_for_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_76_12_80_12_for_begin:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_76_52_80_12_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 77 16 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_77_16_79_16_if_stmt:
+        %tmp.38 = lgetv %score;
+        %tmp.40 = lgetv %scores.1;
+        %tmp.42 = lgetv %i.4;
+        %tmp.43 = agetv %tmp.40 %tmp.42;
+        %tmp.44 = gt %tmp.38 %tmp.43;
+        bf %tmp.44 @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_77_16_79_16_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_77_16_79_16_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_77_39_79_16_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 78 20 ]
+        %tmp.46 = lgetv %i.4;
+        lputv %insert.2 %tmp.46;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_77_39_79_16_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_77_16_79_16_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_77_16_79_16_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_76_52_80_12_stop:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_76_12_80_12_for_incr:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 76 ]
+        %tmp.49 = lgetv %i.4;
+        %tmp.50 = add %tmp.49 1;
+        lputv %i.4 %tmp.50;
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_76_12_80_12_for_test;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_76_12_80_12_for_end:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 82 12 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_82_12_92_12_if_stmt:
+        %tmp.52 = lgetv %insert.2;
+        %tmp.53 = null;
+        %tmp.54 = ne %tmp.52 %tmp.53;
+        bf %tmp.54 @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_82_12_92_12_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_82_12_92_12_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_82_32_92_12_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 83 16 ]
+        for @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_83_16_90_16_for_test @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_83_16_90_16_for_incr @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_83_16_90_16_for_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_83_16_90_16_for_init:
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_83_16_90_16_for_begin" "_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_83_16_90_16_for_end" ]
+        %i.5 = local;
+        %tmp.55 = 0;
+        lputv %i.5 %tmp.55;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_83_16_90_16_for_test:
+        %tmp.57 = lgetv %i.5;
+        %tmp.59 = lgetv %insert.2;
+        %tmp.60 = as %tmp.59 { (!Null) };
+        %tmp.61 = lte %tmp.57 %tmp.60;
+        bf %tmp.61 @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_83_16_90_16_for_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_83_16_90_16_for_begin:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_83_50_90_16_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 84 20 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_84_20_89_20_if_stmt:
+        %tmp.63 = lgetv %i.5;
+        %tmp.65 = lgetv %insert.2;
+        %tmp.66 = as %tmp.65 { (!Null) };
+        %tmp.67 = eq %tmp.63 %tmp.66;
+        bf %tmp.67 @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_84_20_89_20_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_84_20_89_20_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_84_37_86_20_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 85 24 ]
+        %tmp.68 = lgetv %scores.1;
+        %tmp.70 = lgetv %score;
+        %tmp.72 = lgetv %i.5;
+        aputv %tmp.68 %tmp.72 %tmp.70;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_84_37_86_20_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_84_20_89_20_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_84_20_89_20_if_false:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_86_27_89_20_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 87 24 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_86_27_89_20_start" "_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_86_27_89_20_stop" ]
+        %a.6 = local;
+        %tmp.74 = lgetv %scores.1;
+        %tmp.76 = lgetv %i.5;
+        %tmp.77 = 1;
+        %tmp.78 = add %tmp.76 %tmp.77;
+        %tmp.79 = agetv %tmp.74 %tmp.78;
+        lputv %a.6 %tmp.79;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 88 24 ]
+        %tmp.80 = lgetv %scores.1;
+        %tmp.82 = lgetv %a.6;
+        %tmp.84 = lgetv %i.5;
+        aputv %tmp.80 %tmp.84 %tmp.82;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_86_27_89_20_stop:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_84_20_89_20_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_83_50_90_16_stop:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_83_16_90_16_for_incr:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 83 ]
+        %tmp.87 = lgetv %i.5;
+        %tmp.88 = add %tmp.87 1;
+        lputv %i.5 %tmp.88;
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_83_16_90_16_for_test;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_83_16_90_16_for_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_82_32_92_12_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_82_12_92_12_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_82_12_92_12_if_end:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 94 12 ]
+        %tmp.90 = lgetv %scores.1;
+        %tmp.91 = 4;
+        %tmp.92 = agetv %tmp.90 %tmp.91;
+        putv self :one %tmp.92;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 95 12 ]
+        %tmp.94 = lgetv %scores.1;
+        %tmp.95 = 3;
+        %tmp.96 = agetv %tmp.94 %tmp.95;
+        putv self :two %tmp.96;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 96 12 ]
+        %tmp.98 = lgetv %scores.1;
+        %tmp.99 = 2;
+        %tmp.100 = agetv %tmp.98 %tmp.99;
+        putv self :three %tmp.100;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 97 12 ]
+        %tmp.102 = lgetv %scores.1;
+        %tmp.103 = 1;
+        %tmp.104 = agetv %tmp.102 %tmp.103;
+        putv self :four %tmp.104;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 98 12 ]
+        %tmp.106 = lgetv %scores.1;
+        %tmp.107 = 0;
+        %tmp.108 = agetv %tmp.106 %tmp.107;
+        putv self :five %tmp.108;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_75_26_99_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_75_8_99_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_75_8_99_8_if_end:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc" 101 8 ]
+        %tmp.109 = self;
+        %tmp.110 = getv function %tmp.109 :setScores;
+        invoke %tmp.109 %tmp.110();
+_Users_colbymehmen_Developer_SnakeIQ_source_HighScores_mc_70_29_102_4_stop:
+    }
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/HighScores.mc"; @line = 1; ]
+<init> {
+}

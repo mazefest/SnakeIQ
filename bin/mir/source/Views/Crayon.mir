@@ -1,0 +1,227 @@
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 1; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 2; ]
+using Toybox.System as :Sys;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 3; ]
+using Toybox.Application as :App;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 5; ]
+class Crayon{
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 6; @position = 8; ]
+    var colors;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 7; @position = 8; ]
+    var darkMode;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 8; @position = 8; ]
+    var foregroundColor;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 9; @position = 8; ]
+    var backgroundColor;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 10; @position = 8; ]
+    var rainbowIndex;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 11; @position = 8; ]
+    var colorIndex;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 12; @position = 8; ]
+    var rainbowMode;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 13; @position = 8; ]
+    var systemColor;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 15; ]
+    function initialize() as Void {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_15_26_21_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 16 8 ]
+        %tmp.1 = 0;
+        putv self :rainbowIndex %tmp.1;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 17 8 ]
+        %tmp.2 = 0;
+        putv self :colorIndex %tmp.2;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 18 8 ]
+        %tmp.3 = false;
+        putv self :rainbowMode %tmp.3;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 19 8 ]
+        %tmp.4 = self;
+        %tmp.5 = getv function %tmp.4 :configDarkMode;
+        invoke %tmp.4 %tmp.5();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 20 8 ]
+        %tmp.6 = self;
+        %tmp.7 = getv function %tmp.6 :configColors;
+        invoke %tmp.6 %tmp.7();
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_15_26_21_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 23; ]
+    function configColors() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_23_28_35_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 24 8 ]
+        %tmp.1 = newa 9;
+        %tmp.2 = getm $.Toybox.Graphics;
+        %tmp.3 = getv %tmp.2 :COLOR_GREEN;
+        %tmp.4 = dup %tmp.1;
+        %tmp.5 = aputv %tmp.4 0 %tmp.3;
+        %tmp.6 = getm $.Toybox.Graphics;
+        %tmp.7 = getv %tmp.6 :COLOR_BLUE;
+        %tmp.8 = dup %tmp.5;
+        %tmp.9 = aputv %tmp.8 1 %tmp.7;
+        %tmp.10 = getm $.Toybox.Graphics;
+        %tmp.11 = getv %tmp.10 :COLOR_PINK;
+        %tmp.12 = dup %tmp.9;
+        %tmp.13 = aputv %tmp.12 2 %tmp.11;
+        %tmp.14 = getm $.Toybox.Graphics;
+        %tmp.15 = getv %tmp.14 :COLOR_YELLOW;
+        %tmp.16 = dup %tmp.13;
+        %tmp.17 = aputv %tmp.16 3 %tmp.15;
+        %tmp.18 = getm $.Toybox.Graphics;
+        %tmp.19 = getv %tmp.18 :COLOR_ORANGE;
+        %tmp.20 = dup %tmp.17;
+        %tmp.21 = aputv %tmp.20 4 %tmp.19;
+        %tmp.22 = getm $.Toybox.Graphics;
+        %tmp.23 = getv %tmp.22 :COLOR_DK_GRAY;
+        %tmp.24 = dup %tmp.21;
+        %tmp.25 = aputv %tmp.24 5 %tmp.23;
+        %tmp.26 = getm $.Toybox.Graphics;
+        %tmp.27 = getv %tmp.26 :COLOR_RED;
+        %tmp.28 = dup %tmp.25;
+        %tmp.29 = aputv %tmp.28 6 %tmp.27;
+        %tmp.30 = self;
+        %tmp.31 = getv function %tmp.30 :getSystemColor;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        %tmp.33 = dup %tmp.29;
+        %tmp.34 = aputv %tmp.33 7 %tmp.32;
+        %tmp.35 = self;
+        %tmp.36 = getv function %tmp.35 :getRainbowColor;
+        %tmp.37 = invoke %tmp.35 %tmp.36();
+        %tmp.38 = dup %tmp.34;
+        %tmp.39 = aputv %tmp.38 8 %tmp.37;
+        putv self :colors %tmp.39;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_23_28_35_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 37; ]
+    function getSystemColor() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_37_30_43_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 38 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_38_8_42_8_if_stmt:
+        %tmp.2 = getv ? :darkMode;
+        bf %tmp.2 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_38_8_42_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_38_8_42_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_38_22_40_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 39 12 ]
+        %tmp.3 = getm $.Toybox.Graphics;
+        %tmp.4 = getv %tmp.3 :COLOR_WHITE;
+        ret %tmp.4;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_38_22_40_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_38_8_42_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_38_8_42_8_if_false:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_40_15_42_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 41 12 ]
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        ret %tmp.6;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_40_15_42_8_stop:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_38_8_42_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_37_30_43_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 45; ]
+    function configDarkMode() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_45_30_54_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 46 8 ]
+        %tmp.1 = getm $.Toybox.Application;
+        %tmp.2 = getv function %tmp.1 :getApp;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = getv function %tmp.3 :getProperty;
+        %tmp.5 = "darkMode";
+        %tmp.6 = invoke %tmp.3 %tmp.4(%tmp.5);
+        putv self :darkMode %tmp.6;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 47 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_47_8_53_8_if_stmt:
+        %tmp.8 = getv ? :darkMode;
+        bf %tmp.8 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_47_8_53_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_47_8_53_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_47_22_50_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 48 12 ]
+        %tmp.9 = getm $.Toybox.Graphics;
+        %tmp.10 = getv %tmp.9 :COLOR_WHITE;
+        putv self :foregroundColor %tmp.10;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 49 12 ]
+        %tmp.11 = getm $.Toybox.Graphics;
+        %tmp.12 = getv %tmp.11 :COLOR_BLACK;
+        putv self :backgroundColor %tmp.12;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_47_22_50_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_47_8_53_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_47_8_53_8_if_false:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_50_15_53_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 51 12 ]
+        %tmp.13 = getm $.Toybox.Graphics;
+        %tmp.14 = getv %tmp.13 :COLOR_BLACK;
+        putv self :foregroundColor %tmp.14;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 52 12 ]
+        %tmp.15 = getm $.Toybox.Graphics;
+        %tmp.16 = getv %tmp.15 :COLOR_WHITE;
+        putv self :backgroundColor %tmp.16;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_50_15_53_8_stop:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_47_8_53_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_45_30_54_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 56; ]
+    function getRainbowColor() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_56_31_68_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 57 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_57_8_59_8_if_stmt:
+        %tmp.2 = getv ? :colors;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_57_8_59_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_57_8_59_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_57_28_59_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 58 12 ]
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_GREEN;
+        ret %tmp.6;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_57_28_59_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_57_8_59_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_57_8_59_8_if_end:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 60 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_60_8_65_8_if_stmt:
+        %tmp.8 = getv ? :rainbowIndex;
+        %tmp.9 = 3;
+        %tmp.10 = gt %tmp.8 %tmp.9;
+        bf %tmp.10 @_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_60_8_65_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_60_8_65_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_60_30_63_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 61 12 ]
+        %tmp.11 = 0;
+        putv self :rainbowIndex %tmp.11;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 62 12 ]
+        %tmp.13 = getv ? :colorIndex;
+        %tmp.14 = 1;
+        %tmp.15 = add %tmp.13 %tmp.14;
+        %tmp.17 = getv ? :colors;
+        %tmp.18 = getv function %tmp.17 :size;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = 1;
+        %tmp.21 = sub %tmp.19 %tmp.20;
+        %tmp.22 = mod %tmp.15 %tmp.21;
+        putv self :colorIndex %tmp.22;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_60_30_63_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_60_8_65_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_60_8_65_8_if_false:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_63_15_65_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 64 12 ]
+        %tmp.23 = getv self :rainbowIndex;
+        %tmp.24 = 1;
+        %tmp.25 = add %tmp.23 %tmp.24;
+        putv self :rainbowIndex dup %tmp.25;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_63_15_65_8_stop:
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_60_8_65_8_if_end:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc" 67 8 ]
+        %tmp.27 = getv ? :colors;
+        %tmp.29 = getv ? :colorIndex;
+        %tmp.30 = agetv %tmp.27 %tmp.29;
+        ret %tmp.30;
+_Users_colbymehmen_Developer_SnakeIQ_source_Views_Crayon_mc_56_31_68_4_stop:
+    }
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Views/Crayon.mc"; @line = 1; ]
+<init> {
+}

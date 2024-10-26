@@ -1,0 +1,638 @@
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 1; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 2; ]
+using Toybox.System as :Sys;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 3; ]
+using Toybox.Application as :App;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 5; ]
+enum {
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 6; @position = 4; ]
+    North,
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 7; @position = 4; ]
+    East,
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 8; @position = 4; ]
+    South,
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 9; @position = 4; ]
+    West
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 12; ]
+enum {
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 13; @position = 4; ]
+    x,
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 14; @position = 4; ]
+    y
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 17; ]
+class Snake{
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 17; ]
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 17; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 18; @position = 8; ]
+    var isAlive;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 19; @position = 8; ]
+    var hasEaten;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 20; @position = 8; ]
+    var direction;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 21; @position = 8; ]
+    var inventory;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 22; @position = 8; ]
+    var xCoordinates;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 23; @position = 8; ]
+    var yCoordinates;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 24; @position = 8; ]
+    var initialX;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 25; @position = 8; ]
+    var initialY;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 26; @position = 8; ]
+    var size;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 27; @position = 8; ]
+    var color;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 28; @position = 8; ]
+    var rainbowMode;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 29; @position = 8; ]
+    var colorIndex;
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 31; ]
+    function initialize(size, x, y) as Void {
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_31_36_42_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 32 8 ]
+        %tmp.1 = true;
+        putv self :isAlive %tmp.1;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 33 8 ]
+        %tmp.2 = false;
+        putv self :hasEaten %tmp.2;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 34 8 ]
+        %tmp.4 = getv ? :South;
+        putv self :direction %tmp.4;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 35 8 ]
+        %tmp.5 = newa 0;
+        putv self :xCoordinates %tmp.5;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 36 8 ]
+        %tmp.6 = newa 0;
+        putv self :yCoordinates %tmp.6;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 37 8 ]
+        %tmp.8 = lgetv %size;
+        putv self :size %tmp.8;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 38 8 ]
+        %tmp.10 = lgetv %x;
+        putv self :initialX %tmp.10;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 39 8 ]
+        %tmp.12 = lgetv %y;
+        putv self :initialY %tmp.12;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 40 8 ]
+        %tmp.13 = self;
+        %tmp.14 = getv function %tmp.13 :configInitialXYCoordinates;
+        invoke %tmp.13 %tmp.14();
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 41 8 ]
+        %tmp.15 = self;
+        %tmp.16 = getv function %tmp.15 :configColor;
+        invoke %tmp.15 %tmp.16();
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_31_36_42_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 44; ]
+    function getDirection() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_44_28_46_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 45 8 ]
+        %tmp.2 = getv ? :direction;
+        ret %tmp.2;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_44_28_46_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 48; ]
+    function setDirection(dir) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_48_31_54_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 49 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_49_8_53_8_if_stmt:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_49_12_49_38_begin:
+        %tmp.2 = getv ? :direction;
+        %tmp.3 = 0;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_49_8_53_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_49_30_49_38_true:
+        %tmp.6 = lgetv %dir;
+        %tmp.7 = -1;
+        %tmp.8 = eq %tmp.6 %tmp.7;
+        push %tmp.8;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_49_30_49_38_end:
+        %tmp.9 = phi [%tmp.4 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_49_12_49_38_begin] [%tmp.8 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_49_30_49_38_true] [%tmp.9 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_49_30_49_38_end];
+        bf %tmp.9 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_49_8_53_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_49_8_53_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_49_41_51_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 50 12 ]
+        %tmp.11 = getv ? :West;
+        putv self :direction %tmp.11;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_49_41_51_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_49_8_53_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_49_8_53_8_if_false:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_51_15_53_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 52 12 ]
+        %tmp.13 = getv ? :direction;
+        %tmp.15 = lgetv %dir;
+        %tmp.16 = add %tmp.13 %tmp.15;
+        %tmp.17 = 4;
+        %tmp.18 = mod %tmp.16 %tmp.17;
+        putv self :direction %tmp.18;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_51_15_53_8_stop:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_49_8_53_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_48_31_54_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 56; ]
+    function getDirectionCoordinate() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_56_38_68_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 57 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_57_8_67_8_if_stmt:
+        %tmp.2 = getv ? :direction;
+        %tmp.4 = getv ? :North;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_57_8_67_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_57_8_67_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_57_32_59_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 58 12 ]
+        %tmp.6 = newa 2;
+        %tmp.7 = 0;
+        %tmp.8 = dup %tmp.6;
+        %tmp.9 = aputv %tmp.8 0 %tmp.7;
+        %tmp.10 = -5;
+        %tmp.11 = dup %tmp.9;
+        %tmp.12 = aputv %tmp.11 1 %tmp.10;
+        ret %tmp.12;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_57_32_59_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_57_8_67_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_57_8_67_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 59 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_59_15_67_8_if_stmt:
+        %tmp.14 = getv ? :direction;
+        %tmp.16 = getv ? :East;
+        %tmp.17 = eq %tmp.14 %tmp.16;
+        bf %tmp.17 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_59_15_67_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_59_15_67_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_59_38_61_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 60 12 ]
+        %tmp.18 = newa 2;
+        %tmp.19 = 5;
+        %tmp.20 = dup %tmp.18;
+        %tmp.21 = aputv %tmp.20 0 %tmp.19;
+        %tmp.22 = 0;
+        %tmp.23 = dup %tmp.21;
+        %tmp.24 = aputv %tmp.23 1 %tmp.22;
+        ret %tmp.24;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_59_38_61_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_59_15_67_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_59_15_67_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 61 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_61_15_67_8_if_stmt:
+        %tmp.26 = getv ? :direction;
+        %tmp.28 = getv ? :South;
+        %tmp.29 = eq %tmp.26 %tmp.28;
+        bf %tmp.29 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_61_15_67_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_61_15_67_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_61_39_63_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 62 12 ]
+        %tmp.30 = newa 2;
+        %tmp.31 = 0;
+        %tmp.32 = dup %tmp.30;
+        %tmp.33 = aputv %tmp.32 0 %tmp.31;
+        %tmp.34 = 5;
+        %tmp.35 = dup %tmp.33;
+        %tmp.36 = aputv %tmp.35 1 %tmp.34;
+        ret %tmp.36;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_61_39_63_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_61_15_67_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_61_15_67_8_if_false:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 63 15 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_63_15_67_8_if_stmt:
+        %tmp.38 = getv ? :direction;
+        %tmp.40 = getv ? :West;
+        %tmp.41 = eq %tmp.38 %tmp.40;
+        bf %tmp.41 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_63_15_67_8_if_false;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_63_15_67_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_63_38_65_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 64 12 ]
+        %tmp.42 = newa 2;
+        %tmp.43 = -5;
+        %tmp.44 = dup %tmp.42;
+        %tmp.45 = aputv %tmp.44 0 %tmp.43;
+        %tmp.46 = 0;
+        %tmp.47 = dup %tmp.45;
+        %tmp.48 = aputv %tmp.47 1 %tmp.46;
+        ret %tmp.48;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_63_38_65_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_63_15_67_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_63_15_67_8_if_false:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_65_15_67_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 66 12 ]
+        %tmp.49 = newa 2;
+        %tmp.50 = 0;
+        %tmp.51 = dup %tmp.49;
+        %tmp.52 = aputv %tmp.51 0 %tmp.50;
+        %tmp.53 = 0;
+        %tmp.54 = dup %tmp.52;
+        %tmp.55 = aputv %tmp.54 1 %tmp.53;
+        ret %tmp.55;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_65_15_67_8_stop:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_63_15_67_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_61_15_67_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_59_15_67_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_57_8_67_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_56_38_68_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 70; ]
+    function configColor() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_70_27_73_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 71 8 ]
+        %tmp.1 = getm $.Toybox.Application;
+        %tmp.2 = getv function %tmp.1 :getApp;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = getv function %tmp.3 :getProperty;
+        %tmp.5 = "snakeColor";
+        %tmp.6 = invoke %tmp.3 %tmp.4(%tmp.5);
+        putv self :colorIndex %tmp.6;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 72 8 ]
+        %tmp.7 = getm $;
+        %tmp.8 = getv %tmp.7 :crayon;
+        %tmp.9 = getv %tmp.8 :colors;
+        %tmp.11 = getv ? :colorIndex;
+        %tmp.12 = agetv %tmp.9 %tmp.11;
+        putv self :color %tmp.12;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_70_27_73_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 75; ]
+    function configInitialXYCoordinates() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_75_42_89_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 76 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_76_8_80_8_if_stmt:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_76_12_76_44_begin:
+        %tmp.2 = getv ? :initialX;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bt %tmp.4 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_76_8_80_8_if_true;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_76_32_76_44_false:
+        %tmp.6 = getv ? :initialY;
+        %tmp.7 = null;
+        %tmp.8 = eq %tmp.6 %tmp.7;
+        push %tmp.8;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_76_32_76_44_end:
+        %tmp.9 = phi [%tmp.4 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_76_12_76_44_begin] [%tmp.8 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_76_32_76_44_false] [%tmp.9 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_76_32_76_44_end];
+        bf %tmp.9 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_76_8_80_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_76_8_80_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_76_50_80_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 77 12 ]
+        %tmp.10 = getm $;
+        %tmp.11 = getv %tmp.10 :screenWidth;
+        %tmp.12 = 2;
+        %tmp.13 = div %tmp.11 %tmp.12;
+        %tmp.14 = getm $;
+        %tmp.15 = getv %tmp.14 :screenWidth;
+        %tmp.16 = 2;
+        %tmp.17 = div %tmp.15 %tmp.16;
+        %tmp.18 = 5;
+        %tmp.19 = mod %tmp.17 %tmp.18;
+        %tmp.20 = sub %tmp.13 %tmp.19;
+        putv self :initialX %tmp.20;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 78 12 ]
+        %tmp.21 = getm $;
+        %tmp.22 = getv %tmp.21 :screenHeight;
+        %tmp.23 = 3;
+        %tmp.24 = div %tmp.22 %tmp.23;
+        %tmp.25 = getm $;
+        %tmp.26 = getv %tmp.25 :screenHeight;
+        %tmp.27 = 2;
+        %tmp.28 = div %tmp.26 %tmp.27;
+        %tmp.29 = 5;
+        %tmp.30 = mod %tmp.28 %tmp.29;
+        %tmp.31 = sub %tmp.24 %tmp.30;
+        putv self :initialY %tmp.31;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 79 12 ]
+        %tmp.32 = getm $.Toybox.System;
+        %tmp.33 = getv function %tmp.32 :println;
+        %tmp.35 = getv ? :initialY;
+        invoke %tmp.32 %tmp.33(%tmp.35);
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_76_50_80_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_76_8_80_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_76_8_80_8_if_end:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 82 8 ]
+        for @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_8_88_8_for_test @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_8_88_8_for_incr @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_8_88_8_for_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_8_88_8_for_init:
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_8_88_8_for_begin" "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_8_88_8_for_end" ]
+        %i.1 = local;
+        %tmp.37 = getv ? :size;
+        lputv %i.1 %tmp.37;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_8_88_8_for_test:
+        %tmp.39 = lgetv %i.1;
+        %tmp.40 = 0;
+        %tmp.41 = gt %tmp.39 %tmp.40;
+        bf %tmp.41 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_8_88_8_for_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_8_88_8_for_begin:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_39_88_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 83 12 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_39_88_8_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_39_88_8_stop" ]
+        %y.2 = local;
+        %tmp.43 = getv ? :initialY;
+        %tmp.45 = lgetv %i.1;
+        %tmp.46 = 5;
+        %tmp.47 = mul %tmp.45 %tmp.46;
+        %tmp.48 = sub %tmp.43 %tmp.47;
+        lputv %y.2 %tmp.48;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 84 12 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_39_88_8_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_39_88_8_stop" ]
+        %x.3 = local;
+        %tmp.50 = getv ? :initialX;
+        lputv %x.3 %tmp.50;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 85 12 ]
+        %tmp.51 = lgetv %y.2;
+        %tmp.53 = lgetv %y.2;
+        %tmp.54 = 5;
+        %tmp.55 = mod %tmp.53 %tmp.54;
+        %tmp.56 = sub %tmp.51 %tmp.55;
+        lputv %y.2 %tmp.56;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 86 12 ]
+        %tmp.58 = getv ? :xCoordinates;
+        %tmp.59 = getv function %tmp.58 :add;
+        %tmp.61 = lgetv %x.3;
+        invoke %tmp.58 %tmp.59(%tmp.61);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 87 12 ]
+        %tmp.63 = getv ? :yCoordinates;
+        %tmp.64 = getv function %tmp.63 :add;
+        %tmp.66 = lgetv %y.2;
+        invoke %tmp.63 %tmp.64(%tmp.66);
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_39_88_8_stop:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_8_88_8_for_incr:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 82 ]
+        %tmp.69 = lgetv %i.1;
+        %tmp.70 = sub %tmp.69 1;
+        lputv %i.1 %tmp.70;
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_8_88_8_for_test;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_82_8_88_8_for_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_75_42_89_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 91; ]
+    function eatAndGrow(x, y) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_91_30_96_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 92 8 ]
+        %tmp.1 = getv self :size;
+        %tmp.2 = 1;
+        %tmp.3 = add %tmp.1 %tmp.2;
+        putv self :size dup %tmp.3;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 93 8 ]
+        %tmp.5 = getv ? :xCoordinates;
+        %tmp.6 = getv function %tmp.5 :add;
+        %tmp.8 = lgetv %x;
+        invoke %tmp.5 %tmp.6(%tmp.8);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 94 8 ]
+        %tmp.10 = getv ? :yCoordinates;
+        %tmp.11 = getv function %tmp.10 :add;
+        %tmp.13 = lgetv %y;
+        invoke %tmp.10 %tmp.11(%tmp.13);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 95 8 ]
+        %tmp.14 = false;
+        putv self :hasEaten %tmp.14;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_91_30_96_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 98; ]
+    function moveForward(x, y) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_98_31_105_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 99 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_99_8_104_8_if_stmt:
+        %tmp.2 = getv ? :isAlive;
+        bf %tmp.2 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_99_8_104_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_99_8_104_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_99_21_104_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 100 12 ]
+        %tmp.4 = getv ? :xCoordinates;
+        %tmp.5 = getv function %tmp.4 :remove;
+        %tmp.7 = getv ? :xCoordinates;
+        %tmp.8 = 0;
+        %tmp.9 = agetv %tmp.7 %tmp.8;
+        invoke %tmp.4 %tmp.5(%tmp.9);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 101 12 ]
+        %tmp.11 = getv ? :yCoordinates;
+        %tmp.12 = getv function %tmp.11 :remove;
+        %tmp.14 = getv ? :yCoordinates;
+        %tmp.15 = 0;
+        %tmp.16 = agetv %tmp.14 %tmp.15;
+        invoke %tmp.11 %tmp.12(%tmp.16);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 102 12 ]
+        %tmp.18 = getv ? :xCoordinates;
+        %tmp.19 = getv function %tmp.18 :add;
+        %tmp.21 = lgetv %x;
+        invoke %tmp.18 %tmp.19(%tmp.21);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 103 12 ]
+        %tmp.23 = getv ? :yCoordinates;
+        %tmp.24 = getv function %tmp.23 :add;
+        %tmp.26 = lgetv %y;
+        invoke %tmp.23 %tmp.24(%tmp.26);
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_99_21_104_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_99_8_104_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_99_8_104_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_98_31_105_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 107; ]
+    function getSnakeHead() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_107_28_111_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 108 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_107_28_111_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_107_28_111_4_stop" ]
+        %x.1 = local;
+        %tmp.2 = getv ? :xCoordinates;
+        %tmp.4 = getv ? :xCoordinates;
+        %tmp.5 = getv function %tmp.4 :size;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        %tmp.7 = 1;
+        %tmp.8 = sub %tmp.6 %tmp.7;
+        %tmp.9 = agetv %tmp.2 %tmp.8;
+        lputv %x.1 %tmp.9;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 109 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_107_28_111_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_107_28_111_4_stop" ]
+        %y.2 = local;
+        %tmp.11 = getv ? :yCoordinates;
+        %tmp.13 = getv ? :yCoordinates;
+        %tmp.14 = getv function %tmp.13 :size;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        %tmp.16 = 1;
+        %tmp.17 = sub %tmp.15 %tmp.16;
+        %tmp.18 = agetv %tmp.11 %tmp.17;
+        lputv %y.2 %tmp.18;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 110 8 ]
+        %tmp.19 = newa 2;
+        %tmp.21 = lgetv %x.1;
+        %tmp.22 = dup %tmp.19;
+        %tmp.23 = aputv %tmp.22 0 %tmp.21;
+        %tmp.25 = lgetv %y.2;
+        %tmp.26 = dup %tmp.23;
+        %tmp.27 = aputv %tmp.26 1 %tmp.25;
+        ret %tmp.27;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_107_28_111_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 113; ]
+    function selfCollisionCheck(x, y) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_113_38_119_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 114 8 ]
+        for @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_114_8_118_8_for_test @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_114_8_118_8_for_incr @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_114_8_118_8_for_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_114_8_118_8_for_init:
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_114_8_118_8_for_begin" "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_114_8_118_8_for_end" ]
+        %i.1 = local;
+        %tmp.1 = 0;
+        lputv %i.1 %tmp.1;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_114_8_118_8_for_test:
+        %tmp.3 = lgetv %i.1;
+        %tmp.5 = getv ? :size;
+        %tmp.6 = 1;
+        %tmp.7 = sub %tmp.5 %tmp.6;
+        %tmp.8 = lt %tmp.3 %tmp.7;
+        bf %tmp.8 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_114_8_118_8_for_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_114_8_118_8_for_begin:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_114_43_118_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 115 12 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_115_12_117_12_if_stmt:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_115_16_115_59_begin:
+        %tmp.10 = lgetv %x;
+        %tmp.12 = getv ? :xCoordinates;
+        %tmp.14 = lgetv %i.1;
+        %tmp.15 = agetv %tmp.12 %tmp.14;
+        %tmp.16 = eq %tmp.10 %tmp.15;
+        bf %tmp.16 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_115_12_117_12_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_115_40_115_59_true:
+        %tmp.18 = lgetv %y;
+        %tmp.20 = getv ? :yCoordinates;
+        %tmp.22 = lgetv %i.1;
+        %tmp.23 = agetv %tmp.20 %tmp.22;
+        %tmp.24 = eq %tmp.18 %tmp.23;
+        push %tmp.24;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_115_40_115_59_end:
+        %tmp.25 = phi [%tmp.16 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_115_16_115_59_begin] [%tmp.24 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_115_40_115_59_true] [%tmp.25 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_115_40_115_59_end];
+        bf %tmp.25 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_115_12_117_12_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_115_12_117_12_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_115_62_117_12_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 116 16 ]
+        %tmp.26 = false;
+        putv self :isAlive %tmp.26;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_115_62_117_12_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_115_12_117_12_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_115_12_117_12_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_114_43_118_8_stop:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_114_8_118_8_for_incr:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 114 ]
+        %tmp.29 = lgetv %i.1;
+        %tmp.30 = add %tmp.29 1;
+        lputv %i.1 %tmp.30;
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_114_8_118_8_for_test;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_114_8_118_8_for_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_113_38_119_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 121; ]
+    function arenaCollisionCheck(northWall, eastWall, southWall, westWall) {
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_121_75_129_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 122 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_121_75_129_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_121_75_129_4_stop" ]
+        %head.1 = local;
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :getNextPlot;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %head.1 %tmp.3;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 123 8 ]
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_123_8_128_8_if_stmt:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_123_12_126_23_begin:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_123_12_125_23_begin:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_123_12_124_23_begin:
+        %tmp.5 = lgetv %head.1;
+        %tmp.7 = getv ? :x;
+        %tmp.8 = agetv %tmp.5 %tmp.7;
+        %tmp.10 = lgetv %eastWall;
+        %tmp.11 = gte %tmp.8 %tmp.10;
+        bt %tmp.11 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_123_8_128_8_if_true;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_124_12_124_23_false:
+        %tmp.13 = lgetv %head.1;
+        %tmp.15 = getv ? :x;
+        %tmp.16 = agetv %tmp.13 %tmp.15;
+        %tmp.18 = lgetv %westWall;
+        %tmp.19 = lte %tmp.16 %tmp.18;
+        push %tmp.19;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_124_12_124_23_end:
+        %tmp.20 = phi [%tmp.11 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_123_12_124_23_begin] [%tmp.19 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_124_12_124_23_false] [%tmp.20 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_124_12_124_23_end];
+        bt %tmp.20 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_123_8_128_8_if_true;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_125_12_125_23_false:
+        %tmp.22 = lgetv %head.1;
+        %tmp.24 = getv ? :y;
+        %tmp.25 = agetv %tmp.22 %tmp.24;
+        %tmp.27 = lgetv %northWall;
+        %tmp.28 = lte %tmp.25 %tmp.27;
+        push %tmp.28;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_125_12_125_23_end:
+        %tmp.29 = phi [%tmp.20 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_123_12_125_23_begin] [%tmp.28 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_125_12_125_23_false] [%tmp.29 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_125_12_125_23_end];
+        bt %tmp.29 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_123_8_128_8_if_true;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_126_12_126_23_false:
+        %tmp.31 = lgetv %head.1;
+        %tmp.33 = getv ? :y;
+        %tmp.34 = agetv %tmp.31 %tmp.33;
+        %tmp.36 = lgetv %southWall;
+        %tmp.37 = gte %tmp.34 %tmp.36;
+        push %tmp.37;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_126_12_126_23_end:
+        %tmp.38 = phi [%tmp.29 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_123_12_126_23_begin] [%tmp.37 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_126_12_126_23_false] [%tmp.38 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_126_12_126_23_end];
+        bf %tmp.38 @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_123_8_128_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_123_8_128_8_if_true:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_126_34_128_8_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 127 12 ]
+        %tmp.39 = false;
+        putv self :isAlive %tmp.39;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_126_34_128_8_stop:
+        goto @_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_123_8_128_8_if_end;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_123_8_128_8_if_end:
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_121_75_129_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 131; ]
+    function getNextPlot() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_131_27_136_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 132 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_131_27_136_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_131_27_136_4_stop" ]
+        %nextCoordinate.1 = local;
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :getDirectionCoordinate;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %nextCoordinate.1 %tmp.3;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 133 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_131_27_136_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_131_27_136_4_stop" ]
+        %nextXCoordinate.2 = local;
+        %tmp.5 = getv ? :xCoordinates;
+        %tmp.7 = getv ? :xCoordinates;
+        %tmp.8 = getv function %tmp.7 :size;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        %tmp.10 = 1;
+        %tmp.11 = sub %tmp.9 %tmp.10;
+        %tmp.12 = agetv %tmp.5 %tmp.11;
+        %tmp.14 = lgetv %nextCoordinate.1;
+        %tmp.16 = getv ? :x;
+        %tmp.17 = agetv %tmp.14 %tmp.16;
+        %tmp.18 = add %tmp.12 %tmp.17;
+        lputv %nextXCoordinate.2 %tmp.18;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 134 8 ]
+        [ "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_131_27_136_4_start" "_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_131_27_136_4_stop" ]
+        %nextYCoordinate.3 = local;
+        %tmp.20 = getv ? :yCoordinates;
+        %tmp.22 = getv ? :yCoordinates;
+        %tmp.23 = getv function %tmp.22 :size;
+        %tmp.24 = invoke %tmp.22 %tmp.23();
+        %tmp.25 = 1;
+        %tmp.26 = sub %tmp.24 %tmp.25;
+        %tmp.27 = agetv %tmp.20 %tmp.26;
+        %tmp.29 = lgetv %nextCoordinate.1;
+        %tmp.31 = getv ? :y;
+        %tmp.32 = agetv %tmp.29 %tmp.31;
+        %tmp.33 = add %tmp.27 %tmp.32;
+        lputv %nextYCoordinate.3 %tmp.33;
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc" 135 8 ]
+        %tmp.34 = newa 2;
+        %tmp.36 = lgetv %nextXCoordinate.2;
+        %tmp.37 = dup %tmp.34;
+        %tmp.38 = aputv %tmp.37 0 %tmp.36;
+        %tmp.40 = lgetv %nextYCoordinate.3;
+        %tmp.41 = dup %tmp.38;
+        %tmp.42 = aputv %tmp.41 1 %tmp.40;
+        ret %tmp.42;
+_Users_colbymehmen_Developer_SnakeIQ_source_Snake_mc_131_27_136_4_stop:
+    }
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Snake.mc"; @line = 1; ]
+<init> {
+}

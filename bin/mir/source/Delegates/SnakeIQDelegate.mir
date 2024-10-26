@@ -1,0 +1,44 @@
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Delegates/SnakeIQDelegate.mc"; @line = 1; ]
+using Toybox.WatchUi;
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Delegates/SnakeIQDelegate.mc"; @line = 3; ]
+class SnakeIQDelegate extends WatchUi.BehaviorDelegate{
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Delegates/SnakeIQDelegate.mc"; @line = 3; ]
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Delegates/SnakeIQDelegate.mc"; @line = 3; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Delegates/SnakeIQDelegate.mc"; @line = 5; ]
+    function initialize() as Void {
+_Users_colbymehmen_Developer_SnakeIQ_source_Delegates_SnakeIQDelegate_mc_5_26_7_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Delegates/SnakeIQDelegate.mc" 6 8 ]
+        %tmp.2 = getv ? :BehaviorDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_colbymehmen_Developer_SnakeIQ_source_Delegates_SnakeIQDelegate_mc_5_26_7_4_stop:
+    }
+    [ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Delegates/SnakeIQDelegate.mc"; @line = 9; ]
+    function onSelect() {
+_Users_colbymehmen_Developer_SnakeIQ_source_Delegates_SnakeIQDelegate_mc_9_24_12_4_start:
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Delegates/SnakeIQDelegate.mc" 10 8 ]
+        %tmp.1 = getm $.Toybox.WatchUi;
+        %tmp.2 = getv function %tmp.1 :pushView;
+        %tmp.6 = getv ? :Rez;
+        %tmp.7 = getv %tmp.6 :Menus;
+        %tmp.8 = getv function ? %tmp.7 :MainMenu;
+        %tmp.3 = newc %tmp.8 ();
+        %tmp.12 = getv ? :SnakeIQMenuDelegate;
+        %tmp.9 = newc %tmp.12 ();
+        %tmp.13 = getm $.Toybox.WatchUi;
+        %tmp.14 = getv %tmp.13 :SLIDE_UP;
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.9, %tmp.14);
+[ "/Users/colbymehmen/Developer/SnakeIQ/source/Delegates/SnakeIQDelegate.mc" 11 8 ]
+        %tmp.15 = true;
+        ret %tmp.15;
+_Users_colbymehmen_Developer_SnakeIQ_source_Delegates_SnakeIQDelegate_mc_9_24_12_4_stop:
+    }
+}
+[ @file = "/Users/colbymehmen/Developer/SnakeIQ/source/Delegates/SnakeIQDelegate.mc"; @line = 1; ]
+<init> {
+}
