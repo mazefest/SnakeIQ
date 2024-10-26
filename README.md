@@ -4,7 +4,7 @@ This is an open source game for the Garmin ConnectIQ ecosystem. Recreating the c
 
 You can download the game from the `Connect IQ Store` [HERE](https://apps.garmin.com/apps/fd3c9346-c5ed-4337-bde7-76fc8270955e).
 
-# Conributing 
+# Contributing 
 
 If you ever experience any bugs, or want to add compatibility for a device, please open up a PR and I will approve, merge and release the version to app store (with credit of course.)
 
